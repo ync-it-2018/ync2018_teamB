@@ -1,4 +1,4 @@
-package kr.ync.project;
+package kr.ync.project.controller;
 
 import java.text.DateFormat;
 import java.util.Date;
