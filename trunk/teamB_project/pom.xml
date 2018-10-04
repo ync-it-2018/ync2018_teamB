@@ -2,8 +2,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>kr.ync.project</groupId>
-	<artifactId>controller</artifactId>
+	<groupId>com.ync-it</groupId>
+	<artifactId>team-b</artifactId>
 	<name>ex02</name>
 	<packaging>war</packaging>
 	<version>1.0.0-BUILD-SNAPSHOT</version>
@@ -285,7 +285,7 @@
 				<artifactId>tomcat-maven-plugin</artifactId>
 				<configuration>
 					<url>http://www.ync-it.com/manager/html</url>
-					<path></path>
+					<path>/team-b</path>
 					<username>hanize</username>
 					<password>dudtladl2</password>
 				</configuration>
