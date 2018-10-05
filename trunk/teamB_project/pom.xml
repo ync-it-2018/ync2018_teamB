@@ -285,7 +285,7 @@
 			    <artifactId>tomcat8-maven-plugin</artifactId>
 			    <version>3.0-r1756463</version>
 				<configuration>
-					<url>http://www.ync-it.com/manager/html</url>
+					<url>http://www.ync-it.com/manager/text</url>
 					<server>TomcatServer</server>
 					<path>/team-b</path>
 					<username>hanize</username>
