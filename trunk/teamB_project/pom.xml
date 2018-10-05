@@ -214,6 +214,7 @@
 		<profile>
 			<id>production</id>
             <build>
+            	<finalName>ROOT.war</finalName>
             	<resources>
                 	<resource>
 	                    <directory>${project.basedir}/src/main/resources</directory>
