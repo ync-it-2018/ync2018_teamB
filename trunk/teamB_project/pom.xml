@@ -286,6 +286,7 @@
 			    <version>3.0-r1756463</version>
 				<configuration>
 					<url>http://www.ync-it.com/manager/html</url>
+					<server>TomcatServer</server>
 					<path>/team-b</path>
 					<username>hanize</username>
 					<password>dudtladl2</password>
