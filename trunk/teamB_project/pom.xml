@@ -280,8 +280,8 @@
 			<!-- Jenkins에서 사용하는 부분 시작-->
 			<plugin>
 				<groupId>org.apache.tomcat.maven</groupId>
-			    <artifactId>tomcat8-maven-plugin</artifactId>
-			    <version>3.0-r1756463</version>
+			    <artifactId>tomcat7-maven-plugin</artifactId>
+			    <version>2.2</version>
 				<configuration>
 					<url>http://team-b.ync-it.com/manager/html</url>
 					<port>80</port>
