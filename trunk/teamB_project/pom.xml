@@ -289,7 +289,7 @@
 					<url>http://team-b.ync-it.com/manager/html</url>
 					<port>80</port>
 					<server>TomcatServer</server>
-					<path>/</path>
+					<path>/team-b</path>
 					<username>hanize</username>
 					<password>dudtladl2</password>
 				</configuration>
