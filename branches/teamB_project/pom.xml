@@ -286,10 +286,10 @@
 			    <artifactId>tomcat8-maven-plugin</artifactId>
 			    <version>3.0-r1756463</version>
 				<configuration>
-					<url>http://www.ync-it.com/manager/html</url>
+					<url>http://team-b.ync-it.com/manager/html</url>
 					<port>80</port>
 					<server>TomcatServer</server>
-					<path>/team-b</path>
+					<path>/</path>
 					<username>hanize</username>
 					<password>dudtladl2</password>
 				</configuration>
