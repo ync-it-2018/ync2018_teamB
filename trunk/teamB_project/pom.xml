@@ -214,7 +214,6 @@
 		<profile>
 			<id>production</id>
             <build>
-            	<finalName>ROOT</finalName>
             	<resources>
                 	<resource>
 	                    <directory>${project.basedir}/src/main/resources</directory>
@@ -239,6 +238,7 @@
 	<!-- Jenkins에서 사용하는 부분 끝-->
 	
     <build>
+    	<finalName>ROOT</finalName>
         <plugins>
             <plugin>
                 <artifactId>maven-eclipse-plugin</artifactId>
