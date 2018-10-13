@@ -210,7 +210,7 @@
 	</dependencies>
 	
 	<!-- Jenkins에서 사용하는 부분 시작-->
-	<profiles>
+	<!-- <profiles>
 		<profile>
 			<id>production</id>
             <build>
@@ -234,10 +234,11 @@
 				</plugins>
 			</build>
 		</profile>
-	</profiles>
+	</profiles> -->
 	<!-- Jenkins에서 사용하는 부분 끝-->
 	
     <build>
+    	<finalName>ROOT</finalName>
         <plugins>
             <plugin>
                 <artifactId>maven-eclipse-plugin</artifactId>
