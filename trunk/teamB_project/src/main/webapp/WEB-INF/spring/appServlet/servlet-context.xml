@@ -36,7 +36,7 @@
 	
 	-->
 	<beans:bean id="uploadPath" class="java.lang.String">
-		<beans:constructor-arg value="G:\\ync2\\Spring\\2018\\upload">
+		<beans:constructor-arg value="/mnt/disks/add_disk/upload/team_b">
 		</beans:constructor-arg>
 	</beans:bean>
 	
