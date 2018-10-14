@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data-sources>
+	<data-source id="oracle_thin-1667281e51c-6acc4806fc34418" provider="oracle" driver="oracle_thin" name="Oracle - ora11" save-password="true" show-system-objects="true" show-util-objects="true" read-only="false">
+		<connection host="220.67.2.3" port="1521" server="" database="ora11" url="jdbc:oracle:thin:@220.67.2.3:1521:ora11" user="educ239" password="AwUVMxMQHXbk" home="G:\oracle\product\12.2.0\dbhome_1" type="dev">
+			<provider-property name="@dbeaver-sid-service@" value="SID"/>
+			<provider-property name="@dbeaver-use-rule-hint@" value="false"/>
+			<provider-property name="@dbeaver-connection-type@" value="BASIC"/>
+			<provider-property name="@dbeaver-check-schema-content@" value="true"/>
+			<provider-property name="@dbeaver-always-show-dba@" value="false"/>
+		</connection>
+	</data-source>
+	<data-source id="oracle_thin-166728730eb-5024d297c92cd918" provider="oracle" driver="oracle_thin" name="Oracle - ora11 2" save-password="true" show-system-objects="true" show-util-objects="true" read-only="false">
+		<connection host="220.67.2.3" port="1521" server="" database="ora11" url="jdbc:oracle:thin:@//220.67.2.3:1521/ora11" user="educ239" password="AwUVMxMQHXbk" home="G:\oracle\product\12.2.0\dbhome_1" type="dev">
+			<property name="useFetchSizeWithLongColumn" value="true"/>
+			<property name="loginTimeout" value="20"/>
+			<provider-property name="@dbeaver-sid-service@" value="SERVICE"/>
+			<provider-property name="@dbeaver-use-rule-hint@" value="false"/>
+			<provider-property name="@dbeaver-connection-type@" value="BASIC"/>
+			<provider-property name="@dbeaver-check-schema-content@" value="true"/>
+			<provider-property name="@dbeaver-always-show-dba@" value="false"/>
+		</connection>
+	</data-source>
+	<data-source id="oracle_thin-1667299cb2d-46a3747579287ae2" provider="oracle" driver="oracle_thin" name="Oracle - MYORACLE" save-password="true" show-system-objects="true" show-util-objects="true" read-only="false" folder="Oracle/1">
+		<connection host="localhost" port="1521" server="" database="MYORACLE" url="jdbc:oracle:thin:@//localhost:1521/MYORACLE" user="scott" password="Jy0hBXMjpQ==" home="G:\oracle\product\12.2.0\dbhome_1" type="dev">
+			<provider-property name="@dbeaver-sid-service@" value="SERVICE"/>
+			<provider-property name="@dbeaver-use-rule-hint@" value="false"/>
+			<provider-property name="@dbeaver-connection-type@" value="BASIC"/>
+			<provider-property name="@dbeaver-check-schema-content@" value="true"/>
+			<provider-property name="@dbeaver-always-show-dba@" value="false"/>
+		</connection>
+	</data-source>
+	<filters/>
+</data-sources>

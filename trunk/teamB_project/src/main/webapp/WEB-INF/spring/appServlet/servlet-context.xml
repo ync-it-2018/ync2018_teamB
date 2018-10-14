@@ -22,5 +22,22 @@
 	</beans:bean>
 	
 	<context:component-scan base-package="kr.ync.project.controller" />
+
+	<!-- multipartResolver upload file size를 MAX 10M로 설정 -->
+	<beans:bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<beans:property name="maxUploadSize" value="10485760"></beans:property>
+	</beans:bean>
+	
+	<!-- upload되는 file의 실제 저장 경로 설정. 개인별로 폴더 생성 후 경로를 지정해야함!!!
+	constructor-arg 속성으로 매개변수 혹은 value로 해당 bean을 넘겨준다. 여기선 value로 넘겨준다.
+	지금은 local(PC)이지만 프로젝트 수행 시에는 Server에서 동작되기에 해당 경로도
+	Server의 경로로 지정해야 한다.
+	Server의 경로는 추후 설명
+	
+	-->
+	<beans:bean id="uploadPath" class="java.lang.String">
+		<beans:constructor-arg value="G:\\ync2\\Spring\\2018\\upload">
+		</beans:constructor-arg>
+	</beans:bean>
 	
 </beans:beans>
