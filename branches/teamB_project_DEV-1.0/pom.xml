@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.ync-it</groupId>
 	<artifactId>team-b</artifactId>
-	<name>ex02</name>
+	<name>ex02</name><!--  -->
 	<packaging>war</packaging>
 	<version>1.0.0-BUILD-SNAPSHOT</version>
 	<properties>
@@ -17,7 +17,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 	<!--            -->
-	</properties><!-- 이것이 커밋 -->
+	</properties><!-- 이것이 cummit -->
 	<dependencies>
 		<!-- Spring -->
 		<dependency>
@@ -270,6 +270,5 @@
 	        
         </plugins>
     </build>
-    <!-- ㄴㅇㄹㅇㄴㄹㄴㅇㄹ -->
     <!-- 테스트 -->
 </project>
