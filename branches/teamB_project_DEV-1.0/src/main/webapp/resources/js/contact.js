@@ -1,6 +1,7 @@
 jQuery(function($) {'use strict'
-	// 나중에 , 붙일걸 use strict 옆에다가
-
+	/*
+	 * 일단 오류 때문에 use strict 옆에 ',' 지워버림
+	 */
 	var form = $('.contact-form');
 	form.submit(function () {'use strict',
 		$this = $(this);
