@@ -20,10 +20,10 @@
     <script src="js/respond.min.js"></script>
     <![endif]-->       
     <link rel="shortcut icon" href="images/ico/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/resources/front/images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/resources/front/images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/resources/front/images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="/resources/front/images/ico/apple-touch-icon-57-precomposed.png">
 </head><!--/head-->
 
 <body>
@@ -59,7 +59,7 @@
 				<div class="row">
 					<div class="col-sm-4">
 						<div class="logo pull-left">
-							<a href="index.html"><img src="images/home/logo.png" alt="" /></a>
+							<a href="index.html"><img src="/resources/front/images/home/logo.png" alt="" /></a>
 						</div>
 						<div class="btn-group pull-right">
 							<div class="btn-group">
@@ -282,7 +282,7 @@
 						</div><!--/price-range-->
 						
 						<div class="shipping text-center"><!--shipping-->
-							<img src="images/home/shipping.jpg" alt="" />
+							<img src="/resources/front/images/home/shipping.jpg" alt="" />
 						</div><!--/shipping-->
 					</div>
 				</div>
@@ -306,7 +306,7 @@
 								</span>
 							</div>
 							<a href="">
-								<img src="images/blog/blog-one.jpg" alt="">
+								<img src="/resources/front/images/blog/blog-one.jpg" alt="">
 							</a>
 							<p>
 								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p> <br>
@@ -350,12 +350,12 @@
 					</div><!--/rating-area-->
 
 					<div class="socials-share">
-						<a href=""><img src="images/blog/socials.png" alt=""></a>
+						<a href=""><img src="/resources/front/images/blog/socials.png" alt=""></a>
 					</div><!--/socials-share-->
 
 					<div class="media commnets">
 						<a class="pull-left" href="#">
-							<img class="media-object" src="images/blog/man-one.jpg" alt="">
+							<img class="media-object" src="/resources/front/images/blog/man-one.jpg" alt="">
 						</a>
 						<div class="media-body">
 							<h4 class="media-heading">Annie Davis</h4>
@@ -377,7 +377,7 @@
 							<li class="media">
 								
 								<a class="pull-left" href="#">
-									<img class="media-object" src="images/blog/man-two.jpg" alt="">
+									<img class="media-object" src="/resources/front/images/blog/man-two.jpg" alt="">
 								</a>
 								<div class="media-body">
 									<ul class="sinlge-post-meta">
@@ -391,7 +391,7 @@
 							</li>
 							<li class="media second-media">
 								<a class="pull-left" href="#">
-									<img class="media-object" src="images/blog/man-three.jpg" alt="">
+									<img class="media-object" src="/resources/front/images/blog/man-three.jpg" alt="">
 								</a>
 								<div class="media-body">
 									<ul class="sinlge-post-meta">
@@ -405,7 +405,7 @@
 							</li>
 							<li class="media">
 								<a class="pull-left" href="#">
-									<img class="media-object" src="images/blog/man-four.jpg" alt="">
+									<img class="media-object" src="/resources/front/images/blog/man-four.jpg" alt="">
 								</a>
 								<div class="media-body">
 									<ul class="sinlge-post-meta">
@@ -472,7 +472,7 @@
 							<div class="video-gallery text-center">
 								<a href="#">
 									<div class="iframe-img">
-										<img src="images/home/iframe1.png" alt="" />
+										<img src="/resources/front/images/home/iframe1.png" alt="" />
 									</div>
 									<div class="overlay-icon">
 										<i class="fa fa-play-circle-o"></i>
@@ -487,7 +487,7 @@
 							<div class="video-gallery text-center">
 								<a href="#">
 									<div class="iframe-img">
-										<img src="images/home/iframe2.png" alt="" />
+										<img src="/resources/front/images/home/iframe2.png" alt="" />
 									</div>
 									<div class="overlay-icon">
 										<i class="fa fa-play-circle-o"></i>
@@ -502,7 +502,7 @@
 							<div class="video-gallery text-center">
 								<a href="#">
 									<div class="iframe-img">
-										<img src="images/home/iframe3.png" alt="" />
+										<img src="/resources/front/images/home/iframe3.png" alt="" />
 									</div>
 									<div class="overlay-icon">
 										<i class="fa fa-play-circle-o"></i>
@@ -517,7 +517,7 @@
 							<div class="video-gallery text-center">
 								<a href="#">
 									<div class="iframe-img">
-										<img src="images/home/iframe4.png" alt="" />
+										<img src="/resources/front/images/home/iframe4.png" alt="" />
 									</div>
 									<div class="overlay-icon">
 										<i class="fa fa-play-circle-o"></i>
@@ -530,7 +530,7 @@
 					</div>
 					<div class="col-sm-3">
 						<div class="address">
-							<img src="images/home/map.png" alt="" />
+							<img src="/resources/front/images/home/map.png" alt="" />
 							<p>505 S Atlantic Ave Virginia Beach, VA(Virginia)</p>
 						</div>
 					</div>
