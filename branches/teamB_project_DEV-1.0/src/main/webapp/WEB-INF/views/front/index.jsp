@@ -9,17 +9,17 @@
     <meta name="author" content="">
     <title>Home | E-Shopper</title>
     <link href="/resources/front/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/wresources/front/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/resources/front/css/font-awesome.min.css" rel="stylesheet">
     <link href="/resources/front/css/prettyPhoto.css" rel="stylesheet">
     <link href="/resources/front/css/price-range.css" rel="stylesheet">
     <link href="/resources/front/css/animate.css" rel="stylesheet">
 	<link href="/resources/front/css/main.css" rel="stylesheet">
-	<link href="/Wresources/front/css/responsive.css" rel="stylesheet">
+	<link href="/resources/front/css/responsive.css" rel="stylesheet">
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
     <![endif]-->       
-    <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <!-- <link rel="shortcut icon" href="images/ico/favicon.ico"> -->
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
@@ -33,7 +33,7 @@
 				<div class="row">
 					<div class="col-sm-4">
 						<div class="logo pull-left">
-							<a href="index.jsp"><img src="/resources/front/images/home/logo.png" alt="" /></a>
+							<a href="/"><img src="/resources/front/images/home/logo.png" alt="" /></a>
 						</div>
 
 					</div>
@@ -42,7 +42,7 @@
 							<ul class="nav navbar-nav">
 								<li><a href="#"><i class="fa fa-user"></i> 사용자정보</a></li>		
 								<li><a href="cart.html"><i class="fa fa-shopping-cart"></i> 관심물품</a></li>
-								<li><a href="login.html"><i class="fa fa-lock"></i> 로그인</a></li>
+								<li><a href="/login"> 로그인</a></li>
 							</ul>
 						</div>
 					</div>
@@ -64,11 +64,11 @@
 						</div>
 						<div class="mainmenu pull-left">
 							<ul class="nav navbar-nav collapse navbar-collapse">
-								<li><a href="index.html" class="active">홈</a></li>
+								<li><a href="/" class="active">홈</a></li>
                                 <li><a href="">공지사항</a></li>
 								<li class="dropdown"><a href="#">카테고리 펼쳐보기<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
-                                        <li><a href="shop.html">태블릿,모바일</a></li>
+                                        <li><a href="/shop">태블릿,모바일</a></li>
 										<li><a href="product-details.html">생활,가전제품</a></li> 
 										<li><a href="checkout.html">컴퓨터, 노트북</a></li> 
                                     </ul>
