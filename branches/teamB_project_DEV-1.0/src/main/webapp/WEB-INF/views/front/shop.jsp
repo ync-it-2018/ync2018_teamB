@@ -35,7 +35,7 @@
 				<div class="row">
 					<div class="col-sm-4">
 						<div class="logo pull-left">
-							<a href="/">가격비교사이트</a>
+							<a href="/"><img src="/resources/front/images/home/logo.png" alt="" /></a>
 						</div>
 
 					</div>
