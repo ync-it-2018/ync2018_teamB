@@ -25,7 +25,6 @@ public class HomeController {
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
 
-		// 媛��굹�떎
 		logger.info("teamB log �궡�슜", locale);
 
 		Date date = new Date();
