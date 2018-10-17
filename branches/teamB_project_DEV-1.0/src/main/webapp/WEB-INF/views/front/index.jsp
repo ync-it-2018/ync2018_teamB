@@ -41,7 +41,7 @@
 						<div class="shop-menu pull-right">
 							<ul class="nav navbar-nav">
 								<li><a href="#"><i class="fa fa-user"></i> 사용자정보</a></li>		
-								<li><a href="cart.html"><i class="fa fa-shopping-cart"></i> 관심물품</a></li>
+								<li><a href="/cart"><i class="fa fa-shopping-cart"></i> 관심물품</a></li>
 								<li><a href="/login"> 로그인</a></li>
 							</ul>
 						</div>
@@ -69,17 +69,17 @@
 								<li class="dropdown"><a href="#">카테고리 펼쳐보기<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
                                         <li><a href="/shop">태블릿,모바일</a></li>
-										<li><a href="product-details.html">생활,가전제품</a></li> 
-										<li><a href="checkout.html">컴퓨터, 노트북</a></li> 
+										<li><a href="/product-details">생활,가전제품</a></li> 
+										<li><a href="/checkout">컴퓨터, 노트북</a></li> 
                                     </ul>
                                 </li> 
 								<li class="dropdown"><a href="#">게시판<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
-                                        <li><a href="blog.html">자유게시판</a></li>
-										<li><a href="blog-single.html">건의게시판</a></li>
+                                        <li><a href="/blog">자유게시판</a></li>
+										<li><a href="/blog-single">건의게시판</a></li>
                                     </ul>
                                 </li> 
-								<li><a href="404.html">상품사용후기</a></li>
+								<li><a href="/404">상품사용후기</a></li>
 								
 							</ul>
 						</div>
