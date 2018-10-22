@@ -14,7 +14,15 @@
 
 					<div class="box">
             <div class="box-header with-border">
-              <h3 class="box-title">HOME PAGE ${serverTime }</h3>
+              <h2 class="box-title">Team-B</h2><br>
+              <table border="1">
+              	<tr>
+              		<td align="center" width="100px" height="100px"><h3>강세훈</h3></td>
+              		<td align="center" width="100px" height="100px"><h3>박지훈</h3></td>
+              		<td align="center" width="100px" height="100px"><h3>이건영</h3></td>
+              		<td align="center" width="100px" height="100px"><h3>이정욱</h3></td>
+              	</tr>
+			  </table>
             </div>
           </div>
       </div><!--/.col (left) -->
