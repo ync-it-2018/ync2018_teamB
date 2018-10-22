@@ -16,7 +16,7 @@ private static final Logger logger = LoggerFactory.getLogger(HomeController.clas
 	@RequestMapping(value = "/admin", method = RequestMethod.GET)
 	public String admin(Locale locale, Model model) {
 
-		logger.info("teamB log 블로그싱글 페이지", locale);
+		logger.info("teamB log 어드민 페이지", locale);
 
 		return "admin/index";
 	}

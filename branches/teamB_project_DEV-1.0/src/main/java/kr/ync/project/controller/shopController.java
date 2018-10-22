@@ -16,7 +16,7 @@ public class shopController {
 	@RequestMapping(value = "/shop", method = RequestMethod.GET)
 	public String login(Locale locale, Model model) {
 
-		logger.info("teamB log 로그인", locale);
+		logger.info("teamB log shop 페이지", locale);
 
 		return "front/shop";
 	}

@@ -40,7 +40,7 @@
 					<div class="col-sm-8">
 						<div class="shop-menu pull-right">
 							<ul class="nav navbar-nav">
-								<li><a href="/admin"><i class="fa fa-user"></i> 사용자정보</a></li>		
+								<li><a href="#"><i class="fa fa-user"></i> 사용자정보</a></li>		
 								<li><a href="/interest_product"><i class="fa fa-shopping-cart"></i> 관심물품</a></li>
 								<li><a href="/login"> 로그인</a></li>
 							</ul>
@@ -82,6 +82,13 @@
                                         		<li><a href="/product-details">등산제품/등산웨어</a></li>
                                         		<li><a href="/product-details">낚시</a></li>
                                         		<li><a href="/product-details">캠핑</a></li>          
+                                        	</ul> 
+                                        <li><a href="/shop">테스트</a></li> 
+											<ul>
+                                        		<li><a href="/product-details">테스트</a></li>
+                                        		<li><a href="/product-details">테스트</a></li>
+                                        		<li><a href="/product-details">테스트</a></li>
+                                        		<li><a href="/product-details">테스트</a></li>          
                                         	</ul> 
                                     </ul>
                                 </li> 
@@ -174,10 +181,10 @@
 	<section>
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-3">
-					<div class="left-sidebar">
+			<!--	<div class="col-sm-3">
+			 		<div class="left-sidebar">
 						<h2>Category</h2>
-						<div class="panel-group category-products" id="accordian"><!--category-productsr-->
+						<div class="panel-group category-products" id="accordian">category-productsr
 							<div class="panel panel-default">
 								<div class="panel-heading">
 									<h4 class="panel-title">
@@ -247,170 +254,135 @@
 									</div>
 								</div>
                             </div>
-						</div><!--/category-products-->		
+						</div>/category-products		
 					
-					</div>
+					</div> -->
 				</div>
 				
-				<div class="col-sm-9 padding-right">
+				<div>
 					<div class="features_items"><!--features_items-->
-						<h2 class="title text-center">Features Items</h2>
+						<h2 class="title text-center">카테고리별 인기제품 TOP 3</h2>
+						<div class="PC">
+						<h2>디지털</h2>
 						<div class="col-sm-4">
 							<div class="product-image-wrapper">
 								<div class="single-products">
 										<div class="productinfo text-center">
 											<img src="/resources/front/images/home/product1.jpg" alt="" />
-											<h2>$56</h2>
-											<p>Easy Polo Black Edition</p>
-											<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+											<h2>1500만원</h2>
+											<p>마리아</p>
+											<a href="/product-details" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>상세화면</a>
 										</div>
-										<div class="product-overlay">
-											<div class="overlay-content">
-												<h2>$56</h2>
-												<p>Easy Polo Black Edition</p>
-												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-											</div>
-										</div>
-								</div>
-								<div class="choose">
-									<ul class="nav nav-pills nav-justified">
-										<li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
-										<li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
-									</ul>
 								</div>
 							</div>
 						</div>
 						<div class="col-sm-4">
 							<div class="product-image-wrapper">
 								<div class="single-products">
-									<div class="productinfo text-center">
-										<img src="/resources/front/images/home/product2.jpg" alt="" />
-										<h2>$56</h2>
-										<p>Easy Polo Black Edition</p>
-										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-									</div>
-									<div class="product-overlay">
-										<div class="overlay-content">
-											<h2>$56</h2>
-											<p>Easy Polo Black Edition</p>
-											<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+										<div class="productinfo text-center">
+											<img src="/resources/front/images/home/product2.jpg" alt="" />
+											<h2>1700만원</h2>
+											<p>제임스</p>
+											<a href="/product-details" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>상세화면</a>
 										</div>
-									</div>
-								</div>
-								<div class="choose">
-									<ul class="nav nav-pills nav-justified">
-										<li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
-										<li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
-									</ul>
 								</div>
 							</div>
 						</div>
 						<div class="col-sm-4">
 							<div class="product-image-wrapper">
 								<div class="single-products">
-									<div class="productinfo text-center">
-										<img src="/resources/front/images/home/product3.jpg" alt="" />
-										<h2>$56</h2>
-										<p>Easy Polo Black Edition</p>
-										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-									</div>
-									<div class="product-overlay">
-										<div class="overlay-content">
-											<h2>$56</h2>
-											<p>Easy Polo Black Edition</p>
-											<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+										<div class="productinfo text-center">
+											<img src="/resources/front/images/home/product3.jpg" alt="" />
+											<h2>2100만원</h2>
+											<p>줄리엣</p>
+											<a href="/product-details" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>상세화면</a>
 										</div>
-									</div>
 								</div>
-								<div class="choose">
-									<ul class="nav nav-pills nav-justified">
-										<li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
-										<li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
-									</ul>
+							</div>
+						</div>
+						</div>
+						<div class="outdoor">
+						<h2>아웃도어</h2>
+						<div class="col-sm-4">
+							<div class="product-image-wrapper">
+								<div class="single-products">
+										<div class="productinfo text-center">
+											<img src="/resources/front/images/home/product4.jpg" alt="" />
+											<h2>1900만원</h2>
+											<p>크리스티나</p>
+											<a href="/product-details" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>상세화면</a>
+										</div>
 								</div>
 							</div>
 						</div>
 						<div class="col-sm-4">
 							<div class="product-image-wrapper">
 								<div class="single-products">
-									<div class="productinfo text-center">
-										<img src="/resources/front/images/home/product4.jpg" alt="" />
-										<h2>$56</h2>
-										<p>Easy Polo Black Edition</p>
-										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-									</div>
-									<div class="product-overlay">
-										<div class="overlay-content">
-											<h2>$56</h2>
-											<p>Easy Polo Black Edition</p>
-											<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+										<div class="productinfo text-center">
+											<img src="/resources/front/images/home/product5.jpg" alt="" />
+											<h2>1600만원</h2>
+											<p>미셸</p>
+											<a href="/product-details" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>상세화면</a>
 										</div>
-									</div>
-									<img src="/resources/front/images/home/new.png" class="new" alt="" />
-								</div>
-								<div class="choose">
-									<ul class="nav nav-pills nav-justified">
-										<li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
-										<li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
-									</ul>
 								</div>
 							</div>
 						</div>
 						<div class="col-sm-4">
 							<div class="product-image-wrapper">
 								<div class="single-products">
-									<div class="productinfo text-center">
-										<img src="/resources/front/images/home/product5.jpg" alt="" />
-										<h2>$56</h2>
-										<p>Easy Polo Black Edition</p>
-										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-									</div>
-									<div class="product-overlay">
-										<div class="overlay-content">
-											<h2>$56</h2>
-											<p>Easy Polo Black Edition</p>
-											<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+										<div class="productinfo text-center">
+											<img src="/resources/front/images/home/product6.jpg" alt="" />
+											<h2>500원</h2>
+											<p>드록바</p>
+											<a href="/product-details" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>상세화면</a>
 										</div>
-									</div>
-									<img src="/resources/front/images/home/sale.png" class="new" alt="" />
 								</div>
-								<div class="choose">
-									<ul class="nav nav-pills nav-justified">
-										<li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
-										<li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
-									</ul>
+							</div>
+						</div>
+						</div>
+						<div class="test">
+						<h2>테스트</h2>
+						<div class="col-sm-4">
+							<div class="product-image-wrapper">
+								<div class="single-products">
+										<div class="productinfo text-center">
+											<img src="/resources/front/images/home/product1.jpg" alt="" />
+											<h2>700원</h2>
+											<p>이건영</p>
+											<a href="/product-details" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>상세화면</a>
+										</div>
 								</div>
 							</div>
 						</div>
 						<div class="col-sm-4">
 							<div class="product-image-wrapper">
 								<div class="single-products">
-									<div class="productinfo text-center">
-										<img src="/resources/front/images/home/product6.jpg" alt="" />
-										<h2>$56</h2>
-										<p>Easy Polo Black Edition</p>
-										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-									</div>
-									<div class="product-overlay">
-										<div class="overlay-content">
-											<h2>$56</h2>
-											<p>Easy Polo Black Edition</p>
-											<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+										<div class="productinfo text-center">
+											<img src="/resources/front/images/home/product3.jpg" alt="" />
+											<h2>500원</h2>
+											<p>강세훈</p>
+											<a href="/product-details" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>상세화면</a>
 										</div>
-									</div>
-								</div>
-								<div class="choose">
-									<ul class="nav nav-pills nav-justified">
-										<li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
-										<li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
-									</ul>
 								</div>
 							</div>
 						</div>
+						<div class="col-sm-4">
+							<div class="product-image-wrapper">
+								<div class="single-products">
+										<div class="productinfo text-center">
+											<img src="/resources/front/images/home/product2.jpg" alt="" />
+											<h2>200원</h2>
+											<p>이정욱</p>
+											<a href="/product-details" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>상세화면</a>
+										</div>
+								</div>
+							</div>
+						</div>
+					</div>
 						
 					</div><!--features_items-->
 					
-					<div class="category-tab"><!--category-tab-->
+					<!-- <div class="category-tab">category-tab
 						<div class="col-sm-12">
 							<ul class="nav nav-tabs">
 								<li class="active"><a href="#tshirt" data-toggle="tab">T-Shirt</a></li>
@@ -696,9 +668,9 @@
 								</div>
 							</div>
 						</div>
-					</div><!--/category-tab-->
+					</div>/category-tab -->
 					
-					<div class="recommended_items"><!--recommended_items-->
+					<!-- <div class="recommended_items">recommended_items
 						<h2 class="title text-center">recommended items</h2>
 						
 						<div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
@@ -793,14 +765,14 @@
 								<i class="fa fa-angle-right"></i>
 							  </a>			
 						</div>
-					</div><!--/recommended_items-->
+					</div>/recommended_items -->
 					
 				</div>
 			</div>
 		</div>
 	</section>
 	
-	<footer id="footer"><!--Footer-->
+<!-- 	<footer id="footer">Footer
 		
 		
 		<div class="footer-widget">
@@ -878,7 +850,7 @@
 			</div>
 		</div>
 		
-	</footer><!--/Footer-->
+	</footer>/Footer -->
 	
 
   

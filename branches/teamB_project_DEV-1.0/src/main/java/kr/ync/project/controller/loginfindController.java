@@ -16,7 +16,7 @@ public class loginfindController {
 	@RequestMapping(value = "/login_find", method = RequestMethod.GET)
 	public String login_ifnd(Locale locale, Model model) {
 
-		logger.info("teamB log 로그인", locale);
+		logger.info("teamB log 아이디찾기페이지", locale);
 
 		return "front/login_find";
 	}
