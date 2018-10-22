@@ -69,8 +69,8 @@
 								<li class="dropdown"><a href="#">카테고리 펼쳐보기<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
                                         <li><a href="/shop">태블릿,모바일</a></li>
-										<li><a href="/product-details">생활,가전제품</a></li> 
-										<li><a href="/checkout">컴퓨터, 노트북</a></li> 
+										<li><a href="/shop">생활,가전제품</a></li> 
+										<li><a href="/shop">컴퓨터, 노트북</a></li> 
                                     </ul>
                                 </li> 
 								<li class="dropdown"><a href="#">게시판<i class="fa fa-angle-down"></i></a>

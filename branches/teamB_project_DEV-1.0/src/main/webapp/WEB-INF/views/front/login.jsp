@@ -127,7 +127,7 @@
 							</span>
 -->
 							<a class="btn btn-default update" href="">로그인</a> 
-							<a class="btn btn-default check_out" href="">아이디/비밀번호 찾기</a>
+							<a class="btn btn-default check_out" href="/login_find">아이디/비밀번호 찾기</a>
 
 							<!--  
 							<button type="submit" class="btn btn-default">로그인</button>
