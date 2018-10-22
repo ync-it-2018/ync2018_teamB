@@ -1,4 +1,4 @@
-﻿
+
 
 /*************************
 *******Typography******
@@ -9,7 +9,7 @@
 
 
 /*************************
-*******Notice CSS******
+*******freeboard CSS******
 **************************/
 body {
   font-family: 'Roboto', sans-serif;
@@ -18,15 +18,22 @@ body {
   font-weight:400px;
 }
 
+.freeboard > caption {
+  text-align: left;
+  font-weight: bold;
+  font-size: 200%;
+  border-bottom: .2em solid #F3E2A9;
+  margin-bottom: .5em;
+}
 	
 	
-table.board-list {
+table.freeboard {
     border-collapse: collapse;
     text-align: left;
     line-height: 1.5;
 
 }
-table.board-list thead th {
+table.freeboard thead th {
 	background-color:#DBA901;
     padding: 10px;
     font-weight: bold;
@@ -35,7 +42,7 @@ table.board-list thead th {
     border-bottom: 1px solid #F3F781;
     
 }
-table.board-list tbody th {
+table.freeboard tbody th {
     width: 200px;
     padding: 10px;
     font-weight: bold;
@@ -44,7 +51,7 @@ table.board-list tbody th {
     background: #f3f6f7;
     
 }
-table.board-list td {
+table.freeboard td {
     width: 350px;
     padding: 10px;
     vertical-align: top;
@@ -53,24 +60,24 @@ table.board-list td {
   
 }
 
-.num {
-	border-right:1px solid #F2F2F2;
-	text-align: center;
-	 width: 10%;
-}
 .title {
 	border-right:1px solid #F2F2F2;
 	text-align: center;
-	width: 40%;
+	 width:40%;
 }
-.write {
+.writer {
 	border-right:1px solid #F2F2F2;
 	text-align: center;
-	width: 25%;
+	width: 13%;
 }
 .date {
+	border-right:1px solid #F2F2F2;
 	text-align: center;
-	width: 20%;
+	width: 13%;
+}
+.views {
+	text-align: center;
+	width: 8%;
 }
 
 
@@ -85,4 +92,42 @@ tbody tr:nth-child(2n+1) {
 tbody tr:td-child(2) {
 	text-align: left;
 }
+.searchArea{
+	font-size:20px;
+}
+.searchKeyword{
+	font-size:20px;
+}
+.pageMove {
+	font-size : 20px;
+	text-align: center; 
+		
+}
+.searchBody{
+	margin-top:3%;
+	margin-left:30%;
+	
+}
+.searchPart{
+    display: inline-block;
+    float: center;
+    
+}
+.serach{
+	font-size : 20px;
+}
+.write{
+	margin-left:330px;
+}
+
+#reviews button {
+    background: #FE980F;
+    border: 0 none;
+    border-radius: 0;
+    color: #FFFFFF;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    
+}
+
 

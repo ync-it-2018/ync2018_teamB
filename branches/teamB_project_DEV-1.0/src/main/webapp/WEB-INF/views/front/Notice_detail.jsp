@@ -14,8 +14,8 @@
     <link href="/resources/front/css/price-range.css" rel="stylesheet">
     <link href="/resources/front/css/animate.css" rel="stylesheet">
 	<link href="/resources/front/css/main.css" rel="stylesheet">
-	<link href="/resources/front/css/responsive.css" rel="stylesheet">
-	<link href="/resources/front/css/newCss.css" rel="stylesheet">
+	<link href="/resources/front/css/responsive.css?after" rel="stylesheet">
+	<link href="/resources/front/css/notice-detail.css?after" rel="stylesheet">
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
@@ -48,8 +48,8 @@
 						<div class="shop-menu pull-right">
 							<ul class="nav navbar-nav">
 								<li><a href="#"><i class="fa fa-user"></i> 사용자정보</a></li>		
-								<li><a href="/interest_product"><i class="fa fa-shopping-cart"></i> 관심물품</a></li>
-								<li><a href="/login"> 로그인</a></li>
+								<li><a href="/cart"><i class="fa fa-shopping-cart"></i> 장바구니</a></li>
+								<li><a href="/login"><i class="fa fa-lock"></i> 로그인</a></li>
 							</ul>
 						</div>
 					</div>
@@ -73,30 +73,11 @@
 							<ul class="nav navbar-nav collapse navbar-collapse">
 								<li><a href="/" class="active">홈</a></li>
                                 <li><a href="">공지사항</a></li>
-							<li class="dropdown"><a href="#">카테고리 펼쳐보기<i class="fa fa-angle-down"></i></a>
-                                    <ul role="menu" class="sub-menu">                      
-                                         <li><a href="/shop">디지털</a></li>
-                                        	<ul>
-                                        		<li><a href="/product-details">PC</a></li>
-                                        		<li><a href="/product-details">모바일</a></li>
-                                        		<li><a href="/product-details">가전제품</a></li>
-                                        		<li><a href="/product-details">노트북</a></li>
-                                        		<li><a href="/product-details">태블릿</a></li>
-                                        	</ul>
-										<li><a href="/shop">아웃도어</a></li> 
-											<ul>
-                                        		<li><a href="/product-details">골프제품/골프웨어</a></li>
-                                        		<li><a href="/product-details">등산제품/등산웨어</a></li>
-                                        		<li><a href="/product-details">낚시</a></li>
-                                        		<li><a href="/product-details">캠핑</a></li>          
-                                        	</ul> 
-                                        <li><a href="/shop">테스트</a></li> 
-											<ul>
-                                        		<li><a href="/product-details">테스트</a></li>
-                                        		<li><a href="/product-details">테스트</a></li>
-                                        		<li><a href="/product-details">테스트</a></li>
-                                        		<li><a href="/product-details">테스트</a></li>          
-                                        	</ul> 
+								<li class="dropdown"><a href="#">카테고리 펼쳐보기<i class="fa fa-angle-down"></i></a>
+                                    <ul role="menu" class="sub-menu">
+                                        <li><a href="/shop">태블릿,모바일</a></li>
+										<li><a href="/product-details">생활,가전제품</a></li> 
+										<li><a href="/checkout">컴퓨터, 노트북</a></li> 
                                     </ul>
                                 </li> 
 								<li class="dropdown"><a href="#">게시판<i class="fa fa-angle-down"></i></a>
@@ -120,58 +101,31 @@
 		</div><!--/header-bottom-->
 	</header><!--/header-->
 
+
 	<section>
-		<div class="category-tab shop-details-tab">
-			<!--category-tab-->
-			<div class="tab-content">
-				<div class="tab-pane fade active in" id="reviews">
-					<div class="col-sm-12">
-						<form action="#">
-							<table class="board-list">
-								<thead>
-									<tr>
-										<th class="num">번호</th>
-										<th class="title">제목</th>
-										<th class="write">작성자</th>
-										<th class="date">날짜</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>3</td>
-										<td>제목 3</td>
-										<td>가격비교사이트</td>
-										<td>2018-10-18</td>
-										
-									</tr>
-									<tr>
-										<td>2</td>
-										<td>제목 2</td>
-										<td>가격비교사이트</td>
-										<td>2018-10-18</td>
-									</tr>
-									<tr>
-										<td>1</td>
-										<td>제목 1</td>
-										<td>가격비교사이트</td>
-										<td>2018-10-18</td>
-									</tr>
-								</tbody>
-							</table>
-
-							<b>Rating: </b> <img
-								src="/resources/front/images/product-details/rating.png" alt="" />
-
-						</form>
-					</div>
-				</div>
-
-			</div>
+		<div class = "detailBody">
+			<table class="table-detail">
+				<Caption>공지사항</Caption>
+				<thead>
+					
+				</thead>
+				<tbody>
+					<tr>
+						<th class="title_name">제목</th>
+						<td class="title">시스템점검</td>
+						<th class="title_name">날짜</th>
+						<td calss="title">2018-10-22</td>
+					</tr>
+					<!-- <tr><td><img src="/resources/front/images/home/logo.png" alt="" /></td></tr> -->
+					<tr>
+						<td colspan="4">공지사항입니다. 00일 00시부터 시스템점검이 있을 예정입니다.</td>
+					</tr>
+				</tbody>
+			</table>
 		</div>
-		<!--/category-tab-->
-
-
+		
 	</section>
+
 
 	<footer id="footer"><!--Footer-->
 		<div class="footer-top">

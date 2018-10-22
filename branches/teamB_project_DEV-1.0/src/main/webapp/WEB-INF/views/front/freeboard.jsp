@@ -15,7 +15,7 @@
     <link href="/resources/front/css/animate.css" rel="stylesheet">
 	<link href="/resources/front/css/main.css" rel="stylesheet">
 	<link href="/resources/front/css/responsive.css" rel="stylesheet">
-	<link href="/resources/front/css/newCss.css" rel="stylesheet">
+	<link href="/resources/front/css/freeboard.css?after" rel="stylesheet">
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
@@ -48,8 +48,8 @@
 						<div class="shop-menu pull-right">
 							<ul class="nav navbar-nav">
 								<li><a href="#"><i class="fa fa-user"></i> 사용자정보</a></li>		
-								<li><a href="/interest_product"><i class="fa fa-shopping-cart"></i> 관심물품</a></li>
-								<li><a href="/login"> 로그인</a></li>
+								<li><a href="/cart"><i class="fa fa-shopping-cart"></i> 장바구니</a></li>
+								<li><a href="/login"><i class="fa fa-lock"></i> 로그인</a></li>
 							</ul>
 						</div>
 					</div>
@@ -73,30 +73,11 @@
 							<ul class="nav navbar-nav collapse navbar-collapse">
 								<li><a href="/" class="active">홈</a></li>
                                 <li><a href="">공지사항</a></li>
-							<li class="dropdown"><a href="#">카테고리 펼쳐보기<i class="fa fa-angle-down"></i></a>
-                                    <ul role="menu" class="sub-menu">                      
-                                         <li><a href="/shop">디지털</a></li>
-                                        	<ul>
-                                        		<li><a href="/product-details">PC</a></li>
-                                        		<li><a href="/product-details">모바일</a></li>
-                                        		<li><a href="/product-details">가전제품</a></li>
-                                        		<li><a href="/product-details">노트북</a></li>
-                                        		<li><a href="/product-details">태블릿</a></li>
-                                        	</ul>
-										<li><a href="/shop">아웃도어</a></li> 
-											<ul>
-                                        		<li><a href="/product-details">골프제품/골프웨어</a></li>
-                                        		<li><a href="/product-details">등산제품/등산웨어</a></li>
-                                        		<li><a href="/product-details">낚시</a></li>
-                                        		<li><a href="/product-details">캠핑</a></li>          
-                                        	</ul> 
-                                        <li><a href="/shop">테스트</a></li> 
-											<ul>
-                                        		<li><a href="/product-details">테스트</a></li>
-                                        		<li><a href="/product-details">테스트</a></li>
-                                        		<li><a href="/product-details">테스트</a></li>
-                                        		<li><a href="/product-details">테스트</a></li>          
-                                        	</ul> 
+								<li class="dropdown"><a href="#">카테고리 펼쳐보기<i class="fa fa-angle-down"></i></a>
+                                    <ul role="menu" class="sub-menu">
+                                        <li><a href="/shop">태블릿,모바일</a></li>
+										<li><a href="/product-details">생활,가전제품</a></li> 
+										<li><a href="/checkout">컴퓨터, 노트북</a></li> 
                                     </ul>
                                 </li> 
 								<li class="dropdown"><a href="#">게시판<i class="fa fa-angle-down"></i></a>
@@ -127,41 +108,65 @@
 				<div class="tab-pane fade active in" id="reviews">
 					<div class="col-sm-12">
 						<form action="#">
-							<table class="board-list">
+							<table class="freeboard">
+								<Caption>자유게시판</Caption>
 								<thead>
 									<tr>
-										<th class="num">번호</th>
 										<th class="title">제목</th>
-										<th class="write">작성자</th>
-										<th class="date">날짜</th>
+										<th class="writer">글쓴이</th>
+										<th class="date">작성 일</th>
+										<th class="views">조회수</th>
 									</tr>
 								</thead>
 								<tbody>
 									<tr>
-										<td>3</td>
-										<td>제목 3</td>
-										<td>가격비교사이트</td>
-										<td>2018-10-18</td>
+										<td>제목3</td>
+										<td>이정욱</td>
+										<td>2018-10-21</td>
+										<td>5</td>
 										
 									</tr>
 									<tr>
-										<td>2</td>
-										<td>제목 2</td>
-										<td>가격비교사이트</td>
+										<td>제목2</td>
+										<td>강세훈</td>
 										<td>2018-10-18</td>
+										<td>17</td>
 									</tr>
 									<tr>
-										<td>1</td>
-										<td>제목 1</td>
-										<td>가격비교사이트</td>
-										<td>2018-10-18</td>
+										<td>제목1</td>
+										<td>박지훈</td>
+										<td>2018-10-15</td>
+										<td>37</td>
 									</tr>
 								</tbody>
 							</table>
-
-							<b>Rating: </b> <img
-								src="/resources/front/images/product-details/rating.png" alt="" />
-
+							<div class="pageMove"> ◀   ◀◀     1 2 3 4 5    ▶▶   ▶</div>
+							
+							<div class="searchBody">
+								<div class="searchPart">
+									<select class='searchArea'>
+										<option value='title' selected>제목</option>
+										<option value='cont-title'>제목+내용</option>
+										<option value='cont'>내용</option>
+									</select>
+								</div>
+								<div class="searchPart">
+									<input type="text" class="searchKeyword"
+										placeholder="검색 입력하세요.">
+								</div>
+								<div class="searchPart">
+									<span class="serachButton">
+										<button class="search" type="button">검색</button>
+									</span>
+									
+								</div>
+								<div class="searchPart">
+									<span class="serachButton">
+										<button class="write" type="button">글쓰기</button>
+									</span>
+									
+								</div>
+							</div>
 						</form>
 					</div>
 				</div>
