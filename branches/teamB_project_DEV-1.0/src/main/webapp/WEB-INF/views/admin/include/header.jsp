@@ -317,15 +317,17 @@
             <li class="header">MAIN NAVIGATION</li>
             <li class="treeview">
               <a href="#">
-                <i class="fa fa-dashboard"></i> <span>회원 관리</span> <i class="fa fa-angle-left pull-right"></i>
+                <i class="fa fa-files-o"></i>
+                <span>회원관리</span>
+                <span class="label label-primary pull-right">4</span>
               </a>
               <ul class="treeview-menu">
-                <li><a href="/resources/index.html"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
-                <li><a href="/resources/index2.html"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
+                <li><a href="/master"><i class="fa fa-circle-o"></i> 최고권한자</a></li>
+                <li><a href="/management"><i class="fa fa-circle-o"></i> 관리자</a></li>
               </ul>
             </li>
             <li>
-              <a href="../widgets.html">
+              <a href="/management">
                 <i class="fa fa-th"></i> <span>카테고리 관리</span> <small class="label pull-right bg-green">new</small>
               </a>
             </li>
