@@ -40,7 +40,7 @@
 					<div class="col-sm-8">
 						<div class="shop-menu pull-right">
 							<ul class="nav navbar-nav">
-								<li><a href="#"><i class="fa fa-user"></i> 사용자정보</a></li>		
+								<li><a href="/admin"><i class="fa fa-user"></i> 사용자정보</a></li>		
 								<li><a href="/interest_product"><i class="fa fa-shopping-cart"></i> 관심물품</a></li>
 								<li><a href="/login"> 로그인</a></li>
 							</ul>
@@ -67,10 +67,22 @@
 								<li><a href="/" class="active">홈</a></li>
                                 <li><a href="">공지사항</a></li>
 								<li class="dropdown"><a href="#">카테고리 펼쳐보기<i class="fa fa-angle-down"></i></a>
-                                    <ul role="menu" class="sub-menu">
-                                        <li><a href="/shop">태블릿,모바일</a></li>
-										<li><a href="/shop">생활,가전제품</a></li> 
-										<li><a href="/shop">컴퓨터, 노트북</a></li> 
+                                    <ul role="menu" class="sub-menu">                      
+                                         <li><a href="/shop">디지털</a></li>
+                                        	<ul>
+                                        		<li><a href="/product-details">PC</a></li>
+                                        		<li><a href="/product-details">모바일</a></li>
+                                        		<li><a href="/product-details">가전제품</a></li>
+                                        		<li><a href="/product-details">노트북</a></li>
+                                        		<li><a href="/product-details">태블릿</a></li>
+                                        	</ul>
+										<li><a href="/shop">아웃도어</a></li> 
+											<ul>
+                                        		<li><a href="/product-details">골프제품/골프웨어</a></li>
+                                        		<li><a href="/product-details">등산제품/등산웨어</a></li>
+                                        		<li><a href="/product-details">낚시</a></li>
+                                        		<li><a href="/product-details">캠핑</a></li>          
+                                        	</ul> 
                                     </ul>
                                 </li> 
 								<li class="dropdown"><a href="#">게시판<i class="fa fa-angle-down"></i></a>

@@ -281,7 +281,7 @@ a#scrollUp i{
 
 
 .nav.navbar-nav > li:hover > ul.sub-menu{
-  display: block;
+  display: inline;
   -webkit-animation: fadeInUp 400ms;
   -moz-animation: fadeInUp 400ms;
   -ms-animation: fadeInUp 400ms;
@@ -297,12 +297,13 @@ ul.sub-menu {
 	list-style: none;
 	padding: 0;
 	margin: 0;
-	width: 220px;
+	width: 250px;
 	-webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
 	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
 	display: none;
 	z-index: 999;
 }
+
 
 .dropdown ul.sub-menu li .active{
   color: #FDB45E;
@@ -315,7 +316,7 @@ ul.sub-menu {
 }
 
 .navbar-nav li ul.sub-menu li:last-child{
-  padding-bottom: 20px;
+  padding-bottom: 10px;
 }
 
 .navbar-nav li ul.sub-menu li a{
