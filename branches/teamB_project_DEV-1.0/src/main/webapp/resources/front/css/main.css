@@ -1431,7 +1431,7 @@ h2.title {
 #form {
   display: block;
   margin-bottom: 185px;
-  margin-top: 185px;
+  margin-top: 50px;
   overflow: hidden;
 }
 
@@ -2572,4 +2572,10 @@ h2.title {
   color: #FE980F;
 }
 
-
+/*************************
+*******Notice CSS******
+**************************/
+#tNotice {
+	font-size : 30px;
+	color : red;
+}

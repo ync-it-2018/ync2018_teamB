@@ -116,17 +116,15 @@
 				<div class="col-sm-4 col-sm-offset-1">
 					<div class="login-form">
 						<!--login form-->
-						<h2>로그인</h2>
+						<h2>아이디/비밀번호 찾기</h2>
 						<form action="#">
-							<input type="text" placeholder="아이디" /> <input type="password"
-								placeholder="비밀번호" />
+							<input type="text" placeholder="아이디/비밀번호 찾기" />
 							<!--
 							<span>
 								<input type="checkbox" class="checkbox"> 
 								Keep me signed in
 							</span>
 -->
-							<a class="btn btn-default update" href="">로그인</a> 
 							<a class="btn btn-default check_out" href="">아이디/비밀번호 찾기</a>
 
 							<!--  
@@ -138,22 +136,8 @@
 					</div>
 					<!--/login form-->
 				</div>
-				<div class="col-sm-1">
-					<h2 class="or">OR</h2>
-				</div>
-				<div class="col-sm-4">
-					<div class="signup-form">
-						<!--sign up form-->
-						<h2>회원가입</h2>
-						<form action="#">
-							<input type="text" placeholder="아이디" /> <input type="email"
-								placeholder="E-mail 주소" /> <input type="password"
-								placeholder="비밀번호" />
-							<button type="submit" class="btn btn-default">회원가입</button>
-						</form>
-					</div>
-					<!--/sign up form-->
-				</div>
+				
+				
 			</div>
 		</div>
 	</section>
