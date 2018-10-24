@@ -281,7 +281,7 @@ a#scrollUp i{
 
 
 .nav.navbar-nav > li:hover > ul.sub-menu{
-  display: block;
+  display: inline;
   -webkit-animation: fadeInUp 400ms;
   -moz-animation: fadeInUp 400ms;
   -ms-animation: fadeInUp 400ms;
@@ -289,44 +289,50 @@ a#scrollUp i{
   animation: fadeInUp 400ms;
 }
 
+
 ul.sub-menu {
 	position: absolute;
 	top: 30px;
 	left: 0;
-	background: rgba(0, 0, 0, 0.6);
+	background: rgba(0, 0, 0, 1);
 	list-style: none;
 	padding: 0;
 	margin: 0;
-	width: 220px;
+	width: 230px;
 	-webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
 	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
 	display: none;
 	z-index: 999;
+	list-style-type:none;
+	overflow:auto;
 }
-
-.dropdown ul.sub-menu li .active{
+ 
+ 
+ ul.multi-column-dropdown {
+ 	display : inline;
+ }
+.dropdown ul.sub-menu li .active {
   color: #FDB45E;
   padding-left: 0;
 }
 
-
-.navbar-nav li ul.sub-menu li{
+.navbar-nav li ul.sub-menu li {
   padding: 10px 20px 0 ;
 }
 
-.navbar-nav li ul.sub-menu li:last-child{
-  padding-bottom: 20px;
+.navbar-nav li ul.sub-menu li:last-child {
+  padding-bottom: 10px;
 }
 
-.navbar-nav li ul.sub-menu li a{
+.navbar-nav li ul.sub-menu li a {
   color: #fff;
 }
 
-.navbar-nav li ul.sub-menu li a:hover{
+.navbar-nav li ul.sub-menu li a:hover {
     color: #FDB45E;
 }
 
-.fa-angle-down{
+.fa-angle-down {
   padding-left: 5px; 
 }
 
@@ -1431,7 +1437,7 @@ h2.title {
 #form {
   display: block;
   margin-bottom: 185px;
-  margin-top: 185px;
+  margin-top: 50px;
   overflow: hidden;
 }
 
@@ -2570,6 +2576,14 @@ h2.title {
 
 .contact-info .social-networks ul li a:hover{
   color: #FE980F;
+}
+
+/*************************
+*******Notice CSS******
+**************************/
+#tNotice {
+	font-size : 30px;
+	color : red;
 }
 
 

@@ -10,15 +10,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-public class shopController {
-	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
+public class buystatController {
+private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 	
-	@RequestMapping(value = "/shop", method = RequestMethod.GET)
-	public String login(Locale locale, Model model) {
+	@RequestMapping(value = "/buystat", method = RequestMethod.GET)
+	public String buystat(Locale locale, Model model) {
 
-		logger.info("teamB log shop 페이지", locale);
+		logger.info("teamB log buystat 페이지", locale);
 
-		return "front/shop";
+		return "admin/buystat";
 	}
 	
 }

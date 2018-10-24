@@ -1,41 +1,49 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>Login | E-Shopper</title>
-    <link href="/resources/front/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/resources/front/css/font-awesome.min.css" rel="stylesheet">
-    <link href="/resources/front/css/prettyPhoto.css" rel="stylesheet">
-    <link href="/resources/front/css/price-range.css" rel="stylesheet">
-    <link href="/resources/front/css/animate.css" rel="stylesheet">
-	<link href="/resources/front/css/main.css" rel="stylesheet">
-	<link href="/resources/front/css/responsive.css" rel="stylesheet">
-    <!--[if lt IE 9]>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+<title>Login | E-Shopper</title>
+<link href="/resources/front/css/bootstrap.min.css" rel="stylesheet">
+<link href="/resources/front/css/font-awesome.min.css" rel="stylesheet">
+<link href="/resources/front/css/prettyPhoto.css" rel="stylesheet">
+<link href="/resources/front/css/price-range.css" rel="stylesheet">
+<link href="/resources/front/css/animate.css" rel="stylesheet">
+<link href="/resources/front/css/main.css" rel="stylesheet">
+<link href="/resources/front/css/responsive.css" rel="stylesheet">
+<!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
-    <![endif]-->       
-    <link rel="shortcut icon" href="images/ico/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/resources/front/images/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/resources/front/images/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/resources/front/images/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="/resources/front/images/ico/apple-touch-icon-57-precomposed.png">
-</head><!--/head-->
+    <![endif]-->
+<link rel="shortcut icon" href="images/ico/favicon.ico">
+<link rel="apple-touch-icon-precomposed" sizes="144x144"
+	href="/resources/front/images/ico/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114"
+	href="/resources/front/images/ico/apple-touch-icon-114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72"
+	href="/resources/front/images/ico/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed"
+	href="/resources/front/images/ico/apple-touch-icon-57-precomposed.png">
+</head>
+<!--/head-->
 
 <body>
-	<header id="header"><!--header-->
+	<header id="header">
+		<!--header-->
 
-		
-		<div class="header-middle"><!--header-middle-->
+
+		<div class="header-middle">
+			<!--header-middle-->
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-4">
 						<div class="logo pull-left">
-							<a href="/"><img src="/resources/front/images/home/logo.png" alt="" /></a>
+							<a href="/"><img src="/resources/front/images/home/logo.png"
+								alt="" /></a>
 						</div>
 
 					</div>
@@ -43,105 +51,145 @@
 						<div class="shop-menu pull-right">
 							<ul class="nav navbar-nav">
 								<li><a href="#"><i class="fa fa-user"></i> 사용자정보</a></li>		
-								<li><a href="/cart"><i class="fa fa-shopping-cart"></i> 장바구니</a></li>
-								<li><a href="/login"><i class="fa fa-lock"></i> 로그인</a></li>
+								<li><a href="/interest_product"><i class="fa fa-shopping-cart"></i> 관심물품</a></li>
+								<li><a href="/login"> 로그인</a></li>
 							</ul>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div><!--/header-middle-->
-	
-		<div class="header-bottom"><!--header-bottom-->
+		</div>
+		<!--/header-middle-->
+
+		<div class="header-bottom">
+			<!--header-bottom-->
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-9">
 						<div class="navbar-header">
-							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-								<span class="sr-only">Toggle navigation</span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
+							<button type="button" class="navbar-toggle"
+								data-toggle="collapse" data-target=".navbar-collapse">
+								<span class="sr-only">Toggle navigation</span> <span
+									class="icon-bar"></span> <span class="icon-bar"></span> <span
+									class="icon-bar"></span>
 							</button>
 						</div>
 						<div class="mainmenu pull-left">
 							<ul class="nav navbar-nav collapse navbar-collapse">
 								<li><a href="/" class="active">홈</a></li>
-                                <li><a href="">공지사항</a></li>
-								<li class="dropdown"><a href="#">카테고리 펼쳐보기<i class="fa fa-angle-down"></i></a>
-                                    <ul role="menu" class="sub-menu">
-                                        <li><a href="/shop">태블릿,모바일</a></li>
-										<li><a href="/product-details">생활,가전제품</a></li> 
-										<li><a href="/checkout">컴퓨터, 노트북</a></li> 
+								<li><a href="">공지사항</a></li>
+							<li class="dropdown"><a href="#">카테고리 펼쳐보기<i class="fa fa-angle-down"></i></a>
+                                    <ul role="menu" class="sub-menu">                      
+                                         <li><a href="/shop">디지털</a></li>
+                                        	<ul>
+                                        		<li><a href="/product-details">PC</a></li>
+                                        		<li><a href="/product-details">모바일</a></li>
+                                        		<li><a href="/product-details">가전제품</a></li>
+                                        		<li><a href="/product-details">노트북</a></li>
+                                        		<li><a href="/product-details">태블릿</a></li>
+                                        	</ul>
+										<li><a href="/shop">아웃도어</a></li> 
+											<ul>
+                                        		<li><a href="/product-details">골프제품/골프웨어</a></li>
+                                        		<li><a href="/product-details">등산제품/등산웨어</a></li>
+                                        		<li><a href="/product-details">낚시</a></li>
+                                        		<li><a href="/product-details">캠핑</a></li>          
+                                        	</ul> 
+                                        <li><a href="/shop">테스트</a></li> 
+											<ul>
+                                        		<li><a href="/product-details">테스트</a></li>
+                                        		<li><a href="/product-details">테스트</a></li>
+                                        		<li><a href="/product-details">테스트</a></li>
+                                        		<li><a href="/product-details">테스트</a></li>          
+                                        	</ul> 
                                     </ul>
                                 </li> 
-								<li class="dropdown"><a href="#">게시판<i class="fa fa-angle-down"></i></a>
-                                    <ul role="menu" class="sub-menu">
-                                        <li><a href="/blog">자유게시판</a></li>
+								<li class="dropdown"><a href="#">게시판<i
+										class="fa fa-angle-down"></i></a>
+									<ul role="menu" class="sub-menu">
+										<li><a href="/blog">자유게시판</a></li>
 										<li><a href="/blog-single">건의게시판</a></li>
-                                    </ul>
-                                </li> 
+									</ul></li>
 								<li><a href="/404">상품사용후기</a></li>
-								
+
 							</ul>
 						</div>
 					</div>
 					<div class="col-sm-3">
 						<div class="search_box pull-right">
-							<input type="text" placeholder="검색"/>
+							<input type="text" placeholder="검색" />
 						</div>
 					</div>
 				</div>
 			</div>
-		</div><!--/header-bottom-->
-	</header><!--/header-->
-	
-	<section id="form"><!--form-->
+		</div>
+		<!--/header-bottom-->
+	</header>
+	<!--/header-->
+
+	<section id="form">
+		<!--form-->
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-4 col-sm-offset-1">
-					<div class="login-form"><!--login form-->
+					<div class="login-form">
+						<!--login form-->
 						<h2>로그인</h2>
 						<form action="#">
-							<input type="text" placeholder="아이디" />
-							<input type="password" placeholder="비밀번호" />
-<!--
+							<input type="text" placeholder="아이디" /> <input type="password"
+								placeholder="비밀번호" />
+							<!--
 							<span>
 								<input type="checkbox" class="checkbox"> 
 								Keep me signed in
 							</span>
 -->
+							<a class="btn btn-default update" href="">로그인</a> 
+							<a class="btn btn-default check_out" href="/login_find">아이디/비밀번호 찾기</a>
+
+							<!--  
 							<button type="submit" class="btn btn-default">로그인</button>
+							<button type="submit" class="btn btn-default"
+								style="position: absolute; right: 50;">아이디/비밀번호 찾기</button>
+								-->
 						</form>
-					</div><!--/login form-->
+					</div>
+					<!--/login form-->
 				</div>
 				<div class="col-sm-1">
 					<h2 class="or">OR</h2>
 				</div>
 				<div class="col-sm-4">
-					<div class="signup-form"><!--sign up form-->
+					<div class="signup-form">
+						<!--sign up form-->
 						<h2>회원가입</h2>
 						<form action="#">
-							<input type="text" placeholder="아이디"/>
-							<input type="email" placeholder="E-mail 주소"/>
-							<input type="password" placeholder="비밀번호"/>
+							<input type="text" placeholder="아이디" /> <input type="email"
+								placeholder="E-mail 주소" /> <input type="password"
+								placeholder="비밀번호" />
 							<button type="submit" class="btn btn-default">회원가입</button>
 						</form>
-					</div><!--/sign up form-->
+					</div>
+					<!--/sign up form-->
 				</div>
 			</div>
 		</div>
-	</section><!--/form-->
-	
-	
-	<footer id="footer"><!--Footer-->
+	</section>
+	<!--/form-->
+
+
+	<footer id="footer">
+		<!--Footer-->
 		<div class="footer-top">
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-2">
 						<div class="companyinfo">
-							<h2><span>e</span>-shopper</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,sed do eiusmod tempor</p>
+							<h2>
+								<span>e</span>-shopper
+							</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing
+								elit,sed do eiusmod tempor</p>
 						</div>
 					</div>
 					<div class="col-sm-7">
@@ -159,7 +207,7 @@
 								<h2>24 DEC 2014</h2>
 							</div>
 						</div>
-						
+
 						<div class="col-sm-3">
 							<div class="video-gallery text-center">
 								<a href="#">
@@ -174,7 +222,7 @@
 								<h2>24 DEC 2014</h2>
 							</div>
 						</div>
-						
+
 						<div class="col-sm-3">
 							<div class="video-gallery text-center">
 								<a href="#">
@@ -189,7 +237,7 @@
 								<h2>24 DEC 2014</h2>
 							</div>
 						</div>
-						
+
 						<div class="col-sm-3">
 							<div class="video-gallery text-center">
 								<a href="#">
@@ -214,7 +262,7 @@
 				</div>
 			</div>
 		</div>
-		
+
 		<div class="footer-widget">
 			<div class="container">
 				<div class="row">
@@ -271,34 +319,44 @@
 							<h2>About Shopper</h2>
 							<form action="#" class="searchform">
 								<input type="text" placeholder="Your email address" />
-								<button type="submit" class="btn btn-default"><i class="fa fa-arrow-circle-o-right"></i></button>
-								<p>Get the most recent updates from <br />our site and be updated your self...</p>
+								<button type="submit" class="btn btn-default">
+									<i class="fa fa-arrow-circle-o-right"></i>
+								</button>
+								<p>
+									Get the most recent updates from <br />our site and be updated
+									your self...
+								</p>
 							</form>
 						</div>
 					</div>
-					
+
 				</div>
 			</div>
 		</div>
-		
+
 		<div class="footer-bottom">
 			<div class="container">
 				<div class="row">
-					<p class="pull-left">Copyright © 2013 E-SHOPPER Inc. All rights reserved.</p>
-					<p class="pull-right">Designed by <span><a target="_blank" href="http://www.themeum.com">Themeum</a></span></p>
+					<p class="pull-left">Copyright © 2013 E-SHOPPER Inc. All rights
+						reserved.</p>
+					<p class="pull-right">
+						Designed by <span><a target="_blank"
+							href="http://www.themeum.com">Themeum</a></span>
+					</p>
 				</div>
 			</div>
 		</div>
-		
-	</footer><!--/Footer-->
-	
 
-  
-    <script src="/resources/js/jquery.js"></script>
+	</footer>
+	<!--/Footer-->
+
+
+
+	<script src="/resources/js/jquery.js"></script>
 	<script src="/resources/js/price-range.js"></script>
-    <script src="/resources/js/jquery.scrollUp.min.js"></script>
+	<script src="/resources/js/jquery.scrollUp.min.js"></script>
 	<script src="/resources/js/bootstrap.min.js"></script>
-    <script src="/resources/js/jquery.prettyPhoto.js"></script>
-    <script src="/resources/js/main.js"></script>
+	<script src="/resources/js/jquery.prettyPhoto.js"></script>
+	<script src="/resources/js/main.js"></script>
 </body>
 </html>
