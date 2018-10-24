@@ -74,10 +74,30 @@
 								<li><a href="/" class="active">홈</a></li>
                                 <li><a href="">공지사항</a></li>
 								<li class="dropdown"><a href="#">카테고리 펼쳐보기<i class="fa fa-angle-down"></i></a>
-                                    <ul role="menu" class="sub-menu">
-                                        <li><a href="/shop">태블릿,모바일</a></li>
-										<li><a href="/product-details">생활,가전제품</a></li> 
-										<li><a href="/checkout">컴퓨터, 노트북</a></li> 
+                                    <ul role="menu" class="sub-menu">                      
+                                         <li><h4 style="color:white"><strong>디지털</strong></h4></li>
+                                         
+                                        	<ul>
+                                        		<li><a href="/shop">PC</a></li>
+                                        		<li><a href="/shop">모바일</a></li>
+                                        		<li><a href="/shop">가전제품</a></li>
+                                        		<li><a href="/shop">노트북</a></li>
+                                        		<li><a href="/shop">태블릿</a></li>
+                                        	</ul>
+										<li><h4 style="color:white"><strong>아웃도어</strong></h4></li> 
+											<ul>
+                                        		<li><a href="/shop">골프제품/골프웨어</a></li>
+                                        		<li><a href="/shop">등산제품/등산웨어</a></li>
+                                        		<li><a href="/shop">낚시</a></li>
+                                        		<li><a href="/shop">캠핑</a></li>          
+                                        	</ul> 
+                                        <li><h4 style="color:white"><strong>테스트</strong></h4></li> 
+											<ul>
+                                        		<li><a href="/shop">테스트</a></li>
+                                        		<li><a href="/shop">테스트</a></li>
+                                        		<li><a href="/shop">테스트</a></li>
+                                        		<li><a href="/shop">테스트</a></li>          
+                                        	</ul> 
                                     </ul>
                                 </li> 
 								<li class="dropdown"><a href="#">게시판<i class="fa fa-angle-down"></i></a>

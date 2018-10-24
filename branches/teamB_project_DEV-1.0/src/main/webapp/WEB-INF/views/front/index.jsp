@@ -68,27 +68,28 @@
                                 <li><a href="">공지사항</a></li>
 								<li class="dropdown"><a href="#">카테고리 펼쳐보기<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">                      
-                                         <li><a href="/shop">디지털</a></li>
+                                         <li><h4 style="color:white"><strong>디지털</strong></h4></li>
+                                         
                                         	<ul>
-                                        		<li><a href="/product-details">PC</a></li>
-                                        		<li><a href="/product-details">모바일</a></li>
-                                        		<li><a href="/product-details">가전제품</a></li>
-                                        		<li><a href="/product-details">노트북</a></li>
-                                        		<li><a href="/product-details">태블릿</a></li>
+                                        		<li><a href="/shop">PC</a></li>
+                                        		<li><a href="/shop">모바일</a></li>
+                                        		<li><a href="/shop">가전제품</a></li>
+                                        		<li><a href="/shop">노트북</a></li>
+                                        		<li><a href="/shop">태블릿</a></li>
                                         	</ul>
-										<li><a href="/shop">아웃도어</a></li> 
+										<li><h4 style="color:white"><strong>아웃도어</strong></h4></li> 
 											<ul>
-                                        		<li><a href="/product-details">골프제품/골프웨어</a></li>
-                                        		<li><a href="/product-details">등산제품/등산웨어</a></li>
-                                        		<li><a href="/product-details">낚시</a></li>
-                                        		<li><a href="/product-details">캠핑</a></li>          
+                                        		<li><a href="/shop">골프제품/골프웨어</a></li>
+                                        		<li><a href="/shop">등산제품/등산웨어</a></li>
+                                        		<li><a href="/shop">낚시</a></li>
+                                        		<li><a href="/shop">캠핑</a></li>          
                                         	</ul> 
-                                        <li><a href="/shop">테스트</a></li> 
+                                        <li><h4 style="color:white"><strong>테스트</strong></h4></li> 
 											<ul>
-                                        		<li><a href="/product-details">테스트</a></li>
-                                        		<li><a href="/product-details">테스트</a></li>
-                                        		<li><a href="/product-details">테스트</a></li>
-                                        		<li><a href="/product-details">테스트</a></li>          
+                                        		<li><a href="/shop">테스트</a></li>
+                                        		<li><a href="/shop">테스트</a></li>
+                                        		<li><a href="/shop">테스트</a></li>
+                                        		<li><a href="/shop">테스트</a></li>          
                                         	</ul> 
                                     </ul>
                                 </li> 
@@ -268,10 +269,10 @@
 							<div class="product-image-wrapper">
 								<div class="single-products">
 										<div class="productinfo text-center">
-											<img src="/resources/front/images/home/product1.jpg" alt="" />
+											<a href="/product-details"><img src="/resources/front/images/home/product1.jpg" alt=""></a>
 											<h2>1500만원</h2>
 											<p>마리아</p>
-											<a href="/product-details" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>상세화면</a>
+											
 										</div>
 								</div>
 							</div>
@@ -280,10 +281,10 @@
 							<div class="product-image-wrapper">
 								<div class="single-products">
 										<div class="productinfo text-center">
-											<img src="/resources/front/images/home/product2.jpg" alt="" />
+											<a href="/product-details"><img src="/resources/front/images/home/product2.jpg" alt=""></a>
 											<h2>1700만원</h2>
 											<p>제임스</p>
-											<a href="/product-details" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>상세화면</a>
+											
 										</div>
 								</div>
 							</div>
@@ -292,10 +293,10 @@
 							<div class="product-image-wrapper">
 								<div class="single-products">
 										<div class="productinfo text-center">
-											<img src="/resources/front/images/home/product3.jpg" alt="" />
+											<a href="/product-details"><img src="/resources/front/images/home/product3.jpg" alt=""></a>
 											<h2>2100만원</h2>
 											<p>줄리엣</p>
-											<a href="/product-details" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>상세화면</a>
+											
 										</div>
 								</div>
 							</div>
@@ -307,10 +308,10 @@
 							<div class="product-image-wrapper">
 								<div class="single-products">
 										<div class="productinfo text-center">
-											<img src="/resources/front/images/home/product4.jpg" alt="" />
+											<a href="/product-details"><img src="/resources/front/images/home/product4.jpg" alt=""></a>
 											<h2>1900만원</h2>
 											<p>크리스티나</p>
-											<a href="/product-details" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>상세화면</a>
+											
 										</div>
 								</div>
 							</div>
@@ -319,10 +320,10 @@
 							<div class="product-image-wrapper">
 								<div class="single-products">
 										<div class="productinfo text-center">
-											<img src="/resources/front/images/home/product5.jpg" alt="" />
+											<a href="/product-details"><img src="/resources/front/images/home/product5.jpg" alt=""></a>
 											<h2>1600만원</h2>
 											<p>미셸</p>
-											<a href="/product-details" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>상세화면</a>
+											
 										</div>
 								</div>
 							</div>
@@ -331,10 +332,10 @@
 							<div class="product-image-wrapper">
 								<div class="single-products">
 										<div class="productinfo text-center">
-											<img src="/resources/front/images/home/product6.jpg" alt="" />
+											<a href="/product-details"><img src="/resources/front/images/home/product6.jpg" alt=""></a>
 											<h2>500원</h2>
 											<p>드록바</p>
-											<a href="/product-details" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>상세화면</a>
+											
 										</div>
 								</div>
 							</div>
@@ -346,10 +347,10 @@
 							<div class="product-image-wrapper">
 								<div class="single-products">
 										<div class="productinfo text-center">
-											<img src="/resources/front/images/home/product1.jpg" alt="" />
+											<a href="/product-details"><img src="/resources/front/images/home/product1.jpg" alt=""></a>
 											<h2>700원</h2>
 											<p>이건영</p>
-											<a href="/product-details" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>상세화면</a>
+											
 										</div>
 								</div>
 							</div>
@@ -358,10 +359,10 @@
 							<div class="product-image-wrapper">
 								<div class="single-products">
 										<div class="productinfo text-center">
-											<img src="/resources/front/images/home/product3.jpg" alt="" />
+											<a href="/product-details"><img src="/resources/front/images/home/product2.jpg" alt=""></a>
 											<h2>500원</h2>
 											<p>강세훈</p>
-											<a href="/product-details" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>상세화면</a>
+											
 										</div>
 								</div>
 							</div>
@@ -370,10 +371,10 @@
 							<div class="product-image-wrapper">
 								<div class="single-products">
 										<div class="productinfo text-center">
-											<img src="/resources/front/images/home/product2.jpg" alt="" />
+											<a href="/product-details"><img src="/resources/front/images/home/product3.jpg" alt=""></a>
 											<h2>200원</h2>
 											<p>이정욱</p>
-											<a href="/product-details" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>상세화면</a>
+											
 										</div>
 								</div>
 							</div>

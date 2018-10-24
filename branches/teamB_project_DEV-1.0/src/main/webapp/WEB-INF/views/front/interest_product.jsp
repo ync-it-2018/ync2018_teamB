@@ -76,27 +76,28 @@
 								<li><a href="">공지사항</a></li>
 								<li class="dropdown"><a href="#">카테고리 펼쳐보기<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">                      
-                                         <li><a href="/shop">디지털</a></li>
+                                         <li><h4 style="color:white"><strong>디지털</strong></h4></li>
+                                         
                                         	<ul>
-                                        		<li><a href="/product-details">PC</a></li>
-                                        		<li><a href="/product-details">모바일</a></li>
-                                        		<li><a href="/product-details">가전제품</a></li>
-                                        		<li><a href="/product-details">노트북</a></li>
-                                        		<li><a href="/product-details">태블릿</a></li>
+                                        		<li><a href="/shop">PC</a></li>
+                                        		<li><a href="/shop">모바일</a></li>
+                                        		<li><a href="/shop">가전제품</a></li>
+                                        		<li><a href="/shop">노트북</a></li>
+                                        		<li><a href="/shop">태블릿</a></li>
                                         	</ul>
-										<li><a href="/shop">아웃도어</a></li> 
+										<li><h4 style="color:white"><strong>아웃도어</strong></h4></li> 
 											<ul>
-                                        		<li><a href="/product-details">골프제품/골프웨어</a></li>
-                                        		<li><a href="/product-details">등산제품/등산웨어</a></li>
-                                        		<li><a href="/product-details">낚시</a></li>
-                                        		<li><a href="/product-details">캠핑</a></li>          
+                                        		<li><a href="/shop">골프제품/골프웨어</a></li>
+                                        		<li><a href="/shop">등산제품/등산웨어</a></li>
+                                        		<li><a href="/shop">낚시</a></li>
+                                        		<li><a href="/shop">캠핑</a></li>          
                                         	</ul> 
-                                        <li><a href="/shop">테스트</a></li> 
+                                        <li><h4 style="color:white"><strong>테스트</strong></h4></li> 
 											<ul>
-                                        		<li><a href="/product-details">테스트</a></li>
-                                        		<li><a href="/product-details">테스트</a></li>
-                                        		<li><a href="/product-details">테스트</a></li>
-                                        		<li><a href="/product-details">테스트</a></li>          
+                                        		<li><a href="/shop">테스트</a></li>
+                                        		<li><a href="/shop">테스트</a></li>
+                                        		<li><a href="/shop">테스트</a></li>
+                                        		<li><a href="/shop">테스트</a></li>          
                                         	</ul> 
                                     </ul>
                                 </li> 
@@ -130,107 +131,103 @@
 				<table class="table table-condensed">
 					<thead>
 						<tr class="cart_menu">
-							<td class="image">사진</td>
+							<td class="image"><h3>나의 관심상품</h3></td>
 							<!-- image -->
-							<td class="product">제품명</td>
-							<td class="description">제품설명</td>
-							<td class="register">제품 등록일자 <br>상품 사용후기 건수
-							</td>
-							<td class="price">가격</td>
-							<td calss="delete">삭제</td>
+							<td class="product"></td>
+							<td class="description"></td>
+							<td class="register"></td>
+							<td class="price"></td>
+							<td calss="delete"></td>
 
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
-							<td class="interest_product_image"><a href=""><img
+							<td class="interest_product_image"><a href="/product-details"><img
 									src="/resources/front/images/cart/one.png" alt=""></a></td>
 
-							<td class="interest_product">
+							<td class="interest_product"><a href="/product-details">
 								<h4>제품명</h4>
-
+							</a>
 							</td>
 
-							<td class="interest_prdouct_description">
+							<td class="interest_prdouct_description"><a href="/product-details">
 								<h4>제품설명</h4>
 								<p>제품부과 설명</p>
+								</a>
 							</td>
 
-							<td class="interest_product_register">
+							<td class="interest_product_register"><a href="/product-details">
 								<p class="product_register_date">
 									2018-10-17<br>5건
-								</p>
+								</p></a>
 							</td>
 
-							<td class="interest_product_price">
+							<td class="interest_product_price"><a href="/product-details">
 								<h4>$58</h4>
+								</a>
 							</td>
 
 							<td class="interest_product_delete"><a
-								class="interest_product_price_delete" href=""><i
-									class="fa fa-times"></i></a></td>
+								class="interest_product_price_delete" href="/product-details"><i class="fa fa-times"></i></a></td>
 						</tr>
-
-
-
-
 						<tr>
-							<td class="interest_product_image"><a href=""><img
+							<td class="interest_product_image"><a href="/product-details"><img
 									src="/resources/front/images/cart/two.png" alt=""></a></td>
 
-							<td class="interest_product">
+							<td class="interest_product"><a href="/product-details">
 								<h4>제품명</h4>
-
+							</a>
 							</td>
 
-							<td class="interest_prdouct_description">
+							<td class="interest_prdouct_description"><a href="/product-details">
 								<h4>제품설명</h4>
 								<p>제품부과 설명</p>
+								</a>
 							</td>
 
-							<td class="interest_product_register">
+							<td class="interest_product_register"><a href="/product-details">
 								<p class="product_register_date">
 									2018-10-17<br>5건
-								</p>
+								</p></a>
 							</td>
 
-							<td class="interest_product_price">
+							<td class="interest_product_price"><a href="/product-details">
 								<h4>$58</h4>
+								</a>
 							</td>
 
 							<td class="interest_product_delete"><a
-								class="interest_product_price_delete" href=""><i
-									class="fa fa-times"></i></a></td>
+								class="interest_product_price_delete" href="/product-details"><i class="fa fa-times"></i></a></td>
 						</tr>
-
-
-						<tr>
-							<td class="interest_product_image"><a href=""><img
+												<tr>
+							<td class="interest_product_image"><a href="/product-details"><img
 									src="/resources/front/images/cart/three.png" alt=""></a></td>
 
-							<td class="interest_product">
+							<td class="interest_product"><a href="/product-details">
 								<h4>제품명</h4>
-
+							</a>
 							</td>
 
-							<td class="interest_prdouct_description">
+							<td class="interest_prdouct_description"><a href="/product-details">
 								<h4>제품설명</h4>
 								<p>제품부과 설명</p>
+								</a>
 							</td>
 
-							<td class="interest_product_register">
+							<td class="interest_product_register"><a href="/product-details">
 								<p class="product_register_date">
 									2018-10-17<br>5건
-								</p>
+								</p></a>
 							</td>
 
-							<td class="interest_product_price">
+							<td class="interest_product_price"><a href="/product-details">
 								<h4>$58</h4>
+								</a>
 							</td>
 
 							<td class="interest_product_delete"><a
-								class="interest_product_price_delete" href=""><i
-									class="fa fa-times"></i></a></td>
+								class="interest_product_price_delete" href="/product-details"><i class="fa fa-times"></i></a></td>
 						</tr>
 
 					</tbody>
@@ -244,8 +241,8 @@
 
 
 
-	<footer id="footer">
-		<!--Footer-->
+<!-- 	<footer id="footer">
+		Footer
 		<div class="footer-widget">
 			<div class="container">
 				<div class="row">
@@ -331,7 +328,7 @@
 		</div>
 
 	</footer>
-	<!--/Footer-->
+	/Footer -->
 
 </body>
 </html>
