@@ -132,8 +132,8 @@
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="/reviewList"><i class="fa fa-circle-o"></i> 사용후기 목록</a></li>
-                <li><a href="/review"><i class="fa fa-circle-o"></i> 사용후기 조회/수정</a></li>
+                <li><a href="/reviewsearch"><i class="fa fa-circle-o"></i> 사용후기 목록</a></li>
+                <li><a href="/reviewment"><i class="fa fa-circle-o"></i> 사용후기 조회/수정</a></li>
               </ul>
             </li>
             <li>
