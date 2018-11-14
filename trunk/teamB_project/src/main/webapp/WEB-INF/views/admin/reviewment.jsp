@@ -31,7 +31,7 @@
 							<td>Sweetmelody</td>
 							<td>2018-04-18</td>
 							<td>★</td>
-							<td><button ><a href="/reviewResult">수정</button><br>
+							<td><button ><a href="/reviewmodify">수정</button><br>
 							<button>삭제</button></td>
 						</tr>
 
