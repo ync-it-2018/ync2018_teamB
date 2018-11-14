@@ -36,9 +36,9 @@
       
       <header class="main-header">
         <!-- Logo -->
-        <a href="/resources/index2.html" class="logo">
+        <a href="/admin" class="logo">
           <!-- mini logo for sidebar mini 50x50 pixels -->
-          <span class="logo-mini"><b>A</b>LT</span>
+          <span class="logo-mini"><b>B</b></span>
           <!-- logo for regular state and mobile devices -->
           <span class="logo-lg"><b>Team-B</b> PROJECT</span>
         </a>
@@ -51,7 +51,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          
+          <a href="/"><img src="/resources/front/images/home/home_icon4.png" width="52px" height="52px" alt="home" align="right"/></a>
         </nav>
       </header>
       <!-- Left side column. contains the logo and sidebar -->
@@ -75,7 +75,7 @@
               </ul>
             </li>
             <li>
-              <a href="/management">
+              <a href="/categoryment">
                 <i class="fa fa-th"></i> <span>카테고리 관리</span>
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
@@ -101,7 +101,6 @@
               </a>
               <ul class="treeview-menu">
                 <li><a href="/eventment"><i class="fa fa-circle-o"></i> 이벤트등록</a></li>
-                <li><a href="../UI/icons.html"><i class="fa fa-circle-o"></i> Icons</a></li>
               </ul>
             </li>
             <li class="treeview">
