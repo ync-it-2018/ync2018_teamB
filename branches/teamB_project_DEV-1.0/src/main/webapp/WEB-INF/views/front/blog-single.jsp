@@ -68,7 +68,7 @@
 						<div class="mainmenu pull-left">
 							<ul class="nav navbar-nav collapse navbar-collapse">
 								<li><a href="/" class="active">홈</a></li>
-                                <li><a href="">공지사항</a></li>
+                                <li><a href="/Notice">공지사항</a></li>
 								<li class="dropdown"><a href="#">카테고리 펼쳐보기<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">                      
                                          <li><h4 style="color:white"><strong>디지털</strong></h4></li>
