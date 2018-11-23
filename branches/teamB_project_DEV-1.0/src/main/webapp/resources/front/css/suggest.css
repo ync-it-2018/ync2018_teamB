@@ -9,7 +9,7 @@
 
 
 /*************************
-*******freeboard CSS******
+*******suggest CSS******
 **************************/
 body {
   font-family: 'Roboto', sans-serif;
@@ -18,8 +18,7 @@ body {
   font-weight:400px;
 }
 
-
-.freeboard > caption {
+.suggest > caption {
   text-align: left;
   font-weight: bold;
   font-size: 200%;
@@ -28,13 +27,13 @@ body {
 }
 	
 	
-table.freeboard {
+table.suggest {
     border-collapse: collapse;
     text-align: left;
     line-height: 1.5;
 
 }
-table.freeboard thead th {
+table.suggest thead th {
 	background-color:#DBA901;
     padding: 10px;
     font-weight: bold;
@@ -43,16 +42,16 @@ table.freeboard thead th {
     border-bottom: 1px solid #F3F781;
     
 }
-table.freeboard tbody th {
-    width: 200px;
+table.suggest tbody th {
+    width: 100px;
     padding: 10px;
     font-weight: bold;
-    vertical-align: top;
     border-bottom: 1px solid #ccc;
     background: #f3f6f7;
+    vertical-align: middle;
     
 }
-table.freeboard td {
+table.suggest td {
     width: 350px;
     padding: 10px;
     vertical-align: top;

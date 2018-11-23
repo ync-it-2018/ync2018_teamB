@@ -102,8 +102,8 @@
                                 </li> 
 								<li class="dropdown"><a href="#">게시판<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
-                                        <li><a href="/blog">자유게시판</a></li>
-										<li><a href="/blog-single">건의게시판</a></li>
+                                        <li><a href="/freeboard">자유게시판</a></li>
+										<li><a href="/suggest">건의게시판</a></li>
                                     </ul>
                                 </li> 
 								<li><a href="/404">상품사용후기</a></li>
@@ -172,6 +172,20 @@
 
 	</section>
 
+	<footer id="footer"><!--Footer-->
+		<div class="footer-bottom">
+			<div class="container">
+				<div class="row">
+					<p class="pull-left">Team-b © 2018-가격비교사이트 Inc. 영남이공대학교.</p>
+					<p class="pull-right">
+						Designed by <span><a target="_blank"
+							href="">이건영</a></span>
+					</p>
+				</div>
+			</div>
+		</div>
+		
+	</footer><!--/Footer-->
 	
 	
 

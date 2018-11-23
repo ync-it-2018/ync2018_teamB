@@ -15,7 +15,7 @@
 <link href="/resources/front/css/animate.css" rel="stylesheet">
 <link href="/resources/front/css/main.css" rel="stylesheet">
 <link href="/resources/front/css/responsive.css" rel="stylesheet">
-<link href="/resources/front/css/freeboard-write.css?after" rel="stylesheet">
+<link href="/resources/front/css/suggest.css?after" rel="stylesheet">
 <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
@@ -143,13 +143,13 @@
 				<div class="tab-pane fade active in" id="reviews">
 					<div class="col-sm-12">
 						<form action="#">
-							<table class="freeboard">
-								<Caption>자유게시판 글쓰기</Caption>
+							<table class="suggest" style="width: 1157px;">
+								<Caption>건의게시판 글보기</Caption>
 								<tbody>
 									<tr>
 										<th>제목</th>
 										<td><input type="text"
-											style="width: 1004px; height: 30px;"
+											style="width: 1004px; height: 30px; float: left;"
 											placeholder="제목을 입력 하세요."></td>
 									</tr>
 									<tr>
@@ -158,7 +158,12 @@
 									</tr>
 								</tbody>
 							</table>
-								<button class="write" type="button" style="margin-left: 1000px; margin-top:10px;" >글쓰기</button>		
+							<div style="margin-left: 950px;">
+								<a class="btn btn-default update" href="">수정</a> 
+							<a class="btn btn-default check_out" href="">삭제</a>
+							
+							</div>
+										
 						</form>
 					</div>
 				</div>
@@ -169,7 +174,8 @@
 
 
 	</section>
-
+	
+	
 	<footer id="footer"><!--Footer-->
 		<div class="footer-bottom">
 			<div class="container">
