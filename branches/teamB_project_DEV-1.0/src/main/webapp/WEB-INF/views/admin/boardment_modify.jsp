@@ -11,38 +11,34 @@
 		<!-- left column -->
 		<div class="col-md-12">
 			<!-- general form elements -->
+
 			<div class="box">
-				<div class="box-header with-border">				
+				<div class="box-header with-border">
 					<table class="table table-bordered">
 						<tr>
-							<td><button>대분류</button></td>
-							<td><button>중분류</button></td>
-							<td><button>소분류</button></td>
-							<td><button>세분류</button></td>
+							<td>글쓰기</td>
+							<td>
+							<input type="radio" name="chk_info" value="HTML">등록순
+							<input type="radio" name="chk_info" value="CSS">작성순</td>
 						</tr>
 						<tr>
-							<td>컴퓨터/노트북</td>
-							<td>PC주요부품</td>
-							<td>CPU</td>
-							<td>코어</td>
+							<td>댓글 기능</td>
+							<td>
+							<input type="radio" name="chk_info2" value="HTML">사용
+							<input type="radio" name="chk_info2" value="CSS">사용안함</td>
 						</tr>
 						<tr>
-							<td><button>추가</button></td>
-							<td><button>추가</button></td>
-							<td>메인보드</td>
-							<td>하드코어</td>
+							<td>비밀글 기능</td>
+							<td>
+							<input type="radio" name="chk_info3" value="HTML">사용
+							<input type="radio" name="chk_info3" value="CSS">사용안함</td>
 						</tr>
 						<tr>
-							<td></td>
-							<td></td>
-							<td>메모리</td>
-							<td>입력</td>
-						</tr>
-						<tr>
-							<td></td>
-							<td></td>
-							<td><button>추가</button></td>
-							<td><button>추가</button></td>
+							<td>표시여부</td>
+							<td>
+							<input type="radio" name="chk_info4" value="HTML">표시
+							<input type="radio" name="chk_info4" value="CSS">숨김
+							</td>
 						</tr>
 					</table>
 				</div>

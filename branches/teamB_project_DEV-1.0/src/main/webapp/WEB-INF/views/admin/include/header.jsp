@@ -81,17 +81,11 @@
               </a>
             </li>
             <li class="treeview">
-              <a href="#">
+              <a href="/boardment">
                 <i class="fa fa-files-o"></i>
                 <span>게시판 관리</span>
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
-              <ul class="treeview-menu">
-                <li><a href="../layout/top-nav.html"><i class="fa fa-circle-o"></i> Top Navigation</a></li>
-                <li><a href="../layout/boxed.html"><i class="fa fa-circle-o"></i> Boxed</a></li>
-                <li><a href="../layout/fixed.html"><i class="fa fa-circle-o"></i> Fixed</a></li>
-                <li><a href="../layout/collapsed-sidebar.html"><i class="fa fa-circle-o"></i> Collapsed Sidebar</a></li>
-              </ul>
             </li>
             <li class="treeview">
               <a href="#">
