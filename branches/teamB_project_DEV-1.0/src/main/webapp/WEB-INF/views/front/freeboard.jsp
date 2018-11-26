@@ -140,20 +140,20 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>테스트1</td>
+										<td><a href="/freeboard_view">테스트1</a></td>
 										<td>이정욱</td>
 										<td>2018-10-21</td>
 										<td>5</td>
 										
 									</tr>
 									<tr>
-										<td>테스트1</td>
+										<td><a href="/freeboard_view">테스트2</a></td>
 										<td>강세훈</td>
 										<td>2018-10-18</td>
 										<td>17</td>
 									</tr>
 									<tr>
-										<td>테스트1</td>
+										<td><a href="/freeboard_view">테스트3</a></td>
 										<td>박지훈</td>
 										<td>2018-10-15</td>
 										<td>37</td>
@@ -182,9 +182,9 @@
 								</div>
 								<div class="searchPart">
 									<span class="serachButton">
-										<button class="write" type="button" >글쓰기</button>
+										<button type="button" onclick="location.href='/freeboard_write'">글쓰기</button>
 									</span>
-									
+
 								</div>
 							</div>
 						</form>

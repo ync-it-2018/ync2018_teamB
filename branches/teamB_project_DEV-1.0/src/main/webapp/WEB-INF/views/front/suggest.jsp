@@ -140,32 +140,32 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>테스트1</td>
+										<td><a href="/suggest_view">테스트1</a></td>
 										<td>이정욱</td>
 										<td>2018-10-21</td>
 										<td>51</td>
 										
 									</tr>
 									<tr>
-										<td>테스트1</td>
+										<td><a href="/suggest_view">테스트2</a></td>
 										<td>강세훈</td>
 										<td>2018-10-18</td>
 										<td>171</td>
 									</tr>
 									<tr>
-										<td>테스트1</td>
+										<td><a href="/suggest_view">테스트3</a></td>
 										<td>박지훈</td>
 										<td>2018-10-15</td>
 										<td>89</td>
 									</tr>
 									<tr>
-										<td>테스트1</td>
+										<td><a href="/suggest_view">테스트4</a></td>
 										<td>11</td>
 										<td>2018-10-15</td>
 										<td>20</td>
 									</tr>
 									<tr>
-										<td>테스트1</td>
+										<td><a href="/suggest_view">테스트1</a></td>
 										<td>22</td>
 										<td>2018-10-15</td>
 										<td>89</td>
@@ -194,7 +194,7 @@
 								</div>
 								<div class="searchPart">
 									<span class="serachButton">
-										<button class="write" type="button">글쓰기</button>
+										<button class="write" type="button"  onclick="location.href='/suggest_write'">글쓰기</button>
 									</span>
 									
 								</div>
