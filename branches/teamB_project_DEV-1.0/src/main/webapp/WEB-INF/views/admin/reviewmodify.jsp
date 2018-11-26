@@ -19,8 +19,16 @@ span.star-prototype > * {
     background-position: 0 0;
     max-width:80px; 
 }
-</style>
+/* .text1 {
+	height:100%;
+	width:100%;
+} */
 
+
+</style>
+<script src="/resources/plugins/jQuery/jQuery-2.1.4.min.js"></script>
+
+<script type="text/javascript" src="/resources/plugins/editor/js/HuskyEZCreator.js" charset="utf-8"></script>
 <!-- 깨끗한 빈 페이지. 해당 파일을 복사하여 새로운 admin view page를 만들어가면 됨 -->
 <!-- Main content -->
 
@@ -33,11 +41,10 @@ span.star-prototype > * {
 
 			<div class="box">
 				<div class="box-body">
-					<table border="1" >
+					<table border="1">
 						<tr>
-							<td align="center" width="100px" height="50px">제목</td>
-							<td align="center" width="400px" height="50px">I5 8세대 8400 사용후기</td>
-							
+							<td align="center" width="100px">제목</td>
+							<td><textarea name="title" id="title" rows="1" style="width:100%"></textarea></td>
 						</tr>
 
 						<tr>
@@ -47,15 +54,15 @@ span.star-prototype > * {
 						</tr>
 						<tr>
 							<td align="center" width="100px" height="400px">내용</td>
-							<td><input type="text" width="400px" height="400px" value="내용테스트1"></td>
-							
-						</tr>
+							<td class="text1" width="800px" height="400px">
+							<textarea name="contents" id="contents" required="" rows="20" style="width:100%"></textarea></td>
+						</tr>						
 						<tr align="right" border="0">
-							<td colspan="2"><button>
-							<a href="/reviewment">변경</button>
-							<button>취소</button></td>
+							<td colspan="2">
+							<input type="submit" value="변경" />
+							<button>취소</button>
+							</td>
 						</tr>
-
 					</table>
 					
 				</div>
@@ -63,6 +70,25 @@ span.star-prototype > * {
 		</div>
 		<!--/.col (left) -->
 	</div>
+	<script type="text/javascript">
+		var oEditors = [];
+		nhn.husky.EZCreator.createInIFrame({
+			oAppRef : oEditors,
+			elPlaceHolder : "contents",
+			sSkinURI : "/resources/plugins/editor/SmartEditor2Skin.html",
+			fCreator : "createSEditor2"
+		});
+		function submitContents(elClickedObj) {
+			// 에디터의 내용이 textarea에 적용됩니다.
+			oEditors.getById["contents"].exec("UPDATE_CONTENTS_FIELD", []);
+			// 에디터의 내용에 대한 값 검증은 이곳에서 document.getElementById("ir1").value를 이용해서 처리하면 됩니다.
+
+			try {
+				elClickedObj.form.submit();
+			} catch (e) {
+			}
+		}
+	</script>
 	<!-- /.row -->
 </section>
 <script>
@@ -73,6 +99,7 @@ $.fn.generateStars = function() {
 // 숫자 평점을 별로 변환하도록 호출하는 함수
 $('.star-prototype').generateStars();
 </script>
+
 <!-- /.content -->
 
 
