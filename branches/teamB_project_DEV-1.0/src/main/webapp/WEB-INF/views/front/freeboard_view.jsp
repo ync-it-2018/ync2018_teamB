@@ -119,7 +119,7 @@
 										<li><a href="/blog">자유게시판</a></li>
 										<li><a href="/blog-single">건의게시판</a></li>
 									</ul></li>
-								<li><a href="/404">상품사용후기</a></li>
+								<li><a href="/review">상품사용후기</a></li>
 
 							</ul>
 						</div>

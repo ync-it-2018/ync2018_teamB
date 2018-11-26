@@ -105,7 +105,7 @@
 										<li><a href="/blog-single">건의게시판</a></li>
                                     </ul>
                                 </li> 
-								<li><a href="/404">상품사용후기</a></li>
+								<li><a href="/review">상품사용후기</a></li>
 								
 							</ul>
 						</div>
@@ -173,7 +173,7 @@
 									<span>5000원</span>
 									<button type="button" class="btn btn-fefault cart">
 										<i class="fa fa-shopping-cart"></i>
-										Add to cart
+										관심물품에 추가
 									</button>
 								</span>
 								

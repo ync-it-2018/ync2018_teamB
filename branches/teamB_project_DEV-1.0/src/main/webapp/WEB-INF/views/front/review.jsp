@@ -14,8 +14,8 @@
     <link href="/resources/front/css/price-range.css" rel="stylesheet">
     <link href="/resources/front/css/animate.css" rel="stylesheet">
 	<link href="/resources/front/css/main.css" rel="stylesheet">
-	<link href="/resources/front/css/responsive.css?after" rel="stylesheet">
-	<link href="/resources/front/css/notice-detail.css?after" rel="stylesheet">
+	<link href="/resources/front/css/responsive.css" rel="stylesheet">
+	<link href="/resources/front/css/freeboard.css?after" rel="stylesheet">
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
@@ -74,16 +74,36 @@
 								<li><a href="/" class="active">홈</a></li>
                                 <li><a href="/Notice">공지사항</a></li>
 								<li class="dropdown"><a href="#">카테고리 펼쳐보기<i class="fa fa-angle-down"></i></a>
-                                    <ul role="menu" class="sub-menu">
-                                        <li><a href="/shop">태블릿,모바일</a></li>
-										<li><a href="/product-details">생활,가전제품</a></li> 
-										<li><a href="/checkout">컴퓨터, 노트북</a></li> 
+                                    <ul role="menu" class="sub-menu">                      
+                                         <li><h4 style="color:white"><strong>디지털</strong></h4></li>
+                                         
+                                        	<ul>
+                                        		<li><a href="/shop">PC</a></li>
+                                        		<li><a href="/shop">모바일</a></li>
+                                        		<li><a href="/shop">가전제품</a></li>
+                                        		<li><a href="/shop">노트북</a></li>
+                                        		<li><a href="/shop">태블릿</a></li>
+                                        	</ul>
+										<li><h4 style="color:white"><strong>아웃도어</strong></h4></li> 
+											<ul>
+                                        		<li><a href="/shop">골프제품/골프웨어</a></li>
+                                        		<li><a href="/shop">등산제품/등산웨어</a></li>
+                                        		<li><a href="/shop">낚시</a></li>
+                                        		<li><a href="/shop">캠핑</a></li>          
+                                        	</ul> 
+                                        <li><h4 style="color:white"><strong>테스트</strong></h4></li> 
+											<ul>
+                                        		<li><a href="/shop">테스트</a></li>
+                                        		<li><a href="/shop">테스트</a></li>
+                                        		<li><a href="/shop">테스트</a></li>
+                                        		<li><a href="/shop">테스트</a></li>          
+                                        	</ul> 
                                     </ul>
                                 </li> 
 								<li class="dropdown"><a href="#">게시판<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
-                                        <li><a href="/blog">자유게시판</a></li>
-										<li><a href="/blog-single">건의게시판</a></li>
+                                        <li><a href="/freeboard">자유게시판</a></li>
+										<li><a href="/suggest">건의게시판</a></li>
                                     </ul>
                                 </li> 
 								<li><a href="/review">상품사용후기</a></li>
@@ -101,46 +121,83 @@
 		</div><!--/header-bottom-->
 	</header><!--/header-->
 
-
 	<section>
-		<div class = "detailBody">
-			<table class="table-detail">
-				<Caption>공지사항</Caption>
-				<thead>
-					
-				</thead>
-				<tbody>
-					<tr>
-						<th class="title_name">제목</th>
-						<td class="title">시스템점검</td>
-						<th class="title_name">날짜</th>
-						<td calss="title">2018-10-22</td>
-					</tr>
-					<!-- <tr><td><img src="/resources/front/images/home/logo.png" alt="" /></td></tr> -->
-					<tr>
-						<td colspan="4">공지사항입니다. 00일 00시부터 시스템점검이 있을 예정입니다.</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-		
-	</section>
-
-
-	<footer id="footer"><!--Footer-->
-		<div class="footer-bottom">
-			<div class="container">
-				<div class="row">
-					<p class="pull-left">Team-b © 2018-가격비교사이트 Inc. 영남이공대학교.</p>
-					<p class="pull-right">
-						Designed by <span><a target="_blank"
-							href="">이건영</a></span>
-					</p>
+		<div class="category-tab shop-details-tab">
+			<!--category-tab-->
+			<div class="tab-content">
+				<div class="tab-pane fade active in" id="reviews">
+					<div class="col-sm-12">
+						<form action="#">
+							<table class="freeboard">
+								<Caption>사용후기게시판</Caption>
+								<thead>
+									<tr>
+										<th class="title">제목</th>
+										<th class="writer">글쓴이</th>
+										<th class="date">작성 일</th>
+										<th class="views">조회수</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><a href="/review_view">제목</a></td>
+										<td>글쓴이</td>
+										<td>2018-11-26</td>
+										<td>1</td>
+										
+									</tr>
+									<tr>
+										<td>제목</td>
+										<td>글쓴이</td>
+										<td>2018-11-26</td>
+										<td>2</td>
+									</tr>
+									<tr>
+										<td>제목</td>
+										<td>글쓴이</td>
+										<td>2018-11-26</td>
+										<td>3</td>
+									</tr>
+								</tbody>
+							</table>
+							<div class="pageMove"> ◀   ◀◀     1 2 3 4 5    ▶▶   ▶</div>
+							
+							<div class="searchBody">
+								<div class="searchPart">
+									<select class='searchArea'>
+										<option value='title' selected>제목</option>
+										<option value='cont-title'>제목+내용</option>
+										<option value='cont'>내용</option>
+									</select>
+								</div>
+								<div class="searchPart">
+									<input type="text" class="searchKeyword"
+										placeholder="검색 입력하세요.">
+								</div>
+								<div class="searchPart">
+									<span class="serachButton">
+										<button class="search" type="button">검색</button>
+									</span>
+									
+								</div>
+								<div class="searchPart">
+									<span class="serachButton">
+										<a href="/review_write"><button class="write" type="button" >글쓰기</button></a>
+									</span>
+									
+								</div>
+							</div>
+						</form>
+					</div>
 				</div>
+
 			</div>
 		</div>
-		
-	</footer><!--/Footer-->
+		<!--/category-tab-->
+
+
+	</section>
+
 	
 
   

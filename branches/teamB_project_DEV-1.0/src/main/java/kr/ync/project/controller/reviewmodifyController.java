@@ -10,15 +10,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-public class reviewListController {
+public class reviewmodifyController {
 private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 	
-	@RequestMapping(value = "/reviewsearch", method = RequestMethod.GET)
-	public String admin(Locale locale, Model model) {
+	@RequestMapping(value = "/reviewmodify", method = RequestMethod.GET)
+	public String reviewmodifyController(Locale locale, Model model) {
 
 		logger.info("teamB log 블로그싱글 페이지", locale);
 
-		return "admin/reviewsearch";
+		return "admin/reviewmodify";
 	}
 	
 }

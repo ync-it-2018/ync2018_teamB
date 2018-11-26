@@ -15,7 +15,7 @@
 <link href="/resources/front/css/animate.css" rel="stylesheet">
 <link href="/resources/front/css/main.css" rel="stylesheet">
 <link href="/resources/front/css/responsive.css" rel="stylesheet">
-<link href="/resources/front/css/suggest.css?after" rel="stylesheet">
+<link href="/resources/front/css/freeboard-write.css?after" rel="stylesheet">
 <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
@@ -143,27 +143,30 @@
 				<div class="tab-pane fade active in" id="reviews">
 					<div class="col-sm-12">
 						<form action="#">
-							<table class="suggest" style="width: 1157px;">
-								<Caption>건의게시판 글보기</Caption>
+							<table class="freeboard">
+								<Caption>사용자후기 글 보기</Caption>
 								<tbody>
 									<tr>
 										<th>제목</th>
 										<td><input type="text"
-											style="width: 1004px; height: 30px; float: left;"
+											style="width: 1004px; height: 30px;"
 											placeholder="제목을 입력 하세요."></td>
 									</tr>
 									<tr>
-										<th style="vertical-align:center; padding-top: 100px;">내용</th>
+										<th style="vertical-align: center; padding-top: 100px;">내용</th>
 										<td bgcolor="white"><textarea id="freetext"></textarea></td>
 									</tr>
 								</tbody>
 							</table>
-							<div style="margin-left: 950px;">
+							<div style="margin-left:950px;">
 								<a class="btn btn-default update" href="">수정</a> 
-							<a class="btn btn-default check_out" href="">삭제</a>
-							
+								<a class="btn btn-default update" href="">삭제</a>
 							</div>
-										
+							<h3>댓글</h3>
+							
+							<textarea style="width: 1020px; height: 50px;">테스트</textarea>
+							
+							<a class="btn btn-default update" style="height: 40px;width: 80px;"href="">의견쓰기</a>
 						</form>
 					</div>
 				</div>
@@ -174,8 +177,7 @@
 
 
 	</section>
-	
-	
+
 	<footer id="footer"><!--Footer-->
 		<div class="footer-bottom">
 			<div class="container">

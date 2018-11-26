@@ -40,7 +40,7 @@
 						</tr>
 						<tr align="right" border="0">
 							<td colspan="2"><button>
-							<a href="/review">변경</button>
+							<a href="/reviewment">변경</button>
 							<button>취소</button></td>
 						</tr>
 
