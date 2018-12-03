@@ -98,7 +98,7 @@
                                 </li> 
 								<li class="dropdown"><a href="#">게시판<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
-                                        <li><a href="/blog">자유게시판</a></li>
+                                        <li><a href="/freeboard">자유게시판</a></li>
 										<li><a href="/blog-single">건의게시판</a></li>
                                     </ul>
                                 </li> 
