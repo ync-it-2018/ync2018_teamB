@@ -18,8 +18,9 @@ body {
   font-weight:400px;
 }
 
+
 .freeboard > caption {
-  text-align: left;
+  text-align: center;
   font-weight: bold;
   font-size: 200%;
   border-bottom: .2em solid #F3E2A9;
@@ -54,7 +55,7 @@ table.freeboard tbody th {
 table.freeboard td {
     width: 350px;
     padding: 10px;
-    vertical-align: top;
+    vertical-align: middle;
     border-bottom: 1px solid #ccc;
     text-align: center;
   
@@ -90,7 +91,7 @@ tbody tr:nth-child(2n+1) {
 }
 
 tbody tr:td-child(2) {
-	text-align: left;
+	text-align: center;
 }
 .searchArea{
 	font-size:20px;
