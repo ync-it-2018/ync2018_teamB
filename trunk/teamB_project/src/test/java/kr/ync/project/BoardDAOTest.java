@@ -1,4 +1,4 @@
-package kr.ync.project.persistence;
+package kr.ync.project;
 
 import javax.inject.Inject;
 
@@ -8,6 +8,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import kr.ync.project.domain.BoardVO;
+import kr.ync.project.persistence.BoardDAO;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(
