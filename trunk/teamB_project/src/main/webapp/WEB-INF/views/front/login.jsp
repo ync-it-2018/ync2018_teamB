@@ -160,6 +160,7 @@
 				<div class="col-sm-1">
 					<h2 class="or">OR</h2>
 				</div>
+				
 				<div class="col-sm-4">
 					<div class="signup-form">
 						<!--sign up form-->
@@ -168,11 +169,13 @@
 							<input type="text" placeholder="아이디" /> <input type="email"
 								placeholder="E-mail 주소" /> <input type="password"
 								placeholder="비밀번호" />
+								
 							<button type="submit" class="btn btn-default">회원가입</button>
 						</form>
 					</div>
 					<!--/sign up form-->
 				</div>
+				
 			</div>
 		</div>
 	</section>
