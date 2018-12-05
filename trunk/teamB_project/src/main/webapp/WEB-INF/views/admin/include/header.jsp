@@ -130,8 +130,8 @@
               </ul>
             </li>
             <li>
-              <a href="../calendar.html">
-                <i class="fa fa-calendar"></i> <span>제품 등록</span>
+              <a href="/product_registration">
+                <i class="fa fa-th"></i> <span>카테고리 관리</span>
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
             </li>
