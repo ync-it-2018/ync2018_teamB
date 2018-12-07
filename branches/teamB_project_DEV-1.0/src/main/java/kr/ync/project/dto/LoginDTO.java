@@ -1,4 +1,4 @@
-package kr.ync.project.domain;
+package kr.ync.project.dto;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -7,10 +7,10 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
-public class UserVO {
-
+public class LoginDTO {
+	
 	private String USER_ID;
 	private String USER_PW;
-	private String USER_EMAIL;
-	private int upoint;
+	private boolean useCookie;
+
 }

@@ -39,7 +39,17 @@
 		<beans:constructor-arg value="D:\\spring\\upload">
 		</beans:constructor-arg>
 	</beans:bean>
-	
-	
- 		
+
+	<!-- 인터셉터 객체 생성 -->
+    <beans:bean id="loginInterceptor" class="kr.ync.project.interceptor.LoginInterceptor">
+    </beans:bean>
+    
+	 <!-- interceptor 관련 설정 -->
+	<interceptors>
+		<interceptor>
+			<mapping path="/front/loginPost"/>
+			<beans:ref bean="loginInterceptor"/>
+		</interceptor>
+	</interceptors>
+   
 </beans:beans>
