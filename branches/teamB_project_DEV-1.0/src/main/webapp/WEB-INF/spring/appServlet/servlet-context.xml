@@ -43,12 +43,18 @@
 	<!-- 인터셉터 객체 생성 -->
     <beans:bean id="loginInterceptor" class="kr.ync.project.interceptor.LoginInterceptor">
     </beans:bean>
+    <beans:bean id="BoardInterceptor" class="kr.ync.project.interceptor.BoardInterceptor">
+    </beans:bean>
     
 	 <!-- interceptor 관련 설정 -->
 	<interceptors>
 		<interceptor>
 			<mapping path="/front/loginPost"/>
 			<beans:ref bean="loginInterceptor"/>
+		</interceptor>
+		<interceptor>
+			<mapping path="/front/boardwritefail"/>
+			<beans:ref bean="BoardInterceptor"/>
 		</interceptor>
 	</interceptors>
    

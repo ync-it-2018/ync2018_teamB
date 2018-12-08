@@ -12,6 +12,7 @@ import kr.ync.project.domain.BoardVO;
 import kr.ync.project.domain.Criteria;
 import kr.ync.project.domain.SearchCriteria;
 
+
 @Repository
 public class BoardDAOImpl implements BoardDAO {
 

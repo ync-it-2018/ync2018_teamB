@@ -142,23 +142,13 @@
 			<div class="tab-content">
 				<div class="tab-pane fade active in" id="reviews">
 					<div class="col-sm-12">
-						<form action="#">
-							<table class="freeboard">
-								<Caption>자유게시판 글쓰기</Caption>
-								<tbody>
-									<tr>
-										<th>제목</th>
-										<td><input type="text"
-											style="width: 1004px; height: 30px;"
-											placeholder="제목을 입력 하세요."></td>
-									</tr>
-									<tr>
-										<th style="vertical-align:center; padding-top: 100px;">내용</th>
-										<td bgcolor="white"><textarea id="freetext"></textarea></td>
-									</tr>
-								</tbody>
-							</table>
-								<button class="write" type="button" style="margin-left: 1000px; margin-top:10px;" >글쓰기</button>		
+						<form action="/front/boardwritefail" method="post">
+							<input type="text" name="free_board_title" placeholder="제목" />
+							<input type="text" name="free_board_cont" placeholder="내용" />
+							<input type="text" name="free_board_writer" placeholder="작성자" />
+							<input type="text" name="user_id" placeholder="admin" />
+							<button type="submit">등록</button>
+													
 						</form>
 					</div>
 				</div>
