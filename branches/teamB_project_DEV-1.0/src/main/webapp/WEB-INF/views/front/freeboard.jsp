@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -103,7 +105,7 @@
 								<li class="dropdown"><a href="#">게시판<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
 
-                                        <li><a href="/freeboard">자유게시판</a></li>
+                                        <li><a href="/front/freeboard">자유게시판</a></li>
 										<li><a href="/suggest">건의게시판</a></li>
 
                                     </ul>
@@ -134,32 +136,25 @@
 								<Caption>자유게시판</Caption>
 								<thead>
 									<tr>
+										<th class="bno">글번호</th>
 										<th class="title">제목</th>
 										<th class="writer">글쓴이</th>
 										<th class="date">작성 일</th>
 										<th class="views">조회수</th>
 									</tr>
 								</thead>
+								
 								<tbody>
+									<c:forEach items="${list}" var="BoardVO">
 									<tr>
-										<td><a href="/freeboard_view">테스트1</a></td>
-										<td>이정욱</td>
-										<td>2018-10-21</td>
-										<td>5</td>
-										
+										<td>${BoardVO.free_board_num}</td>
+										<td><a href=''>${BoardVO.free_board_title }</a></td>
+										<td>${BoardVO.free_board_writer}</td>
+										<td><fmt:formatDate pattern="yyyy-MM-dd HH:mm"
+											value="${BoardVO.free_board_date}"/></td>
+										<td><span class="badge bg-red">${BoardVO.free_board_hits }</span>
 									</tr>
-									<tr>
-										<td><a href="/freeboard_view">테스트2</a></td>
-										<td>강세훈</td>
-										<td>2018-10-18</td>
-										<td>17</td>
-									</tr>
-									<tr>
-										<td><a href="/freeboard_view">테스트3</a></td>
-										<td>박지훈</td>
-										<td>2018-10-15</td>
-										<td>37</td>
-									</tr>
+									</c:forEach>
 								</tbody>
 							</table>
 							<div class="pageMove"> ◀   ◀◀     1 2 3 4 5    ▶▶   ▶</div>

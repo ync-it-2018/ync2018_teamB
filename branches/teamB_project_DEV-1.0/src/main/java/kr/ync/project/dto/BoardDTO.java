@@ -21,7 +21,7 @@ public class BoardDTO {
 
 	 private Date free_board_date;
 
-	 private int free_board_hit;
+	 private int free_board_hits;
 	    
 	 private String user_id;
 }

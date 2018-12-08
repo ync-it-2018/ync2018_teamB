@@ -24,13 +24,16 @@ public class boardController {
 	@Autowired
 	private BoardService service;
 
-	@GetMapping(value = "/BoardService")
-	public void BoardGET(@ModelAttribute("dto") BoardDTO dto) {
-
+	@GetMapping(value = "/freeboard")
+	public String BoardGET(Model model) throws Exception {
+		logger.info("show all List...............");
+		model.addAttribute("list", service.listAll());
+		
+		return "front/freeboard";
 	}
 
 	@PostMapping(value = "/boardwritefail")
-	public void loginPOST(BoardVO vo, HttpSession session, Model model) throws Exception {
+	public void BoardPOST(BoardVO vo, HttpSession session, Model model) throws Exception {
 
 		service.regist(vo);
 		
@@ -42,6 +45,7 @@ public class boardController {
 		model.addAttribute("BoardVO", vo);
 
 	}
+	
 	
 //	@GetMapping(value = "/login2")
 //	public void BoardGET(@ModelAttribute("dto") BoardDTO dto) {

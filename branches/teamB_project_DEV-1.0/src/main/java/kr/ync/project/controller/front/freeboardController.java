@@ -13,14 +13,14 @@ import kr.ync.project.controller.HomeController;
 
 @Controller
 public class freeboardController {
-	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
-	
-	@RequestMapping(value = "/freeboard", method = RequestMethod.GET)
-	public String freeboard(Locale locale, Model model) {
-
-		logger.info("teamB log freeboard 페이지", locale);
-
-		return "front/freeboard";
-	}
+//	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
+//	
+//	@RequestMapping(value = "/freeboard", method = RequestMethod.GET)
+//	public String freeboard(Locale locale, Model model) {
+//
+//		logger.info("teamB log freeboard 페이지", locale);
+//
+//		return "front/freeboard";
+//	}
 	
 }
