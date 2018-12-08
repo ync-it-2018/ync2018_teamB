@@ -14,8 +14,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</select>
   
 	<update id="keepLogin" >
-		UPDATE TB_USER SET 	sessionKey = #{sessionId},
-	  							sessionLimit = #{next}
+		UPDATE TB_USER SET sessionKey = #{sessionId}, sessionLimit = #{next} 
 		WHERE USER_ID = #{USER_ID}
 	</update>
 

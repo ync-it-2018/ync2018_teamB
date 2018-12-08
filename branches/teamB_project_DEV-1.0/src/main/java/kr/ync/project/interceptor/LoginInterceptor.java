@@ -38,9 +38,9 @@ public class LoginInterceptor extends HandlerInterceptorAdapter {
 				loginCookie.setMaxAge(60 * 60 * 24 * 7);
 				response.addCookie(loginCookie);
 			}*/
-			response.sendRedirect("/");
-			//Object dest = session.getAttribute("dest");
-			//response.sendRedirect(dest != null ? (String) dest : "/");
+			//response.sendRedirect("/");
+			Object dest = session.getAttribute("dest");
+			response.sendRedirect(dest != null ? (String) dest : "/");
 		}
 	}
 

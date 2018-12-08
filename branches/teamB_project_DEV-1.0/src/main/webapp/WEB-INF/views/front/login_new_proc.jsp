@@ -30,7 +30,7 @@ String driverName = "oracle.jdbc.driver.OracleDriver";
 String url = "jdbc:oracle:thin:@220.67.2.3:1521:ora11";
 String userID = "educ239";
 String dbpwd = "pass239";
-System.out.println("★★★★★★★★★★★★★어디까지 왔냐★★★★★★★★★★★★★");
+//System.out.println("★★★★★★★★★★★★★어디까지 왔냐★★★★★★★★★★★★★");
 Connection conn = null;
 PreparedStatement pstmt = null;
 int result = 0;

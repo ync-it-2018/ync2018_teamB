@@ -179,7 +179,7 @@
 								</div>
 								<div class="searchPart">
 									<span class="serachButton">
-										<button type="button" onclick="location.href='/freeboard_write'">글쓰기</button>
+										<a href="/freeboard_write"><button type="button">글쓰기</button></a>
 									</span>
 
 								</div>
