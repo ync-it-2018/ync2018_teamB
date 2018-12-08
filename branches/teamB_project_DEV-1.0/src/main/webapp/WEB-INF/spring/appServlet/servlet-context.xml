@@ -47,6 +47,8 @@
     </beans:bean>
     <beans:bean id="AuthInterceptor" class="kr.ync.project.interceptor.AuthInterceptor">
     </beans:bean>
+    <beans:bean id="Product_regiInterceptor" class="kr.ync.project.interceptor.Product_regiInterceptor">
+    </beans:bean>
     
 	 <!-- interceptor 관련 설정 -->
 	<interceptors>
@@ -63,7 +65,10 @@
 			<mapping path="/front/boardwritefail"/>
 			<beans:ref bean="BoardInterceptor"/>
 		</interceptor>
-
+		<interceptor>
+			<mapping path="/admin/product_regiPost"/>
+			<beans:ref bean="Product_regiInterceptor"/>
+	    </interceptor>		
 	</interceptors>
    
 </beans:beans>
