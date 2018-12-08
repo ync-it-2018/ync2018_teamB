@@ -138,7 +138,8 @@
 						<h2>로그인</h2>
 						<form action="/front/loginPost" method="post">
 							<input type="text" name="USER_ID" placeholder="아이디" /> 
-							<input type="password" name="USER_PW" placeholder="비밀번호" />							<button type="submit" class="btn btn-primary btn-block btn-flat">로그인</button>
+							<input type="password" name="USER_PW" placeholder="비밀번호" />							
+							<button type="submit" class="btn btn-primary btn-block btn-flat">로그인</button>
 							<button type="submit" class="btn btn-primary btn-block btn-flat">아이디/비밀번호 찾기</button>
 						
 						</form>
@@ -153,11 +154,11 @@
 					<div class="signup-form">
 						<!--sign up form-->
 						<h2>회원가입</h2>
-						<form method="post" name="member_new">
+						<form action="login_new_proc" method="post" >
 							<input type="text" name="USER_ID" placeholder="아이디" /> 
 							<input type="email"  name="USER_EMAIL"  placeholder="E-mail 주소" /> 
 							<input type="password" name="USER_PW" placeholder="비밀번호" />
-							<button type="submit" class="btn btn-default" onclick="newMember();">회원가입</button>
+							<button type="submit" class="btn btn-primary btn-block btn-flat">회원가입</button>
 						</form>
 					</div>
 					<!--/sign up form-->
@@ -187,31 +188,34 @@
 
 <!--오류가 아이디나 이메일적을 때, 다른값으로 안 넘어감 -->
 	<script type="text/javascript">
-		function newMember() { 
+	/* 		function newMember() { 
 			if (document.member_new.USER_ID.value.length <= 0) {
 				alert("아이디를 입력하세요");
 				document.member_new.USER_ID.focus();
-				location.href("/index");
+				self.location = "/login";
 				
 			} else if (document.member_new.USER_EMAIL.value.length <= 0){
 				alert("이메일을 입력하세요");
 				document.member_new.USER_EMAIL.focus();
-				location.href("/index");
+				self.location = "/login";
 				
-			} else if (document.member_new.USER_PW.value.length <= 0){
+			}  else if (document.member_new.USER_PW.value.length <= 0){
 				alert("비밀번호를 입력하세요");
 				document.member_new.USER_PW.focus();
-				location.href("/index");
+				self.location = "/login";
+				/* location.href("/index"); 
 				
 			} else {
-				alert("확인완료");
-				document.member_new.submit();
-			}
+				alert("확인완료"); 
+				document.member_new.submit(); 
+				self.location = "/login_new_proc";
+				
+			} 
 			<!-- self.location = "/login_new_proc";-->
-			document.member_new.action = "/login_new_proc";
-			document.member_new.submit();
+			
+			
 		}
-
+			*/
  		
 		/* function nicknameCheck() {
 			window.open("nickname_check.jsp", "pop");

@@ -22,7 +22,7 @@
 	</beans:bean>
 	
 	<context:component-scan base-package="kr.ync.project.controller" />
-
+	
 	<!-- multipartResolver upload file size를 MAX 10M로 설정 -->
 	<beans:bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
 		<beans:property name="maxUploadSize" value="10485760"></beans:property>
@@ -39,11 +39,13 @@
 		<beans:constructor-arg value="D:\\spring\\upload">
 		</beans:constructor-arg>
 	</beans:bean>
-
+	
 	<!-- 인터셉터 객체 생성 -->
     <beans:bean id="loginInterceptor" class="kr.ync.project.interceptor.LoginInterceptor">
     </beans:bean>
     <beans:bean id="BoardInterceptor" class="kr.ync.project.interceptor.BoardInterceptor">
+    </beans:bean>
+    <beans:bean id="AuthInterceptor" class="kr.ync.project.interceptor.AuthInterceptor">
     </beans:bean>
     
 	 <!-- interceptor 관련 설정 -->
@@ -53,9 +55,15 @@
 			<beans:ref bean="loginInterceptor"/>
 		</interceptor>
 		<interceptor>
+			<mapping path="/front/freeboard_write"/>
+			<beans:ref bean="AuthInterceptor"/>
+		</interceptor>
+
+		<interceptor>
 			<mapping path="/front/boardwritefail"/>
 			<beans:ref bean="BoardInterceptor"/>
 		</interceptor>
+
 	</interceptors>
    
 </beans:beans>

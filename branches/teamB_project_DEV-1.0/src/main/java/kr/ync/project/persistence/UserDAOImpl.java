@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import kr.ync.project.domain.UserVO;
+import kr.ync.project.dto.InsertDTO;
 import kr.ync.project.dto.LoginDTO;
 
 @Repository
@@ -41,5 +42,11 @@ public class UserDAOImpl implements UserDAO {
 	public UserVO checkUserWithSessionKey(String value) {
 
 		return session.selectOne(namespace + ".checkUserWithSessionKey", value);
+	}
+
+	@Override
+	public void insertMember(UserVO vo){
+		// TODO Auto-generated method stub
+		session.insert(namespace+".insertMember", vo);
 	}
 }

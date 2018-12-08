@@ -16,7 +16,7 @@ public class loginfindController {
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 	
 	@RequestMapping(value = "/login_find", method = RequestMethod.GET)
-	public String login_ifnd(Locale locale, Model model) {
+	public String login_find(Locale locale, Model model) {
 
 		logger.info("teamB log 아이디찾기페이지", locale);
 

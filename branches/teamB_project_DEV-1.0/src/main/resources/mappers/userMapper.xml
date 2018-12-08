@@ -26,6 +26,10 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		AND		sessionlimit > SYSDATE
 	</select>	
 
+	<insert id ="insertMember">
+    	INSERT into TB_USER (USER_ID, USER_PW, USER_EMAIL) values (#{USER_ID},#{USER_PW},#{USER_EMAIL})
+	</insert>
+	
 </mapper>
 
 

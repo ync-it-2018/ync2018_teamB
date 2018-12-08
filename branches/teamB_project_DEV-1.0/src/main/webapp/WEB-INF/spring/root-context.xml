@@ -67,5 +67,6 @@
 	
 	<context:component-scan base-package="kr.ync.project.service">
 	</context:component-scan>
-
+	
+	
 </beans>

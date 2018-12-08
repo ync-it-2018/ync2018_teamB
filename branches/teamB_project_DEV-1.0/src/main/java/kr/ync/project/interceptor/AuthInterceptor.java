@@ -43,7 +43,7 @@ public class AuthInterceptor extends HandlerInterceptorAdapter {
 
 			}*/
 
-			response.sendRedirect("/user/login");
+			response.sendRedirect("/front/login");
 			return false;
 		}
 		return true;

@@ -2,7 +2,9 @@
     pageEncoding="UTF-8" import="java.net.URL"
 	import="java.sql.Connection" import="java.sql.DriverManager"
 	import="java.sql.PreparedStatement" import="java.sql.ResultSet"
-	import="java.sql.SQLException"%>
+	import="java.sql.SQLException"
+
+	%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,6 +12,7 @@
 <title>Insert title here</title>
 </head>
 <%
+
 request.setCharacterEncoding("utf-8");
 String strID="", strPWD="", strEmail="";
 
@@ -23,16 +26,17 @@ if ( request.getParameter("USER_EMAIL") != null )
 	strEmail = request.getParameter("USER_EMAIL");
 
 
-String driverName = "org.oracle.jdbc.Driver";
+String driverName = "oracle.jdbc.driver.OracleDriver";
 String url = "jdbc:oracle:thin:@220.67.2.3:1521:ora11";
 String userID = "educ239";
 String dbpwd = "pass239";
+System.out.println("★★★★★★★★★★★★★어디까지 왔냐★★★★★★★★★★★★★");
 Connection conn = null;
 PreparedStatement pstmt = null;
 int result = 0;
 
 
-String qry =    "insert ignore into TB_USER "
+String qry =    "insert into TB_USER "
         + "(USER_ID, USER_PW, USER_EMAIL) "
         + "values (" 
         + "'" + strID + "', "
@@ -72,12 +76,15 @@ try {
 	</script>
 <%  } %>
 	<script>
-		location.href("/index");
+		self.location = "/login";
 	</script>
 <% 
+	
 }
-%>
+	
+%> 
 <body>
+
 </body>
 <script type ="text/javascript">
 	function insertResult() {
@@ -88,7 +95,7 @@ try {
 		}else if (result == 1) {
 			
 		}
-		location.href=("/index");
+		self.location = "/login";
 	}
 </script>
 </html>

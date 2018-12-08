@@ -3,6 +3,7 @@ package kr.ync.project.persistence;
 import java.util.Date;
 
 import kr.ync.project.domain.UserVO;
+import kr.ync.project.dto.InsertDTO;
 import kr.ync.project.dto.LoginDTO;
 
 public interface UserDAO {
@@ -12,4 +13,7 @@ public interface UserDAO {
 	public void keepLogin(String uids, String sessionId, Date next);
 
 	public UserVO checkUserWithSessionKey(String value);
+	
+	public void insertMember(UserVO vo);
+
 }

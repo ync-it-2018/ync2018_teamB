@@ -6,8 +6,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import kr.ync.project.domain.UserVO;
+import kr.ync.project.dto.InsertDTO;
 import kr.ync.project.dto.LoginDTO;
 import kr.ync.project.persistence.UserDAO;
+
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -33,4 +35,6 @@ public class UserServiceImpl implements UserService {
 
 		return dao.checkUserWithSessionKey(value);
 	}
+
+	
 }
