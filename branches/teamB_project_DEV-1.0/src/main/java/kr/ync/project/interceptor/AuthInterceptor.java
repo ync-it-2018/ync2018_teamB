@@ -50,13 +50,14 @@ public class AuthInterceptor extends HandlerInterceptorAdapter {
 			log.info("current user is not logined");
 
 			saveDest(request);
-/*			Cookie loginCookie = WebUtils.getCookie(request, "loginCookie");
+			
+			Cookie loginCookie = WebUtils.getCookie(request, "loginCookie");
 
 			if (loginCookie != null) {
 
 				UserVO userVO = service.checkLoginBefore(loginCookie.getValue());
 
-				logger.info("USERVO: " + userVO);
+				log.info("USERVO: " + userVO);
 
 				if (userVO != null) {
 					session.setAttribute("login", userVO);
@@ -64,7 +65,7 @@ public class AuthInterceptor extends HandlerInterceptorAdapter {
 				}
 
 			}
-*/
+
 			response.sendRedirect("/login");
 			return false;
 		}

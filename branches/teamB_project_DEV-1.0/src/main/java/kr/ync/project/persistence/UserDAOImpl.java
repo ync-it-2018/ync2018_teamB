@@ -30,7 +30,7 @@ public class UserDAOImpl implements UserDAO {
 	public void keepLogin(String USER_ID, String sessionId, Date next) {
 
 		Map<String, Object> paramMap = new HashMap<String, Object>();
-		paramMap.put("uids", USER_ID);
+		paramMap.put("USER_ID", USER_ID);
 		paramMap.put("sessionId", sessionId);
 		paramMap.put("next", next);
 
@@ -40,7 +40,6 @@ public class UserDAOImpl implements UserDAO {
 
 	@Override
 	public UserVO checkUserWithSessionKey(String value) {
-
 		return session.selectOne(namespace + ".checkUserWithSessionKey", value);
 	}
 

@@ -27,14 +27,10 @@ public class UserServiceImpl implements UserService {
 	public void keepLogin(String USER_ID, String sessionId, Date next) throws Exception {
 
 		dao.keepLogin(USER_ID, sessionId, next);
-
 	}
 
 	@Override
 	public UserVO checkLoginBefore(String value) {
-
 		return dao.checkUserWithSessionKey(value);
 	}
-
-	
 }

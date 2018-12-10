@@ -10,10 +10,10 @@ public interface UserDAO {
 
 	public UserVO login(LoginDTO dto) throws Exception;
 
-	public void keepLogin(String uids, String sessionId, Date next);
+	public void keepLogin(String USER_ID, String sessionId, Date next);
 
 	public UserVO checkUserWithSessionKey(String value);
 	
 	public void insertMember(UserVO vo);
-
+	
 }

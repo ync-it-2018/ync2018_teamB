@@ -20,6 +20,12 @@
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
     <![endif]-->
+<!-- 스마트 글쓰기 -->
+<script src="/resources/plugins/jQuery/jQuery-2.1.4.min.js"></script>
+
+<script type="text/javascript" src="/resources/plugins/editor/js/HuskyEZCreator.js" charset="utf-8"></script>
+
+
 <link rel="shortcut icon" href="images/ico/favicon.ico">
 <link rel="apple-touch-icon-precomposed" sizes="144x144"
 	href="/resources/front/images/ico/apple-touch-icon-144-precomposed.png">
@@ -143,10 +149,25 @@
 				<div class="tab-pane fade active in" id="reviews">
 					<div class="col-sm-12">
 						<form action="/front/boardwritefail" method="post">
-							<input type="text" name="free_board_title" placeholder="제목" />
-							<input type="text" name="free_board_cont" placeholder="내용" />
-							<input type="text" name="free_board_writer" placeholder="작성자" />
-							<input type="text" name="user_id" placeholder="admin" />
+						<table class="freeboard"  width= "100%">
+								<Caption>자유게시판 글쓰기</Caption>
+									<tr>
+										<th>제목</th>
+										<td><input type="text" name="free_board_title" placeholder="제목" /></td>
+									</tr>
+									<tr>
+										<td colspan=2><textarea name="free_board_cont" id="content" required="" rows="200" style="width:100%"></textarea></td>
+									</tr>
+									<tr>
+										<th>작성자</th>
+										<td><input type="text" name="free_board_writer" placeholder="작성자" /></td>
+									</tr>
+									<tr>
+										<th>아이디</th>
+										<td><input type="text" name="user_id" placeholder="admin" /></td>
+									</tr>
+							</table>
+
 							<button type="submit">등록</button>
 													
 						</form>
@@ -156,26 +177,27 @@
 			</div>
 		</div>
 		<!--/category-tab-->
+<script type="text/javascript">
+		var oEditors = [];
+		nhn.husky.EZCreator.createInIFrame({
+			oAppRef : oEditors,
+			elPlaceHolder : "content",
+			sSkinURI : "/resources/plugins/editor/SmartEditor2Skin.html",
+			fCreator : "createSEditor2"
+		});
+		function submitContents(elClickedObj) {
+			// 에디터의 내용이 textarea에 적용됩니다.
+			oEditors.getById["content"].exec("UPDATE_CONTENTS_FIELD", []);
+			// 에디터의 내용에 대한 값 검증은 이곳에서 document.getElementById("ir1").value를 이용해서 처리하면 됩니다.
 
+			try {
+				elClickedObj.form.submit();
+			} catch (e) {
+			}
+		}
+	</script>
 
 	</section>
-
-	<footer id="footer"><!--Footer-->
-		<div class="footer-bottom">
-			<div class="container">
-				<div class="row">
-					<p class="pull-left">Team-b © 2018-가격비교사이트 Inc. 영남이공대학교.</p>
-					<p class="pull-right">
-						Designed by <span><a target="_blank"
-							href="">이건영</a></span>
-					</p>
-				</div>
-			</div>
-		</div>
-		
-	</footer><!--/Footer-->
-
-
 
 	<script src="/resources/js/jquery.js"></script>
 	<script src="/resources/js/price-range.js"></script>
