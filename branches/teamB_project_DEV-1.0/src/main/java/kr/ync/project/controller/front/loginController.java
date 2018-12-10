@@ -27,9 +27,40 @@ public class loginController {
 	@PostMapping(value = "/login_new_proc")
 	public String login_new_proc(Locale locale, Model model) {
 
-		logger.info("teamB log 회원가입페이지", locale);
+		logger.info("teamB log 회원가입페이지(코딩부분)", locale);
 
 		return "front/login_new_proc";
 	}
 	
+	@RequestMapping(value = "/login_user_modify", method = RequestMethod.GET)
+	public String login_user_modify(Locale locale, Model model) {
+
+		logger.info("teamB log 회원수정페이지, 회원탈퇴페이지", locale);
+
+		return "front/login_user_modify";
+	}
+	
+//	@RequestMapping(value = "/login_user_modi_proc", method = RequestMethod.GET)
+//	public String login_user_modi_proc(Locale locale, Model model) {
+//
+//		logger.info("teamB log 회원수정페이지(코딩부분)", locale);
+//
+//		return "front/login_user_modi_proc";
+//	}
+	
+	@PostMapping(value = "/login_user_modi_proc")
+	public String login_user_modi_proc(Locale locale, Model model) {
+
+		logger.info("teamB log 회원수정페이지(코딩부분)", locale);
+
+		return "front/login_user_modi_proc";
+	}
+	
+	@PostMapping(value = "/login_user_delete_proc")
+	public String login_user_delete_proc(Locale locale, Model model) {
+
+		logger.info("teamB log 회원삭제페이지(코딩부분)", locale);
+
+		return "front/login_user_delete_proc";
+	}
 }

@@ -1,5 +1,6 @@
 package kr.ync.project.interceptor;
 
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -30,14 +31,14 @@ public class LoginInterceptor extends HandlerInterceptorAdapter {
 			log.info("★★★★★★★★★★★★★★★★★★★new login success");
 			session.setAttribute(LOGIN, userVO);
 
-			/*if (request.getParameter("useCookie") != null) {
+			if (request.getParameter("useCookie") != null) {
 
-				logger.info("remember me................");
+				log.info("remember me................");
 				Cookie loginCookie = new Cookie("loginCookie", session.getId());
 				loginCookie.setPath("/");
-				loginCookie.setMaxAge(60 * 60 * 24 * 7);
+				loginCookie.setMaxAge(60 * 60 * 24 * 2); // 이틀동안 브라우저 유지
 				response.addCookie(loginCookie);
-			}*/
+			}
 			//response.sendRedirect("/");
 			Object dest = session.getAttribute("dest");
 			response.sendRedirect(dest != null ? (String) dest : "/");
