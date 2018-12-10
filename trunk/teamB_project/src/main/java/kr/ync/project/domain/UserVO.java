@@ -1,30 +1,16 @@
 package kr.ync.project.domain;
 
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+
+@Getter
+@Setter
+@ToString
 public class UserVO {
-	private String uid;
-	private String upw;
-	private String uemail;
-	public String getUid() {
-		return uid;
-	}
-	public void setUid(String uid) {
-		this.uid = uid;
-	}
-	public String getUpw() {
-		return upw;
-	}
-	public void setUpw(String upw) {
-		this.upw = upw;
-	}
-	public String getUemail() {
-		return uemail;
-	}
-	public void setUemail(String uemail) {
-		this.uemail = uemail;
-	}
-	@Override
-	public String toString() {
-		return "UserVO [uid=" + uid + ", upw=" + upw + ", uemail=" + uemail + "]";
-	}
-	
+
+	private String USER_ID;
+	private String USER_PW;
+	private String USER_EMAIL;
+	private int upoint;
 }

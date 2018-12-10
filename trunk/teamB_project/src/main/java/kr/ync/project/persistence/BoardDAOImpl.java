@@ -12,6 +12,7 @@ import kr.ync.project.domain.BoardVO;
 import kr.ync.project.domain.Criteria;
 import kr.ync.project.domain.SearchCriteria;
 
+
 @Repository
 public class BoardDAOImpl implements BoardDAO {
 
@@ -26,8 +27,8 @@ public class BoardDAOImpl implements BoardDAO {
 	}
 
 	@Override
-	public BoardVO read(Integer bno) throws Exception {
-		return session.selectOne(namespace + ".read", bno);
+	public BoardVO read(Integer free_board_num) throws Exception {
+		return session.selectOne(namespace + ".read", free_board_num);
 	}
 
 	@Override

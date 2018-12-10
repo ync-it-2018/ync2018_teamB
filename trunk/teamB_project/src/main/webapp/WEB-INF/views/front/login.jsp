@@ -108,7 +108,7 @@
 								<li class="dropdown"><a href="#">게시판<i
 										class="fa fa-angle-down"></i></a>
 									<ul role="menu" class="sub-menu">
-										<li><a href="/freeboard">자유게시판</a></li>
+										<li><a href="/front/freeboard">자유게시판</a></li>
 										<li><a href="/blog-single">건의게시판</a></li>
 									</ul></li>
 								<li><a href="/review">상품사용후기</a></li>
@@ -128,7 +128,7 @@
 	</header>
 	<!--/header-->
 
-	<section id="form">
+	<section id="form" >
 		<!--form-->
 		<div class="container">
 			<div class="row">
@@ -136,23 +136,18 @@
 					<div class="login-form">
 						<!--login form-->
 						<h2>로그인</h2>
-						<form action="#">
-							<input type="text" placeholder="아이디" /> <input type="password"
-								placeholder="비밀번호" />
-							<!--
-							<span>
-								<input type="checkbox" class="checkbox"> 
-								Keep me signed in
-							</span>
--->
-							<a class="btn btn-default update" href="">로그인</a> 
-							<a class="btn btn-default check_out" href="/login_find">아이디/비밀번호 찾기</a>
-
-							<!--  
-							<button type="submit" class="btn btn-default">로그인</button>
-							<button type="submit" class="btn btn-default"
-								style="position: absolute; right: 50;">아이디/비밀번호 찾기</button>
-								-->
+						<form action="/front/loginPost" method="post">
+						<div>
+						<input type="text" name="USER_ID" placeholder="아이디" /> 
+						</div>
+						<div><input type="password" name="USER_PW" placeholder="비밀번호" />
+						</div>
+						
+						<input type="checkbox" name="useCookie"> Remember Me
+					
+						<button type="submit" class="btn btn-primary btn-block btn-flat">로그인</button>
+						<button type="submit" class="btn btn-primary btn-block btn-flat">아이디/비밀번호 찾기</button>
+						
 						</form>
 					</div>
 					<!--/login form-->
@@ -165,12 +160,11 @@
 					<div class="signup-form">
 						<!--sign up form-->
 						<h2>회원가입</h2>
-						<form action="#">
-							<input type="text" placeholder="아이디" /> <input type="email"
-								placeholder="E-mail 주소" /> <input type="password"
-								placeholder="비밀번호" />
-								
-							<button type="submit" class="btn btn-default">회원가입</button>
+						<form action="login_new_proc" method="post" >
+							<input type="text" name="USER_ID" placeholder="아이디" /> 
+							<input type="email"  name="USER_EMAIL"  placeholder="E-mail 주소" /> 
+							<input type="password" name="USER_PW" placeholder="비밀번호" />
+							<button type="submit" class="btn btn-primary btn-block btn-flat">회원가입</button>
 						</form>
 					</div>
 					<!--/sign up form-->
@@ -197,6 +191,56 @@
 		
 	</footer><!--/Footer-->
 
+
+<!--오류가 아이디나 이메일적을 때, 다른값으로 안 넘어감 -->
+	<script type="text/javascript">
+	/* 		function newMember() { 
+			if (document.member_new.USER_ID.value.length <= 0) {
+				alert("아이디를 입력하세요");
+				document.member_new.USER_ID.focus();
+				self.location = "/login";
+				
+			} else if (document.member_new.USER_EMAIL.value.length <= 0){
+				alert("이메일을 입력하세요");
+				document.member_new.USER_EMAIL.focus();
+				self.location = "/login";
+				
+			}  else if (document.member_new.USER_PW.value.length <= 0){
+				alert("비밀번호를 입력하세요");
+				document.member_new.USER_PW.focus();
+				self.location = "/login";
+				/* location.href("/index"); 
+				
+			} else {
+				alert("확인완료"); 
+				document.member_new.submit(); 
+				self.location = "/login_new_proc";
+				
+			} 
+			<!-- self.location = "/login_new_proc";-->
+			
+			
+		}
+			*/
+ 		
+		/* function nicknameCheck() {
+			window.open("nickname_check.jsp", "pop");
+		}
+
+
+
+		function passwordCheck() {
+			var password = document.member_new.pwd.value;
+			var passCheck = document.member_new.pwdChk.value;
+			if (password == passCheck) {
+				document.getElementById("checked").innerHTML = "입력값이 일치합니다.";
+			} else {
+				document.getElementById("checked").innerHTML = "입력값이 일치하지 않습니다.";
+			}
+
+		} */
+	
+	</script>
 
 
 	<script src="/resources/js/jquery.js"></script>

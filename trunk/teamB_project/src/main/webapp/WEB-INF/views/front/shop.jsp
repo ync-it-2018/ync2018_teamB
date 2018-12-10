@@ -107,7 +107,7 @@
 								<li class="dropdown"><a href="#">게시판<i
 										class="fa fa-angle-down"></i></a>
 									<ul role="menu" class="sub-menu">
-										<li><a href="/freeboard">자유게시판</a></li>
+										<li><a href="/front/freeboard">자유게시판</a></li>
 										<li><a href="/suggest">건의게시판</a></li>
 									</ul></li>
 

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="kr.ync.project.mapper.BoardMapper">
+
+<insert id="create">
+	INSERT INTO tb_free_board (free_board_num, free_board_title, free_board_cont, free_board_writer, user_id) 
+	VALUES(SEQ_BOARD.NEXTVAL, #{free_board_title},#{free_board_cont}, #{free_board_writer}, #{user_id})
+</insert>
+
+<select id="read" resultType="BoardVO">
+	SELECT  free_board_num,
+	 		free_board_title,
+	 		free_board_cont,
+	 		free_board_writer
+	FROM 	tb_free_board 
+	WHERE	free_board_num = #{free_board_num}
+</select>
+
+<update id="update">
+	UPDATE tb_free_board	SET free_board_title =#{free_board_title},
+							free_board_cont =#{free_board_cont},
+							free_board_writer =#{free_board_writer}
+	WHERE free_board_num = #{free_board_num}
+</update>
+
+<delete id="delete">
+	delete from tb_free_board where free_board_num = #{free_board_num}
+</delete>
+
+<select id="listAll" resultType="BoardVO">
+	<![CDATA[
+	SELECT 	free_board_num,
+	 		free_board_title,
+	 		free_board_cont,
+	 		free_board_writer,
+	 		free_board_date,
+	 		free_board_hits
+	FROM tb_free_board 
+	WHERE free_board_num > 0 
+	ORDER BY free_board_num DESC, free_board_date DESC
+	]]>  
+</select>
+ 
+
+<select id="listPage"  resultType="BoardVO">
+	<![CDATA[
+	SELECT	free_board_num,
+	 		free_board_title,
+	 		free_board_cont,
+	 		free_board_writer,
+	 		free_board_date,
+	 		free_board_hits
+	FROM   (SELECT 	/*+INDEX_DESC(tb_free_board pk_board)*/
+					rownum rn,
+					free_board_num,
+			 		free_board_title,
+			 		free_board_cont,
+			 		free_board_writer,
+			 		free_board_date,
+			 		free_board_hits
+	  		FROM	tb_free_board
+			WHERE	rownum <= #{page} * #{perPageNum}
+			AND		free_board_num > 0
+			)
+	WHERE 	rn > (#{page} -1) * #{perPageNum}
+	]]>
+</select>
+
+<select id="listCriteria" resultType="BoardVO">
+	<![CDATA[
+	SELECT	free_board_num,
+	 		free_board_title,
+	 		free_board_cont,
+	 		free_board_writer,
+	 		free_board_date,
+	 		free_board_hits
+	FROM   (SELECT 	/*+INDEX_DESC(tb_free_board pk_board)*/
+					rownum rn,
+					free_board_num,
+					free_board_title,
+			 		free_board_cont,
+			 		free_board_writer,
+			 		free_board_date,
+			 		free_board_hits
+	  		FROM	tb_free_board
+			WHERE	rownum <= #{page} * #{perPageNum}
+			AND		free_board_num > 0
+			)
+	WHERE 	rn > (#{page} -1) * #{perPageNum}
+	]]>
+</select>
+
+<select id="countPaging" resultType="int">
+	<![CDATA[
+	SELECT	count(free_board_num) 
+	FROM	tb_free_board 
+	WHERE	free_board_num > 0 
+	]]>
+</select>
+
+
+
+<!-- 동적SQL (<sql>로 분리) 작성된 최종 SQL 시작-->
+<sql id="search">
+	<if test="searchType != null" >
+		<if test="searchType == 't'.toString()">
+			AND title LIKE '%'|| #{keyword}||'%'
+		</if>
+		<if test="searchType == 'c'.toString()">
+			AND content LIKE '%'|| #{keyword}||'%'
+		</if>
+		<if test="searchType == 'w'.toString()">
+			AND writer LIKE '%'|| #{keyword}||'%'
+		</if>    
+		<if test="searchType == 'tc'.toString()">
+			AND (title LIKE '%'|| #{keyword}||'%' OR content LIKE '%'|| #{keyword}||'%')
+		</if>      
+	</if>
+</sql>
+
+<select id="listSearch"  resultType="BoardVO">
+	<![CDATA[
+		SELECT		free_board_num,
+					free_board_title,
+			 		free_board_cont,
+			 		free_board_writer,
+			 		free_board_date,
+			 		free_board_hits
+		FROM   (SELECT 	/*+INDEX_DESC(tb_free_board pk_board)*/
+						rownum rn,
+						free_board_num,
+						free_board_title,
+				 		free_board_cont,
+				 		free_board_writer,
+				 		free_board_date,
+				 		free_board_hits
+		  		FROM	tb_free_board
+	]]>
+		<!--
+		<where> 엘리먼트로 검색을 하지 않았을 경우 AND rownum <= 과 같이 WHERE 구문이 빠져버린다.
+		따라서 <where> 를 사용하면 AND나 OR로 구문이 시작되면 AND나 OR를 지워버린다.
+		아래 구문과 동일한 기능. 
+		<trim prefix="WHERE" prefixOverrides="AND|OR ">
+		  ... 
+		</trim>
+		http://www.mybatis.org/mybatis-3/ko/dynamic-sql.html 참고
+		-->
+		<where>
+				<include refid="search"></include>
+				<![CDATA[
+				AND rownum <= #{page} * #{perPageNum}
+				AND free_board_num > 0
+		  		)
+				]]>
+		</where>
+	<![CDATA[
+		WHERE rn > (#{page} -1) * #{perPageNum}
+	]]>
+</select>
+
+<select id="listSearchCount"  resultType="int">
+	<![CDATA[
+		SELECT	count(free_board_num)
+		FROM	tb_free_board
+	]]>
+	
+	<where>
+		<include refid="search"></include>
+		<![CDATA[
+			AND free_board_num > 0
+		]]>
+	</where>
+</select>
+<!-- 동적SQL (<sql>로 분리) 작성된 최종 SQL 끝-->
+
+</mapper>

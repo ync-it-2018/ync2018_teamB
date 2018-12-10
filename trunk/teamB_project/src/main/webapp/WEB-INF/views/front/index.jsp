@@ -33,7 +33,7 @@
 				<div class="row">
 					<div class="col-sm-4">
 						<div class="logo pull-left">
-							<a href="/"><img src="/resources/front/images/home/logo.png" alt="" /></a>
+							<a href="/logout"><img src="/resources/front/images/home/logo.png" alt="" /></a>
 						</div>
 
 					</div>
@@ -97,7 +97,7 @@
                                     <ul role="menu" class="sub-menu">
 
 
-                                        <li><a href="/freeboard">자유게시판</a></li>
+                                        <li><a href="/front/freeboard">자유게시판</a></li>
 										<li><a href="/suggest">건의게시판</a></li>
 
                                     </ul>
@@ -131,21 +131,20 @@
 						<div class="carousel-inner">
 							<div class="item active">
 								<div class="col-sm-6">
-									<h1><span>E</span>-SHOPPER</h1>
-									<h2>Free E-Commerce Template</h2>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+									<h1><span>가</span>격비교사이트</h1>
+									<h2>TEAM-B</h2>
+									<p>팀장 : 강세훈 그외 3명 </p>
 									<button type="button" class="btn btn-default get">Get it now</button>
 								</div>
 								<div class="col-sm-6">
-									<img src="/resources/front/images/home/girl1.jpg" class="girl img-responsive" alt="" />
-									<img src="/resources/front/images/home/pricing.png"  class="pricing" alt="" />
+									<img src="/resources/front/images/home/zzal.jpg" class="girl img-responsive" alt="" />
 								</div>
 							</div>
 							<div class="item">
 								<div class="col-sm-6">
-									<h1><span>E</span>-SHOPPER</h1>
-									<h2>100% Responsive Design</h2>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+									<h1><span>팀</span> 프로젝트</h1>
+									<h2>100% 수제작</h2>
+									<p>레알 개망한듯 </p>
 									<button type="button" class="btn btn-default get">Get it now</button>
 								</div>
 								<div class="col-sm-6">
@@ -156,9 +155,9 @@
 							
 							<div class="item">
 								<div class="col-sm-6">
-									<h1><span>E</span>-SHOPPER</h1>
-									<h2>Free Ecommerce Template</h2>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+									<h1><span>하</span>기싫다</h1>
+									<h2>너무 귀찮다</h2>
+									<p>사실 할줄 모른다</p>
 									<button type="button" class="btn btn-default get">Get it now</button>
 								</div>
 								<div class="col-sm-6">
@@ -272,9 +271,9 @@
 							<div class="product-image-wrapper">
 								<div class="single-products">
 										<div class="productinfo text-center">
-											<a href="/product-details"><img src="/resources/front/images/home/product1.jpg" alt=""></a>
-											<h2>1500만원</h2>
-											<p>마리아</p>
+											<a href="/product-details"><img src="/resources/front/images/home/LG.jpg" alt=""></a>
+											<h2>150만원</h2>
+											<p>LG 4문형 냉장고</p>
 											
 										</div>
 								</div>
@@ -284,9 +283,9 @@
 							<div class="product-image-wrapper">
 								<div class="single-products">
 										<div class="productinfo text-center">
-											<a href="/product-details"><img src="/resources/front/images/home/product2.jpg" alt=""></a>
-											<h2>1700만원</h2>
-											<p>제임스</p>
+											<a href="/product-details"><img src="/resources/front/images/home/LG_2.jpg" alt=""></a>
+											<h2>140만원</h2>
+											<p>LG 김치냉장고</p>
 											
 										</div>
 								</div>
@@ -296,9 +295,9 @@
 							<div class="product-image-wrapper">
 								<div class="single-products">
 										<div class="productinfo text-center">
-											<a href="/product-details"><img src="/resources/front/images/home/product3.jpg" alt=""></a>
-											<h2>2100만원</h2>
-											<p>줄리엣</p>
+											<a href="/product-details"><img src="/resources/front/images/home/LG3.jpg" alt=""></a>
+											<h2>51만원</h2>
+											<p>전기오븐</p>
 											
 										</div>
 								</div>
@@ -311,9 +310,9 @@
 							<div class="product-image-wrapper">
 								<div class="single-products">
 										<div class="productinfo text-center">
-											<a href="/product-details"><img src="/resources/front/images/home/product4.jpg" alt=""></a>
-											<h2>1900만원</h2>
-											<p>크리스티나</p>
+											<a href="/product-details"><img src="/resources/front/images/home/gazuaaa.gif" alt=""></a>
+											<h2>가즈아아아아!!</h2>
+											<p>떡상</p>
 											
 										</div>
 								</div>
@@ -323,9 +322,9 @@
 							<div class="product-image-wrapper">
 								<div class="single-products">
 										<div class="productinfo text-center">
-											<a href="/product-details"><img src="/resources/front/images/home/product5.jpg" alt=""></a>
-											<h2>1600만원</h2>
-											<p>미셸</p>
+											<a href="/product-details"><img src="/resources/front/images/home/buaa.gif" alt=""></a>
+											<h2>좀비 폭탄</h2>
+											<p>메탈슬러그</p>
 											
 										</div>
 								</div>
@@ -335,9 +334,9 @@
 							<div class="product-image-wrapper">
 								<div class="single-products">
 										<div class="productinfo text-center">
-											<a href="/product-details"><img src="/resources/front/images/home/product6.jpg" alt=""></a>
-											<h2>500원</h2>
-											<p>드록바</p>
+											<a href="/product-details"><img src="/resources/front/images/home/hell.gif" alt=""></a>
+											<h2>입소2일차</h2>
+											<p>집합15분전</p>
 											
 										</div>
 								</div>
@@ -350,9 +349,9 @@
 							<div class="product-image-wrapper">
 								<div class="single-products">
 										<div class="productinfo text-center">
-											<a href="/product-details"><img src="/resources/front/images/home/product1.jpg" alt=""></a>
-											<h2>700원</h2>
-											<p>이건영</p>
+											<a href="/product-details"><img src="/resources/front/images/home/ah.gif" alt=""></a>
+											<h2>절레절레</h2>
+											<p>안철수</p>
 											
 										</div>
 								</div>
@@ -362,9 +361,9 @@
 							<div class="product-image-wrapper">
 								<div class="single-products">
 										<div class="productinfo text-center">
-											<a href="/product-details"><img src="/resources/front/images/home/product2.jpg" alt=""></a>
-											<h2>500원</h2>
-											<p>강세훈</p>
+											<a href="/product-details"><img src="/resources/front/images/home/giee.jpg" alt=""></a>
+											<h2>끼에에엑!</h2>
+											<p>빼애애액!</p>
 											
 										</div>
 								</div>
@@ -374,9 +373,9 @@
 							<div class="product-image-wrapper">
 								<div class="single-products">
 										<div class="productinfo text-center">
-											<a href="/product-details"><img src="/resources/front/images/home/product3.jpg" alt=""></a>
-											<h2>200원</h2>
-											<p>이정욱</p>
+											<a href="/product-details"><img src="/resources/front/images/home/goza.gif" alt=""></a>
+											<h2>고자라니!!</h2>
+											<p>심영</p>
 											
 										</div>
 								</div>
