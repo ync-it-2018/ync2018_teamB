@@ -45,7 +45,7 @@
 							</tr>
 							<tr>
 								<td><label>가장낮은가격</label></td>
-								<td>자동 입력</td>
+								<td><input type="text" name="PRO_LOW"  placeholder="가장 낮은가격"></td>
 								<td><label>판매사이트</label></td>
 								<td><input type="text" name="PRO_SITE"  placeholder="판매사이트명"></td>
 								<td>

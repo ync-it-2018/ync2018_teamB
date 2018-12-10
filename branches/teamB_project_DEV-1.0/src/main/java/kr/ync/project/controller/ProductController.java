@@ -28,9 +28,16 @@ public class ProductController {
 //	public void Product_regiGET(@ModelAttribute("dto") Product_regiDTO dto) {
 //
 //	}
+//	@GetMapping(value = "/shop")
+//	public String Product_GET(Model model) throws Exception {
+//		logger.info("show all List...............");
+//		model.addAttribute("list", service.listAll());
+//		
+//		return "front/shop";
+//	}
 
 	@PostMapping(value = "/product_regiPost")
-	public void loginPOST(Product_regiVO vo, HttpSession session, Model model) throws Exception {
+	public void Product_regiPOST(Product_regiVO vo, HttpSession session, Model model) throws Exception {
 
 		service.regist(vo);
 		

@@ -10,7 +10,7 @@ public interface Product_regiService {
 	
 	public void regist(Product_regiVO vo) throws Exception;
 
-	public Product_regiVO read(Integer pno) throws Exception;
+	public Product_regiVO read(Integer PRO_NUM) throws Exception;
 
 	public void modify(Product_regiVO product) throws Exception;
 

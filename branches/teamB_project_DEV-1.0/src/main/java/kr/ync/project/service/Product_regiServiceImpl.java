@@ -23,8 +23,8 @@ public class Product_regiServiceImpl implements Product_regiService
 	
 
 	@Override
-	public Product_regiVO read(Integer pno) throws Exception {
-		return dao.read(pno);
+	public Product_regiVO read(Integer PRO_NUM) throws Exception {
+		return dao.read(PRO_NUM);
 		
 	}
 

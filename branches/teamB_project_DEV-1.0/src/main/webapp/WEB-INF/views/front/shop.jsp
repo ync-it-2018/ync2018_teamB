@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -136,49 +138,52 @@
 				<table class="table table-condensed">
 					<thead>
 						<tr class="cart_menu">
-							<td class="image">사진</td>
+							<td class="PRO_MAIN_IMAGE">사진</td>
 							<!-- image -->
-							<td class="product">제품명</td>
-							<td class="description">제품설명</td>
+							<td class="PRO_NAME">제품명</td>
+							<td class="PRO_EXPLAN">제품설명</td>
 							<td class="register">제품 등록일자 <br>상품 사용후기 건수</td>
-							<td class="price">가격</td>
+							<td class="PRO_PRICE">가격</td>
 							<td></td>
 
 						</tr>
 					</thead>
+					
 					<tbody>
+						<c:forEach items="${product_list}" var="Product_regiVO">
 						<tr>
-							<td class="interest_product_image"><a href="/product-details"><img
-									src="/resources/front/images/cart/one.png" alt=""></a></td>
+							<td class="interest_product_image">
+							<a href='/front/product_details?PRO_NUM=${Product_regiVO.PRO_NUM } '>
+							<img src="${Product_regiVO.PRO_MAIN_IMAGE}" width="150" height="150" alt=""></a></td>
 
 							<td class="interest_product">
-								<h4>제품명</h4>
+								<h4>${Product_regiVO.PRO_NUM}</h4>
 
 							</td>
 
 							<td class="interest_prdouct_description">
-								<h4>제품설명</h4>
-								<p>제품부과 설명</p>
+								<h4>${Product_regiVO.PRO_EXPLAN}</h4>
+								<p>${Product_regiVO.PRO_TAG}</p>
 							</td>
 
 							<td class="interest_product_register">
-								<p class="product_register_date">
-									2018-10-17</p>
+								<!-- <p class="product_register_date">
+									2018-10-17</p> -->
+									<fmt:formatDate pattern="yyyy-MM-dd HH:mm"
+											value="${Product_regiVO.PRO_DATE}"/>
 									<p>5건
 								</p>
 							</td>
 
 							<td class="interest_product_price">
-								<h4>$58</h4>
-							</td>
-
-						
+								<h4>${Product_regiVO.PRO_PRICE}</h4>
+							</td>					
 						</tr>
+						</c:forEach>
 
 
 
-
-						<tr>
+						<!-- <tr>
 							<td class="interest_product_image"><a href="/product-details"><img
 									src="/resources/front/images/cart/two.png" alt=""></a></td>
 
@@ -231,7 +236,7 @@
 							</td>
 
 					
-						</tr>
+						</tr> -->
 
 					</tbody>
 				</table>

@@ -10,17 +10,271 @@
 	<!-- 게시판 추가하기 -->
 	<insert id="create">
 		INSERT INTO TB_PRODUCT
-		(PRO_NUM ,PRO_NAME, PRO_SITE, PRO_PRICE, PRO_PRICE3,
-		 PRO_EXPLAN, PRO_BUY_HITS, PRO_HITS,FIRST_CAT_NUM, SECOND_CAT_NUM, 
+		(PRO_NUM ,PRO_NAME, PRO_LOW ,PRO_SITE, PRO_MAIN_IMAGE, PRO_PRICE, PRO_PRICE3,
+		 PRO_EXPLAN, PRO_BUY_HITS, PRO_HITS, PRO_TAG, FIRST_CAT_NUM, SECOND_CAT_NUM, 
 		 THIRD_CAT_NUM, LAST_CAT_NUM,PRODUCT_DETAIL_NUM, PRO_URL, PRO_URL2, 
-		 PRO_PRICE2, PRO_URL3)
+		 PRO_PRICE2, PRO_URL3,PRO_DATE)
 		 
-		VALUES(TB_SEQ_PRODUCT_NUM.NEXTVAL, #{PRO_NAME},#{PRO_SITE},#{PRO_PRICE},#{PRO_PRICE3},
-		       #{PRO_EXPLAN}, TB_SEQ_PRODUCT_BUY_HITS.NEXTVAL , TB_SEQ_PRODUCT_HITS.NEXTVAL,1,1,
+		VALUES(TB_SEQ_PRODUCT_NUM.NEXTVAL, #{PRO_NAME} , #{PRO_LOW},#{PRO_SITE},'http://image.itdonga.com/files/2018/03/26/003_9YzKR9R.jpg',#{PRO_PRICE},#{PRO_PRICE3},
+		       #{PRO_EXPLAN}, TB_SEQ_PRODUCT_BUY_HITS.NEXTVAL , TB_SEQ_PRODUCT_HITS.NEXTVAL,'TAG',1,1,
 		       1, 1, 1, #{PRO_URL}, #{PRO_URL2}, 
-		       #{PRO_PRICE2},#{PRO_URL3})
-
+		       #{PRO_PRICE2},#{PRO_URL3}, sysdate)
 	</insert>
+	<select id="read" resultType="Product_regiVO">
+	SELECT  PRO_NUM,
+	 		PRO_NAME,
+	 		PRO_LOW,
+	 		PRO_SITE,
+	 		PRO_MAIN_IMAGE,
+	 		PRO_PRICE,
+	 		PRO_PRICE3,
+	 		PRO_EXPLAN,
+	 		PRO_BUY_HITS,
+	 		PRO_HITS,
+	 		PRO_TAG,
+	 		
+	 		PRO_URL,
+	 		PRO_PRICE2
+	 		PRO_URL2,
+	 		PRO_URL3,
+	 		PRO_DATE
+	FROM 	tb_product 
+	WHERE	PRO_NUM = #{PRONUM}
+</select>
+
+<update id="update">
+	UPDATE tb_free_board	SET free_board_title =#{free_board_title},
+							free_board_cont =#{free_board_cont},
+							free_board_writer =#{free_board_writer}
+	WHERE free_board_num = #{free_board_num}
+</update>
+
+<delete id="delete">
+	delete from tb_free_board where free_board_num = #{free_board_num}
+</delete>
+
+<select id="listAll" resultType="Product_regiVO">
+	<![CDATA[
+	SELECT  PRO_NUM,
+	 		PRO_NAME,
+	 		PRO_LOW,
+	 		PRO_SITE,
+	 		PRO_MAIN_IMAGE,
+	 		PRO_PRICE,
+	 		PRO_PRICE3,
+	 		PRO_EXPLAN,
+	 		PRO_BUY_HITS,
+	 		PRO_HITS,
+	 		PRO_TAG,
+	 		
+	 		PRO_URL,
+	 		PRO_PRICE2
+	 		PRO_URL2,
+	 		PRO_URL3,
+	 		PRO_DATE
+	FROM 	tb_product 
+	WHERE	PRO_NUM > 0 
+	ORDER BY PRO_NUM DESC, PRO_DATE DESC
+	]]>  
+</select>
+ 
+
+<select id="listPage"  resultType="Product_regiVO">
+	<![CDATA[
+	SELECT  PRO_NUM,
+	 		PRO_NAME,
+	 		PRO_LOW,
+	 		PRO_SITE,
+	 		PRO_MAIN_IMAGE,
+	 		PRO_PRICE,
+	 		PRO_PRICE3,
+	 		PRO_EXPLAN,
+	 		PRO_BUY_HITS,
+	 		PRO_HITS,
+	 		PRO_TAG,
+	 		
+	 		PRO_URL,
+	 		PRO_PRICE2
+	 		PRO_URL2,
+	 		PRO_URL3,
+	 		PRO_DATE
+	FROM   (SELECT 	/*+INDEX_DESC(tb_free_board pk_board)*/
+					rownum rn,
+					PRO_NUM,
+	 				PRO_NAME,
+	 				PRO_LOW,
+	 				PRO_SITE,
+	 				PRO_MAIN_IMAGE,
+	 				PRO_PRICE,
+	 				PRO_PRICE3,
+	 				PRO_EXPLAN,
+	 				PRO_BUY_HITS,
+	 				PRO_HITS,
+	 				PRO_TAG,
+	 		
+	 				PRO_URL,
+	 				PRO_PRICE2
+	 				PRO_URL2,
+	 				PRO_URL3,
+	 				PRO_DATE
+	  		FROM	tb_product
+			WHERE	rownum <= #{page} * #{perPageNum}
+			AND		free_board_num > 0
+			)
+	WHERE 	rn > (#{page} -1) * #{perPageNum}
+	]]>
+</select>
+
+<select id="listCriteria" resultType="Product_regiVO">
+	<![CDATA[
+	SELECT	PRO_NUM,
+	 		PRO_NAME,
+	 		PRO_LOW,
+	 		PRO_SITE,
+	 		PRO_MAIN_IMAGE,
+	 		PRO_PRICE,
+	 		PRO_PRICE3,
+	 		PRO_EXPLAN,
+	 		PRO_BUY_HITS,
+	 		PRO_HITS,
+	 		PRO_TAG,
+	 		
+	 		PRO_URL,
+	 		PRO_PRICE2
+	 		PRO_URL2,
+	 		PRO_URL3,
+	 		PRO_DATE
+	FROM   (SELECT 	/*+INDEX_DESC(tb_free_board pk_board)*/
+					rownum rn,
+					PRO_NUM,
+	 				PRO_NAME,
+	 				PRO_LOW,
+	 				PRO_SITE,
+	 				PRO_MAIN_IMAGE,
+	 				PRO_PRICE,
+	 				PRO_PRICE3,
+	 				PRO_EXPLAN,
+	 				PRO_BUY_HITS,
+	 				PRO_HITS,
+	 				PRO_TAG,
+	 		
+	 				PRO_URL,
+	 				PRO_PRICE2
+	 				PRO_URL2,
+	 				PRO_URL3,
+	 				PRO_DATE
+	  		FROM	tb_product
+			WHERE	rownum <= #{page} * #{perPageNum}
+			AND		PRO_NUM > 0
+			)
+	WHERE 	rn > (#{page} -1) * #{perPageNum}
+	]]>
+</select>
+
+<select id="countPaging" resultType="int">
+	<![CDATA[
+	SELECT	count(PRO_NUM) 
+	FROM	tb_product 
+	WHERE	PRO_NUM > 0 
+	]]>
+</select>
+
+
+
+<!-- 동적SQL (<sql>로 분리) 작성된 최종 SQL 시작-->
+<sql id="search">
+	<if test="searchType != null" >
+		<if test="searchType == 't'.toString()">
+			AND title LIKE '%'|| #{keyword}||'%'
+		</if>
+		<if test="searchType == 'c'.toString()">
+			AND content LIKE '%'|| #{keyword}||'%'
+		</if>
+		<if test="searchType == 'w'.toString()">
+			AND writer LIKE '%'|| #{keyword}||'%'
+		</if>    
+		<if test="searchType == 'tc'.toString()">
+			AND (title LIKE '%'|| #{keyword}||'%' OR content LIKE '%'|| #{keyword}||'%')
+		</if>      
+	</if>
+</sql>
+
+<select id="listSearch"  resultType="Product_regiVO">
+	<![CDATA[
+		SELECT		PRO_NUM,
+	 				PRO_NAME,
+	 				PRO_LOW,
+	 				PRO_SITE,
+	 				PRO_MAIN_IMAGE,
+	 				PRO_PRICE,
+	 				PRO_PRICE3,
+	 				PRO_EXPLAN,
+	 				PRO_BUY_HITS,
+	 				PRO_HITS,
+	 				PRO_TAG,
+	 		
+	 				PRO_URL,
+	 				PRO_PRICE2
+	 				PRO_URL2,
+	 				PRO_URL3,
+	 				PRO_DATE
+		FROM   (SELECT 	/*+INDEX_DESC(tb_product pk_board)*/
+						rownum rn,
+						PRO_NUM,
+	 					PRO_NAME,
+	 					PRO_LOW,
+	 					PRO_SITE,
+	 					PRO_MAIN_IMAGE,
+	 					PRO_PRICE,
+	 					PRO_PRICE3,
+	 					PRO_EXPLAN,
+	 					PRO_BUY_HITS,
+	 					PRO_HITS,
+	 					PRO_TAG,
+	 		
+	 					PRO_URL,
+	 					PRO_PRICE2
+	 					PRO_URL2,
+	 					PRO_URL3,
+	 					PRO_DATE
+		  		FROM	tb_product
+	]]>
+		<!--
+		<where> 엘리먼트로 검색을 하지 않았을 경우 AND rownum <= 과 같이 WHERE 구문이 빠져버린다.
+		따라서 <where> 를 사용하면 AND나 OR로 구문이 시작되면 AND나 OR를 지워버린다.
+		아래 구문과 동일한 기능. 
+		<trim prefix="WHERE" prefixOverrides="AND|OR ">
+		  ... 
+		</trim>
+		http://www.mybatis.org/mybatis-3/ko/dynamic-sql.html 참고
+		-->
+		<where>
+				<include refid="search"></include>
+				<![CDATA[
+				AND rownum <= #{page} * #{perPageNum}
+				AND PRO_NUM > 0
+		  		)
+				]]>
+		</where>
+	<![CDATA[
+		WHERE rn > (#{page} -1) * #{perPageNum}
+	]]>
+</select>
+
+<select id="listSearchCount"  resultType="int">
+	<![CDATA[
+		SELECT	count(PRO_NUM)
+		FROM	tb_free_board
+	]]>
+	
+	<where>
+		<include refid="search"></include>
+		<![CDATA[
+			AND PRO_NUM > 0
+		]]>
+	</where>
+</select>
+<!-- 동적SQL (<sql>로 분리) 작성된 최종 SQL 끝-->
 </mapper>
 
 

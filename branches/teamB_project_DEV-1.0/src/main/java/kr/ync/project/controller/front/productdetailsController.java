@@ -15,12 +15,12 @@ import kr.ync.project.controller.HomeController;
 public class productdetailsController {
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 	
-	@RequestMapping(value = "/product-details", method = RequestMethod.GET)
-	public String productdetails(Locale locale, Model model) {
-
-		logger.info("teamB log productdetails 페이지", locale);
-
-		return "front/product-details";
-	}
+//	@RequestMapping(value = "/product-details", method = RequestMethod.GET)
+//	public String productdetails(Locale locale, Model model) {
+//
+//		logger.info("teamB log productdetails 페이지", locale);
+//
+//		return "front/product-details";
+//	}
 	
 }
