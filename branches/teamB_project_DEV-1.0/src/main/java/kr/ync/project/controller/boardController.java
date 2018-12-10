@@ -34,7 +34,7 @@ public class boardController {
 	@GetMapping(value = "/freeboard_view")
 	public String read(@RequestParam("free_board_num") int free_board_num,Model model) throws Exception {
 		logger.info("show free board view...............");
-		model.addAttribute(service.read(free_board_num));
+		model.addAttribute("boardView", service.read(free_board_num));
 		
 		return "front/freeboard_view";
 		

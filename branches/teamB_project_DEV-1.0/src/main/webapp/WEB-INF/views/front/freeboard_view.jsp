@@ -145,23 +145,23 @@
 				<div class="tab-pane fade active in" id="reviews">
 					<div class="col-sm-12">
 						<form role="form" method="post">
-							<input type='hidden' name='free_board_num' value="${BoardVO.free_board_num }">
+							<input type='hidden' name='free_board_num' value="${boardView.free_board_num}">
 						</form>
 						
 						<div class="box-body">
 							<div class="form-group">
 								<label for="exampleInputEamil1">Title</label>
-								<input type="text" name='free_board_title' class="form-control" value="${BoardVO.free_board_title}"
+								<input type="text" name='free_board_title' class="form-control" value="${boardView.free_board_title}"
 								readonly="readonly">
 							</div>
 							<div class="form-group">
 								<label for="exampleInputPassword1">Content</label>
-								<input type="text" name='free_board_cont' class="form-control" value="${BoardVO.free_board_cont}"
+								<input type="text" name='free_board_cont' class="form-control" value="${boardView.free_board_cont}"
 								readonly="readonly">
 							</div>
 							<div class="form-group">
 								<label for="exampleInputEamil1">Writer</label>
-								<input type="text" name='free_board_writer' class="form-control" value="${BoardVO.free_board_writer}"
+								<input type="text" name='free_board_writer' class="form-control" value="${boardView.free_board_writer}"
 								readonly="readonly">
 								
 							</div>

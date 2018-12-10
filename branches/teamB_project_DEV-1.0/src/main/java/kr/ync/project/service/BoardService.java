@@ -15,7 +15,7 @@ public interface BoardService {
 
 	public void modify(BoardVO board) throws Exception;
 
-	public void remove(Integer bno) throws Exception;
+	public void remove(Integer free_board_num) throws Exception;
 
 	public List<BoardVO> listAll() throws Exception;
 
