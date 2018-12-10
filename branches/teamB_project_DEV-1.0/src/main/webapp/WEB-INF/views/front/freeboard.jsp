@@ -148,7 +148,8 @@
 									<c:forEach items="${list}" var="BoardVO">
 									<tr>
 										<td>${BoardVO.free_board_num}</td>
-										<td><a href=''>${BoardVO.free_board_title }</a></td>
+										<td><a href='/front/freeboard_view?free_board_num=${BoardVO.free_board_num }'>${BoardVO.free_board_title }</a>
+										</td>
 										<td>${BoardVO.free_board_writer}</td>
 										<td><fmt:formatDate pattern="yyyy-MM-dd HH:mm"
 											value="${BoardVO.free_board_date}"/></td>

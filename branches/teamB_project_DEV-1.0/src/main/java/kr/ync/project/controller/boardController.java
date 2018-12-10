@@ -8,12 +8,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import kr.ync.project.domain.BoardVO;
-import kr.ync.project.dto.BoardDTO;
 import kr.ync.project.service.BoardService;
 @Controller
 @RequestMapping("/front")
@@ -31,6 +30,16 @@ public class boardController {
 		
 		return "front/freeboard";
 	}
+	
+	@GetMapping(value = "/freeboard_view")
+	public String read(@RequestParam("free_board_num") int free_board_num,Model model) throws Exception {
+		logger.info("show free board view...............");
+		model.addAttribute(service.read(free_board_num));
+		
+		return "front/freeboard_view";
+		
+	}
+
 
 	@PostMapping(value = "/boardwritefail")
 	public void BoardPOST(BoardVO vo, HttpSession session, Model model) throws Exception {

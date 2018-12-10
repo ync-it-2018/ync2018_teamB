@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -142,32 +144,35 @@
 			<div class="tab-content">
 				<div class="tab-pane fade active in" id="reviews">
 					<div class="col-sm-12">
-						<form action="#">
-							<table class="freeboard">
-								<Caption>자유게시판 글 보기</Caption>
-								<tbody>
-									<tr>
-										<th>제목</th>
-										<td><input type="text"
-											style="width: 1004px; height: 30px;"
-											placeholder="제목을 입력 하세요."></td>
-									</tr>
-									<tr>
-										<th style="vertical-align: center; padding-top: 100px;">내용</th>
-										<td bgcolor="white"><textarea id="freetext"></textarea></td>
-									</tr>
-								</tbody>
-							</table>
-							<div style="margin-left:950px;">
-								<a class="btn btn-default update" href="/freeboard_modify">수정</a> 
-								<a class="btn btn-default update" href="">삭제</a>
-							</div>
-							<h3>댓글</h3>
-							
-							<textarea style="width: 1020px; height: 50px;">테스트</textarea>
-							
-							<a class="btn btn-default update" style="height: 40px;width: 80px;"href="">의견쓰기</a>
+						<form role="form" method="post">
+							<input type='hidden' name='free_board_num' value="${BoardVO.free_board_num }">
 						</form>
+						
+						<div class="box-body">
+							<div class="form-group">
+								<label for="exampleInputEamil1">Title</label>
+								<input type="text" name='free_board_title' class="form-control" value="${BoardVO.free_board_title}"
+								readonly="readonly">
+							</div>
+							<div class="form-group">
+								<label for="exampleInputPassword1">Content</label>
+								<input type="text" name='free_board_cont' class="form-control" value="${BoardVO.free_board_cont}"
+								readonly="readonly">
+							</div>
+							<div class="form-group">
+								<label for="exampleInputEamil1">Writer</label>
+								<input type="text" name='free_board_writer' class="form-control" value="${BoardVO.free_board_writer}"
+								readonly="readonly">
+								
+							</div>
+						</div>
+						<!-- /.box-body -->
+						
+						<div class="box-footer">
+							<button type="submit" class="btn btn-warning">Modify</button>
+							<button type="submit" class="btn btn-danger">REMOVE</button>
+							<button type="submit" class="btn btn-primary">List All</button>
+						</div>
 					</div>
 				</div>
 

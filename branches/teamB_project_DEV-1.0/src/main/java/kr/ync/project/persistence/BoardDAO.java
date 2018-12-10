@@ -12,7 +12,7 @@ public interface BoardDAO {
 
 	public void create(BoardVO vo) throws Exception;
 
-	public BoardVO read(Integer bno) throws Exception;
+	public BoardVO read(Integer free_board_num) throws Exception;
 
 	public void update(BoardVO vo) throws Exception;
 

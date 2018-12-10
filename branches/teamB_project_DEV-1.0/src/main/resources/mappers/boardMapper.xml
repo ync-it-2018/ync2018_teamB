@@ -13,9 +13,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <select id="read" resultType="BoardVO">
 	SELECT  free_board_num,
 	 		free_board_title,
-	 		free_board_writer,
-	 		free_board_date,
-	 		free_board_hits
+	 		free_board_cont,
+	 		free_board_writer
 	FROM 	tb_free_board 
 	WHERE	free_board_num = #{free_board_num}
 </select>
@@ -35,6 +34,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<![CDATA[
 	SELECT 	free_board_num,
 	 		free_board_title,
+	 		free_board_cont,
 	 		free_board_writer,
 	 		free_board_date,
 	 		free_board_hits

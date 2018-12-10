@@ -13,7 +13,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class BoardInterceptor extends HandlerInterceptorAdapter {
 
-	private static final String BOARD = "board";
+	private static final String BOARD = "Board";
 
 	@Override
 	public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler,
@@ -22,13 +22,13 @@ public class BoardInterceptor extends HandlerInterceptorAdapter {
 		HttpSession session = request.getSession();
 
 		ModelMap modelMap = modelAndView.getModelMap();
-		Object boardVO = modelMap.get("boardVO");
+		Object BoardVO = modelMap.get("BoardVO");
 		
 		// UserVO가 null 이란 말은 DB에서 해당 user에 대한 data가 없다는 말이다.  
-		if (boardVO != null) {
+		if (BoardVO != null) {
 
 			log.info("★★★★★★★★★★★★★★★★★★★new write success");
-			session.setAttribute(BOARD, boardVO);
+			session.setAttribute(BOARD, BoardVO);
 
 			/*if (request.getParameter("useCookie") != null) {
 

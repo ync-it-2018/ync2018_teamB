@@ -11,7 +11,7 @@ public interface BoardService {
 
 	public void regist(BoardVO vo) throws Exception;
 
-	public BoardVO read(Integer bno) throws Exception;
+	public BoardVO read(Integer free_board_num) throws Exception;
 
 	public void modify(BoardVO board) throws Exception;
 

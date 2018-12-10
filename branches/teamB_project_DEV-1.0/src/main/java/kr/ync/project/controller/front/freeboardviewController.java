@@ -15,12 +15,12 @@ import kr.ync.project.controller.HomeController;
 public class freeboardviewController {
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 	
-	@RequestMapping(value = "/freeboard_view", method = RequestMethod.GET)
-	public String hitstat(Locale locale, Model model) {
-
-		logger.info("teamB log freeboard_view 페이지", locale);
-
-		return "front/freeboard_view";
-	}
+//	@RequestMapping(value = "/freeboard_view", method = RequestMethod.GET)
+//	public String hitstat(Locale locale, Model model) {
+//
+//		logger.info("teamB log freeboard_view 페이지", locale);
+//
+//		return "front/freeboard_view";
+//	}
 	
 }
