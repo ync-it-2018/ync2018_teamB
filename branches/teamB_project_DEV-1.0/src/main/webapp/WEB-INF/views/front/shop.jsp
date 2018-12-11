@@ -157,7 +157,7 @@
 							<img src="${Product_regiVO.PRO_MAIN_IMAGE}" width="150" height="150" alt=""></a></td>
 
 							<td class="interest_product">
-								<h4>${Product_regiVO.PRO_NUM}</h4>
+								<h4>${Product_regiVO.PRO_NAME}</h4>
 
 							</td>
 
@@ -181,70 +181,60 @@
 						</tr>
 						</c:forEach>
 
-
-
-						<!-- <tr>
-							<td class="interest_product_image"><a href="/product-details"><img
-									src="/resources/front/images/cart/two.png" alt=""></a></td>
-
-							<td class="interest_product">
-								<h4>제품명</h4>
-
-							</td>
-
-							<td class="interest_prdouct_description">
-								<h4>제품설명</h4>
-								<p>제품부과 설명</p>
-							</td>
-
-							<td class="interest_product_register">
-								<p class="product_register_date">
-									2018-10-17<br>5건
-								</p>
-							</td>
-
-							<td class="interest_product_price">
-								<h4>$58</h4>
-							</td>
-
-
-						</tr>
-
-
-						<tr>
-							<td class="interest_product_image"><a href="/product-details"><img
-									src="/resources/front/images/cart/three.png" alt=""></a></td>
-
-							<td class="interest_product">
-								<h4>제품명</h4>
-
-							</td>
-
-							<td class="interest_prdouct_description">
-								<h4>제품설명</h4>
-								<p>제품부과 설명</p>
-							</td>
-
-							<td class="interest_product_register">
-								<p class="product_register_date">
-									2018-10-17<br>5건
-								</p>
-							</td>
-
-							<td class="interest_product_price">
-								<h4>$58</h4>
-							</td>
-
-					
-						</tr> -->
-
 					</tbody>
 				</table>
+					<div class="box-footer">
+
+					<div class="text-center">
+						<ul class="pagination">
+
+							<c:if test="${pageMaker.prev}">
+								<li><a href="shop${pageMaker.makeSearch(pageMaker.startPage - 1) }">&laquo;</a></li>
+							</c:if>
+
+							<c:forEach begin="${pageMaker.startPage }" end="${pageMaker.endPage }" var="idx">
+								<li
+									<c:out value="${pageMaker.cri.page == idx?'class =active':''}"/>>
+									<a href="shop${pageMaker.makeSearch(idx)}">${idx}</a>
+								</li>
+							</c:forEach>
+
+							<c:if test="${pageMaker.next && pageMaker.endPage > 0}">
+								<li><a href="shop${pageMaker.makeSearch(pageMaker.endPage +1) }">&raquo;</a></li>
+							</c:if>
+
+						</ul>
+					</div>
+
+				</div>
 			</div>
 		</div>
 	</section>
 	<!--/#cart_items-->
+<script>
+	var result = '${msg}';
 
+	if (result == 'SUCCESS') {
+		alert("처리가 완료되었습니다.");
+	}
+</script>
+
+<script>
+	$(document).ready(function() {
+		$('#searchBtn').on("click",function(event) {
+			self.location = "product_list"
+							+ '${pageMaker.makeQuery(1)}'
+							+ "&searchType="
+							+ $("select option:selected").val()
+							+ "&keyword=" + $('#keywordInput').val();
+
+		});
+
+		$('#newBtn').on("click", function(evt) {
+			self.location = "register";
+		});
+	});
+</script>
 
 
 

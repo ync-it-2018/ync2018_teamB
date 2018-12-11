@@ -50,7 +50,7 @@ public class Product_regiDAOImpl implements Product_regiDAO {
 			page = 1;
 		}
 
-		page = (page - 1) * 10;
+//		page = (page - 1) * 10;
 
 		return session.selectList(namespace + ".listPage", page);
 	}

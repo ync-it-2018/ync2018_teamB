@@ -71,7 +71,7 @@
                                          <li><h4 style="color:white"><strong>디지털</strong></h4></li>
                                          
                                         	<ul>
-                                        		<li><a href="/shop">PC</a></li>
+                                        		<li><a href='/shop${pageMaker.makeSearch(pageMaker.cri.page)}'>PC</a></li>
                                         		<li><a href="/shop">모바일</a></li>
                                         		<li><a href="/shop">가전제품</a></li>
                                         		<li><a href="/shop">노트북</a></li>
