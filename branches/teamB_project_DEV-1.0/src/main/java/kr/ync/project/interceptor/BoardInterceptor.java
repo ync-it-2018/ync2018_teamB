@@ -30,17 +30,8 @@ public class BoardInterceptor extends HandlerInterceptorAdapter {
 			log.info("★★★★★★★★★★★★★★★★★★★new write success");
 			session.setAttribute(BOARD, BoardVO);
 
-			/*if (request.getParameter("useCookie") != null) {
-
-				logger.info("remember me................");
-				Cookie loginCookie = new Cookie("loginCookie", session.getId());
-				loginCookie.setPath("/");
-				loginCookie.setMaxAge(60 * 60 * 24 * 7);
-				response.addCookie(loginCookie);
-			}*/
-			response.sendRedirect("/");
-			//Object dest = session.getAttribute("dest");
-			//response.sendRedirect(dest != null ? (String) dest : "/");
+			response.sendRedirect("/front/freeboard");
+			
 		}
 	}
 

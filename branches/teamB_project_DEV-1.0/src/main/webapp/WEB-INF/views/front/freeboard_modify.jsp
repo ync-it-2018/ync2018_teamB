@@ -31,7 +31,19 @@
 	href="/resources/front/images/ico/apple-touch-icon-57-precomposed.png">
 </head>
 <!--/head-->
-
+<script>
+$(document).ready(function(){
+	var formObj = $("form[role='form']");
+	console.log(formObj);
+	
+	$(".btn-warning").on("click",function(){
+		self.location = "/front/freeboard";
+	});
+	$(".btn-primary").on("click",function(){
+		formObj.submit();
+	});
+});
+</script>
 <body>
 	<header id="header">
 		<!--header-->
@@ -145,20 +157,33 @@
 						<form action="#">
 							<table class="freeboard">
 								<Caption>자유게시판 글 수정</Caption>
-								<tbody>
-									<tr>
-										<th>제목</th>
-										<td><input type="text"
-											style="width: 1004px; height: 30px;"
-											placeholder="제목을 입력 하세요."></td>
-									</tr>
-									<tr>
-										<th style="vertical-align:center; padding-top: 100px;">내용</th>
-										<td bgcolor="white"><textarea id="freetext"></textarea></td>
-									</tr>
-								</tbody>
+								<form role= "form" method="post">
+									<div class ="box-body">
+										<div class="form-group">
+											<label for="exampleInputEmail1">글번호</label>
+											<input type="text" name='free_board_num' class="form-control" value="${boardView.free_board_num}">
+										</div>
+										<div class="form-group">
+											<label for="exampleInputEmail1">제목</label>
+											<input type="text" name='free_board_title' class="form-control" value="${boardView.free_board_title}">
+										</div>
+										<div class="form-group">
+											<label for="exampleInputPassword1">내용</label>
+											<input type="text" name='free_board_cont' class="form-control" value="${boardView.free_board_cont}">
+										</div>
+										<div class="form-group">
+											<label for="exampleInputEmail1">작성자</label>
+											<input type="text" name='free_board_writer' class="form-control" value="${boardView.free_board_writer}">
+										</div>
+									</div>
+									<!-- /.box-body -->
+								</form>
+								<div class="box-footer">
+									<button type="submit" class="btn btn-primary">저장</button>
+									<button type="submit" class="btn btn-warning">취소</button>
+								</div>
 							</table>
-								<button class="modify" type="button" style="margin-left: 1000px; margin-top:10px;" >수 정</button>		
+										
 						</form>
 					</div>
 				</div>

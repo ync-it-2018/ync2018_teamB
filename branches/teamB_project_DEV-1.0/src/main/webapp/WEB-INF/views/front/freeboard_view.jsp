@@ -1,7 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ page session="false"%>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -144,9 +147,7 @@
 			<div class="tab-content">
 				<div class="tab-pane fade active in" id="reviews">
 					<div class="col-sm-12">
-						<form role="form" method="post">
-							<input type='hidden' name='free_board_num' value="${boardView.free_board_num}">
-						</form>
+						
 						
 						<div class="box-body">
 							<div class="form-group">
@@ -167,11 +168,14 @@
 							</div>
 						</div>
 						<!-- /.box-body -->
+						<div>
+						<form role="form" action="/front/freeboard_modify" method="post">
+							<input type='hidden' name='free_board_num' value="${boardView.free_board_num}">
 						
-						<div class="box-footer">
-							<button type="submit" class="btn btn-warning">Modify</button>
-							<button type="submit" class="btn btn-danger">REMOVE</button>
-							<button type="submit" class="btn btn-primary">List All</button>
+							<button type="submit"  id="modifyBtn">수정</button>
+							<button type="submit"  id="removeBtn">삭제</button>
+							<button type="submit"  id="listBtn">목록</button>
+						</form>
 						</div>
 					</div>
 				</div>
@@ -197,9 +201,31 @@
 		</div>
 		
 	</footer><!--/Footer-->
-
-
-
+	<script type="text/javascript">
+	$(document).ready(function(){
+	    
+	    var formObj = $("form[role='form']");
+	    
+	    console.log(formObj);
+	    
+	    $("#modifyBtn").on("click", function() {
+	    	alret("시발");
+	       formObj.attr("action", "/front/freeboard_modify");
+	       formObj.attr("method", "get");
+	       formObj.submit();
+	    });
+	    
+	    $("#removeBtn").on("click", function() {
+	       formObj.attr("action", "/front");
+	       formObj.submit();
+	    });
+	    
+	    $("#listBtn").on("click", function() {
+	       self.location = "/front/freeboard";	
+	    });
+	    
+	 });
+</script>
 	<script src="/resources/js/jquery.js"></script>
 	<script src="/resources/js/price-range.js"></script>
 	<script src="/resources/js/jquery.scrollUp.min.js"></script>
