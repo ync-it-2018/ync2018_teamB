@@ -60,10 +60,6 @@
 			<mapping path="/freeboard_write"/>
 			<beans:ref bean="AuthInterceptor"/>
 		</interceptor>
-		<!-- <interceptor>
-			<mapping path="/front/logout"/>
-			<beans:ref bean="loginInterceptor"/>
-		</interceptor> -->
 		<interceptor>
 			<mapping path="/front/boardwritefail"/>
 			<beans:ref bean="BoardInterceptor"/>

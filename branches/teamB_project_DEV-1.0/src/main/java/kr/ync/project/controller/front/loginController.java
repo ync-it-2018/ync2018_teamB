@@ -32,7 +32,7 @@ public class loginController {
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public String login(Locale locale, Model model) {
 
-		logger.info("teamB log 아이디찾기페이지", locale);
+		logger.info("teamB log 로그인페이지", locale);
 
 		return "front/login";
 	}
@@ -71,12 +71,23 @@ public class loginController {
 			logger.info("쿠키 있으면 지워라");
 
 			Cookie loginCookie = WebUtils.getCookie(request, "loginCookie");
+			
+			Cookie loginCookie2 = WebUtils.getCookie(request, "JSESSIONID");
 
+			
 			if (loginCookie != null) {
 
 				loginCookie.setPath("/");
 				loginCookie.setMaxAge(0);
 				response.addCookie(loginCookie);
+				service.keepLogin(vo.getUSER_ID(), session.getId(), new Date());
+			}
+			
+			if (loginCookie2 != null) {
+
+				loginCookie.setPath("/");
+				loginCookie.setMaxAge(0);
+				response.addCookie(loginCookie2);
 				service.keepLogin(vo.getUSER_ID(), session.getId(), new Date());
 			}
 		}
