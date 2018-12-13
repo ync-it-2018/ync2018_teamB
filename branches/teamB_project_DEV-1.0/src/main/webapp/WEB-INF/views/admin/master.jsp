@@ -1,4 +1,6 @@
+
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ page session="false" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
   pageEncoding="UTF-8"%>
@@ -20,30 +22,31 @@
             <%} %>
             <button>전체</button><button>권한자</button>
             <br>
-              <table border="1">
-              	<tr bgcolor="skyblue">
-              		<td width="75px" align="center">회원번호</td>
-              		<td width="75px" align="center">ID</td>
-              		<td width="120px" align="center">E-mail</td>
-              		<td width="75px" align="center">권한부여</td>
-              		<td width="75px" align="center">삭제</td>
-              	</tr>
-              	<tr>
-              		<td width="75px" align="center">1</td>
-              		<td width="75px" align="center">Admins</td>
-              		<td width="120px" align="center">ksh@daum.net</td>
-              		<td width="75px" align="center">체크</td>
-              		<td width="75px" align="center">X</td>
-              	</tr>
-              	<tr>
-              		<td width="75px" align="center">2</td>
-              		<td width="75px" align="center">emps1</td>
-              		<td width="120px" align="center">ksh@daum.net</td>
-              		<td width="75px" align="center">체크</td>
-              		<td width="75px" align="center">X</td>
-              	</tr>
-              </table>
-              
+            <form name="masterpost" method="post">
+			  <table>
+			  		<thead>
+			  			<tr bgcolor="skyblue">
+              				<td width="75px" align="center">회원번호</td>
+              				<td width="75px" align="center">ID</td>
+              				<td width="120px" align="center">E-mail</td>
+              				<td width="75px" align="center">권한부여</td>
+              				<td width="75px" align="center">삭제</td>
+              			</tr>
+			  		</thead>
+			  		<tbody>
+			  		<c:forEach items="${masterlist}" var="UserVO">
+						<tr>
+							<td>${UserVO.USER_NUM}</td>
+							<td>${UserVO.USER_ID}</td>
+							<td>${UserVO.USER_EMAIL}</td>
+							<td><input type="button" id="" value="권한부여"></td>
+							<td><input type="button" id="btnDelete" value="회원삭제"></td>
+						</tr>
+						</c:forEach>
+			  		</tbody>
+			  </table>
+			  </form>	
+           
             </div>
           </div>
       </div><!--/.col (left) -->
@@ -52,5 +55,13 @@
 
     
 <%@include file="include/footer.jsp" %>
+<script type="text/javascript">
+
+	$(document).ready(function() {
+		$('#btnDelete').click(function() {
+			alert("삭제");
+		});
+	});
+</script>
  
  

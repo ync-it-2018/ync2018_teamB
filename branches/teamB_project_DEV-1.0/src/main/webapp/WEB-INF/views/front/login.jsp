@@ -147,7 +147,7 @@
 					
 						<button type="submit" class="btn btn-primary btn-block btn-flat">로그인</button>
 						<button type="submit" class="btn btn-primary btn-block btn-flat">아이디/비밀번호 찾기</button>
-						
+
 						</form>
 					</div>
 					<!--/login form-->

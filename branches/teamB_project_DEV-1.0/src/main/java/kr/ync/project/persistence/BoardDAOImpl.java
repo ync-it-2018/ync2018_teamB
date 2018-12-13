@@ -41,6 +41,7 @@ public class BoardDAOImpl implements BoardDAO {
 		session.delete(namespace + ".delete", bno);
 	}
 
+	
 	@Override
 	public List<BoardVO> listAll() throws Exception {
 		return session.selectList(namespace + ".listAll");

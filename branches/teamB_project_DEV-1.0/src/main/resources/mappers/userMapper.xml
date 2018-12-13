@@ -25,6 +25,67 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     	INSERT into TB_USER (USER_ID, USER_PW, USER_EMAIL) values (#{USER_ID},#{USER_PW},#{USER_EMAIL})
 	</insert>
 	
+	
+	<select id="readMember">
+		SELETE USER_ID, USER_EMAIL FROM TB_USER
+	</select>
+	
+	
+	<select id="listAll" resultType="UserVO">
+		<![CDATA[
+		SELECT 	USER_NUM,
+		 		USER_ID,
+		 		USER_EMAIL,
+		 		USER_GRADE
+		FROM 	TB_USER
+		WHERE	USER_NUM > 0
+		ORDER BY USER_NUM ASC, USER_GRADE ASC
+		
+		]]>
+	</select>
+	
+	<delete id="deleteMember">
+		delete from TB_USER where USER_NUM = #{USER_NUM}
+	</delete>
+
+
+
+	<select id="userlistPage" resultType="UserVO">
+	<![CDATA[
+	SELECT  USER_NUM, USER_ID, USER_EMAIL
+	FROM   (SELECT 	rownum rn,
+					USER_ID,
+					USER_EMAIL
+	  		FROM	TB_USER
+			WHERE	rownum <= #{page} * #{perPageNum}
+			AND		USER_NUM > 0
+			)
+	WHERE 	rn > (#{page} -1) * #{perPageNum}
+	]]>
+	</select>
+
+	<select id="userlistCriteria" resultType="UserVO">
+	<![CDATA[
+	SELECT	USER_NUM, USER_ID, USER_EMAIL
+	FROM   (SELECT  rownum rn,
+					USER_ID,
+					USER_EMAIL
+	  		FROM	TB_USER
+			WHERE	rownum <= #{page} * #{perPageNum}
+			AND		USER_NUM > 0
+			)
+	WHERE 	rn > (#{page} -1) * #{perPageNum}
+	]]>
+	</select>
+
+	<select id="usercountPaging" resultType="int">
+	<![CDATA[
+	SELECT	count(USER_NUM) 
+	FROM	TB_USER 
+	WHERE	USER_NUM > 0 
+	]]>
+	</select>
+	
 </mapper>
 
 
