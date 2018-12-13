@@ -142,19 +142,28 @@
 			<div class="tab-content">
 				<div class="tab-pane fade active in" id="reviews">
 					<div class="col-sm-12">
-						<form action="#">
+							<form role="form" method="post">
+								<input type='hidden' name='REVIEW_NUM' value="${review_View.REVIEW_NUM}">
+							</form>
 							<table class="freeboard">
 								<Caption>사용자후기 글 보기</Caption>
 								<tbody>
 									<tr>
 										<th>제목</th>
-										<td><input type="text"
-											style="width: 1004px; height: 30px;"
-											placeholder="제목을 입력 하세요."></td>
+										<td><h4 align="left">${review_View.REVIEW_TITLE}</h4> </td>
 									</tr>
 									<tr>
-										<th style="vertical-align: center; padding-top: 100px;">내용</th>
-										<td bgcolor="white"><textarea id="freetext"></textarea></td>
+										<th style="vertical-align: center; padding-top: 50px;">내용</th>
+										<td style="float: left; width: 1004px;" bgcolor="white">
+										<%-- <input type="text"	name="writer" class="form-control" placeholder="${review_View.REVIEW_CONT}" readonly> --%>
+										<textarea name="" style="width: 1004px; name="review_cont" id="review_cont" required="" rows="20" style="width:100%" placeholder="${review_View.REVIEW_CONT}" readonly></textarea>
+										</td>
+									</tr>
+									<tr>
+										<th>이미지</th>
+										<td style="float: left;">
+												<img src="${review_View.REVIEW_IMAGE}" alt="" />
+										</td>
 									</tr>
 								</tbody>
 							</table>
@@ -167,7 +176,6 @@
 							<textarea style="width: 1020px; height: 50px;">테스트</textarea>
 							
 							<a class="btn btn-default update" style="height: 40px;width: 80px;"href="">의견쓰기</a>
-						</form>
 					</div>
 				</div>
 

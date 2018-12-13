@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>    
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -139,29 +141,42 @@
 									</tr>
 								</thead>
 								<tbody>
+ 									<c:forEach items="${review_list}" var="Review_regiVO">
 									<tr>
-										<td><a href="/review_view">제목</a></td>
-										<td>글쓴이</td>
-										<td>2018-11-26</td>
-										<td>1</td>
-										
+										<td><a href='/front/review_view?REVIEW_NUM=${Review_regiVO.REVIEW_NUM } '>
+										<h4>${Review_regiVO.REVIEW_TITLE}</h4></a></td>
+										<td><h4>${Review_regiVO.USER_ID}</h4></td>
+										<td><fmt:formatDate pattern="yyyy-MM-dd HH:mm"
+											value="${Review_regiVO.REVIEW_DATE}"/></td>
+										<td><h4>${Review_regiVO.REVIEW_HITS}</h4></td>
 									</tr>
-									<tr>
-										<td>제목</td>
-										<td>글쓴이</td>
-										<td>2018-11-26</td>
-										<td>2</td>
-									</tr>
-									<tr>
-										<td>제목</td>
-										<td>글쓴이</td>
-										<td>2018-11-26</td>
-										<td>3</td>
-									</tr>
+									</c:forEach>
 								</tbody>
 							</table>
-							<div class="pageMove"> ◀   ◀◀     1 2 3 4 5    ▶▶   ▶</div>
-							
+					<div class="box-footer">
+
+					<div class="text-center">
+						<ul class="pagination">
+
+							<c:if test="${pageMaker.prev}">
+								<li><a href="shop${pageMaker.makeSearch(pageMaker.startPage - 1) }">&laquo;</a></li>
+							</c:if>
+
+							<c:forEach begin="${pageMaker.startPage }" end="${pageMaker.endPage }" var="idx">
+								<li
+									<c:out value="${pageMaker.cri.page == idx?'class =active':''}"/>>
+									<a href="shop${pageMaker.makeSearch(idx)}">${idx}</a>
+								</li>
+							</c:forEach>
+
+							<c:if test="${pageMaker.next && pageMaker.endPage > 0}">
+								<li><a href="shop${pageMaker.makeSearch(pageMaker.endPage +1) }">&raquo;</a></li>
+							</c:if>
+
+						</ul>
+					</div>
+
+				</div>
 							<div class="searchBody">
 								<div class="searchPart">
 									<select class='searchArea'>

@@ -15,7 +15,8 @@
 <link href="/resources/front/css/animate.css" rel="stylesheet">
 <link href="/resources/front/css/main.css" rel="stylesheet">
 <link href="/resources/front/css/responsive.css" rel="stylesheet">
-<link href="/resources/front/css/freeboard-write.css?after" rel="stylesheet">
+<link href="/resources/front/css/freeboard-write.css?after"
+	rel="stylesheet">
 <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
@@ -29,9 +30,21 @@
 	href="/resources/front/images/ico/apple-touch-icon-72-precomposed.png">
 <link rel="apple-touch-icon-precomposed"
 	href="/resources/front/images/ico/apple-touch-icon-57-precomposed.png">
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
+	rel="stylesheet">
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/resources/admin/css/star-rating.css"
+	media="all" rel="stylesheet" type="text/css" />
+<link href="/resources/adminMain/css/main.css?after" rel="stylesheet">	
+<script
+	src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="/resources/js/star-rating.js" type="text/javascript"></script>
+
+<script type="text/javascript" src="/resources/plugins/editor/js/HuskyEZCreator.js" charset="utf-8"></script>
 </head>
 <!--/head-->
-
 <body>
 	<header id="header">
 		<!--header-->
@@ -135,7 +148,8 @@
 		<!--/header-bottom-->
 	</header>
 	<!--/header-->
-
+	
+	<form role="form" method="post">
 	<section>
 		<div class="category-tab shop-details-tab">
 			<!--category-tab-->
@@ -148,28 +162,63 @@
 								<tbody>
 									<tr>
 										<th>제목</th>
-										<td><input type="text"
-											style="width: 1004px; height: 30px;"
-											placeholder="제목을 입력 하세요."></td>
+										<td>
+										<input type="text" name="REVIEW_TITLE" id="REVIEW_TITLE" style="width: 1004px; height: 30px;" placeholder="제목을 입력 하세요.">
+											</td>
 									</tr>
 									<tr>
-										<th style="vertical-align:center; padding-top: 100px;">내용</th>
-										<td bgcolor="white"><textarea id="freetext"></textarea></td>
+										<th style="vertical-align:center; ">내용</th>
+										<td bgcolor="white">
+										<textarea name="REVIEW_CONT" id="REVIEW_CONT" style="width: 1004px;  required="" rows="20" style="width:100%" placeholder="제목을 입력 하세요." ></textarea>
+										</td>
 									</tr>
 								</tbody>
-							</table>
-								<button class="write" type="button" style="margin-left: 1100px; margin-top:10px;" >글쓰기</button>		
-						</form>
+							</table>	
+<!-- 							<input type="Text" style="width: 100%;" rows ="20" /> -->
+						
+							<div style="float:left; width:175px; height:100px; margin-left: 10px;margin-top: 10px; ">
+							<label> 평점 </label></div>						
+							<div style="float:left; width:300px; height:100px; margin-top: 10px;">
+							<input name="REVIEW_GRADE" id="input-21e" value="0" type="number" class="rating" min=0 max=5 step=0.5 data-size="sm" ></div>
+							<div style="float:right; display:inline-block; width:600px; height:100px; ">
+							<button type="submit" class="write" style="float:right; margin-top: 10px;">글쓰기</button></div>
+						</div>
 					</div>
 				</div>
-
 			</div>
-		</div>
+		
 		<!--/category-tab-->
-
-
 	</section>
+	</form>
+	<script>
+	$('#input-21e').rating('update', {disabled: true, showClear: false, showCaption: false});
+	 
+	// method chaining 
+	var ratingValue = $('#input-21e').rating('update', {
+	    disabled: true, 
+	    showClear: false, 
+	    showCaption: false
+	}).val();
+	</script>
+	<script type="text/javascript">
+		var oEditors = [];
+		nhn.husky.EZCreator.createInIFrame({
+			oAppRef : oEditors,
+			elPlaceHolder : "REVIEW_CONT",
+			sSkinURI : "/resources/plugins/editor/SmartEditor2Skin.html",
+			fCreator : "createSEditor2"
+		});
+		function submitContents(elClickedObj) {
+			// 에디터의 내용이 textarea에 적용됩니다.
+			oEditors.getById["REVIEW_CONT"].exec("UPDATE_CONTENTS_FIELD", []);
+			// 에디터의 내용에 대한 값 검증은 이곳에서 document.getElementById("ir1").value를 이용해서 처리하면 됩니다.
 
+			try {
+				elClickedObj.form.submit();
+			} catch (e) {
+			}
+		}
+	</script>
 	<script src="/resources/js/jquery.js"></script>
 	<script src="/resources/js/price-range.js"></script>
 	<script src="/resources/js/jquery.scrollUp.min.js"></script>

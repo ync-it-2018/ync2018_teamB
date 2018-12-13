@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="kr.ync.project.mapper.Review_regiMapper">
+
+	<!-- 게시판 추가하기 -->
+	<insert id="create">
+		INSERT INTO TB_REVIEW
+		(REVIEW_NUM ,REVIEW_TITLE, USER_ID ,PRO_NUM, REVIEW_DATE, REVIEW_GRADE, REVIEW_CONT )
+		 
+		VALUES(TB_SEQ_REVIEW_NUM.NEXTVAL, #{REVIEW_TITLE} , 'admin' , 19, sysdate , #{REVIEW_GRADE} ,#{REVIEW_CONT})
+	</insert>
+	<select id="read" resultType="Review_regiVO">
+	SELECT  REVIEW_NUM,
+	 		REVIEW_TITLE,
+	 		USER_ID,
+	 		PRO_NUM,
+	 		REVIEW_DATE,
+	 		REVIEW_GRADE,
+	 		REVIEW_CONT,
+	 		REVIEW_IMAGE,
+	 		REVIEW_HITS
+	FROM 	TB_REVIEW 
+	WHERE	REVIEW_NUM = #{REVIEW_NUM}
+</select>
+
+<update id="hits_UP">
+	UPDATE TB_REVIEW	SET REVIEW_HITS = REVIEW_HITS + 1
+	WHERE REVIEW_NUM = #{REVIEW_NUM}
+</update>
+
+
+<update id="update">
+	UPDATE tb_free_board	SET free_board_title =#{free_board_title},
+							free_board_cont =#{free_board_cont},
+							free_board_writer =#{free_board_writer}
+	WHERE free_board_num = #{free_board_num}
+</update>
+
+<delete id="delete">
+	delete from tb_free_board where free_board_num = #{free_board_num}
+</delete>
+
+<select id="listAll" resultType="Review_regiVO">
+	<![CDATA[
+	SELECT  REVIEW_NUM,
+	 		REVIEW_TITLE,
+	 		USER_ID,
+	 		PRO_NUM,
+	 		REVIEW_DATE,
+	 		REVIEW_GRADE,
+	 		REVIEW_CONT,
+	 		REVIEW_IMAGE,
+	 		REVIEW_HITS
+	FROM 	TB_REVIEW 
+	WHERE	REVIEW_NUM > 0 
+	ORDER BY REVIEW_NUM DESC, REVIEW_DATE DESC
+	]]>  
+</select>
+ 
+
+<select id="listPage"  resultType="Review_regiVO">
+	<![CDATA[
+	SELECT  REVIEW_NUM,
+	 		REVIEW_TITLE,
+	 		USER_ID,
+	 		PRO_NUM,
+	 		REVIEW_DATE,
+	 		REVIEW_GRADE,
+	 		REVIEW_CONT,
+	 		REVIEW_IMAGE,
+	 		REVIEW_HITS
+	FROM   (SELECT 	rownum rn,
+					REVIEW_NUM,
+	 				REVIEW_TITLE,
+	 				USER_ID,
+	 				PRO_NUM,
+	 				REVIEW_DATE,
+	 				REVIEW_GRADE,
+	 				REVIEW_CONT,
+	 				REVIEW_IMAGE,
+	 				REVIEW_HITS
+	  		FROM	TB_REVIEW
+			WHERE	rownum <= #{page} * #{perPageNum}
+			AND		REVIEW_NUM > 0
+			)
+	WHERE 	rn > (#{page} -1) * #{perPageNum}
+	]]>
+</select>
+
+<select id="listCriteria" resultType="Review_regiVO">
+	<![CDATA[
+	SELECT	REVIEW_NUM,
+	 		REVIEW_TITLE,
+	 		USER_ID,
+	 		PRO_NUM,
+	 		REVIEW_DATE,
+	 		REVIEW_GRADE,
+	 		REVIEW_CONT,
+	 		REVIEW_IMAGE,
+	 		REVIEW_HITS
+	FROM   (SELECT  rownum rn,
+					REVIEW_NUM,
+	 				REVIEW_TITLE,
+	 				USER_ID,
+	 				PRO_NUM,
+	 				REVIEW_DATE,
+	 				REVIEW_GRADE,
+	 				REVIEW_CONT,
+	 				REVIEW_IMAGE,
+	 				REVIEW_HITS
+	  		FROM	TB_REVIEW
+			WHERE	rownum <= #{page} * #{perPageNum}
+			AND		REVIEW_NUM > 0
+			)
+	WHERE 	rn > (#{page} -1) * #{perPageNum}
+	]]>
+</select>
+
+<select id="countPaging" resultType="int">
+	<![CDATA[
+	SELECT	count(REVIEW_NUM) 
+	FROM	TB_REVIEW 
+	WHERE	REVIEW_NUM > 0 
+	]]>
+</select>
+
+
+
+<!-- 동적SQL (<sql>로 분리) 작성된 최종 SQL 시작-->
+<sql id="search">
+	<if test="searchType != null" >
+		<if test="searchType == 't'.toString()">
+			AND title LIKE '%'|| #{keyword}||'%'
+		</if>
+		<if test="searchType == 'c'.toString()">
+			AND content LIKE '%'|| #{keyword}||'%'
+		</if>
+		<if test="searchType == 'w'.toString()">
+			AND writer LIKE '%'|| #{keyword}||'%'
+		</if>    
+		<if test="searchType == 'tc'.toString()">
+			AND (title LIKE '%'|| #{keyword}||'%' OR content LIKE '%'|| #{keyword}||'%')
+		</if>      
+	</if>
+</sql>
+
+<select id="listSearch"  resultType="Review_regiVO">
+	<![CDATA[
+		SELECT		REVIEW_NUM,
+	 				REVIEW_TITLE,
+	 				USER_ID,
+	 				PRO_NUM,
+	 				REVIEW_DATE,
+	 				REVIEW_GRADE,
+	 				REVIEW_CONT,
+	 				REVIEW_IMAGE,
+	 				REVIEW_HITS
+		FROM   (SELECT rownum rn,
+						REVIEW_NUM,
+	 					REVIEW_TITLE,
+	 					USER_ID,
+	 					PRO_NUM,
+	 					REVIEW_DATE,
+	 					REVIEW_GRADE,
+	 					REVIEW_CONT,
+	 					REVIEW_IMAGE,
+	 					REVIEW_HITS
+		  		FROM	TB_REVIEW
+	]]>
+		<!--
+		<where> 엘리먼트로 검색을 하지 않았을 경우 AND rownum <= 과 같이 WHERE 구문이 빠져버린다.
+		따라서 <where> 를 사용하면 AND나 OR로 구문이 시작되면 AND나 OR를 지워버린다.
+		아래 구문과 동일한 기능. 
+		<trim prefix="WHERE" prefixOverrides="AND|OR ">
+		  ... 
+		</trim>
+		http://www.mybatis.org/mybatis-3/ko/dynamic-sql.html 참고
+		-->
+		<where>
+		<include refid="search"></include>
+		  <![CDATA[
+				AND rownum <= #{page} * #{perPageNum}
+				AND REVIEW_NUM > 0
+		  		)
+				]]>
+		</where>
+	<![CDATA[
+		WHERE rn > (#{page} -1) * #{perPageNum}
+	]]>
+</select>
+
+<select id="listSearchCount"  resultType="int">
+	<![CDATA[
+		SELECT	count(REVIEW_NUM)
+		FROM	TB_REVIEW
+	]]>
+	
+	<where>
+		<include refid="search"></include>
+		<![CDATA[
+			AND REVIEW_NUM > 0
+		]]>
+	</where>
+</select>
+<!-- 동적SQL (<sql>로 분리) 작성된 최종 SQL 끝-->
+</mapper>
+
+

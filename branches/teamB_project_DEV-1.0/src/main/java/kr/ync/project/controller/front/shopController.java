@@ -7,13 +7,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import kr.ync.project.domain.PageMaker;
 import kr.ync.project.domain.SearchCriteria;
 import kr.ync.project.service.Product_regiService;
-import lombok.extern.slf4j.Slf4j;
 
 @Controller
 public class shopController {
@@ -21,21 +19,6 @@ public class shopController {
 	
 	@Autowired
 	private Product_regiService service;
-//	@RequestMapping(value = "/shop", method = RequestMethod.GET)
-//	public String login(Locale locale, Model model) {
-//
-//		logger.info("teamB log shop 페이지", locale);
-//
-//		return "front/shop";
-//	}
-	
-//	@GetMapping(value = "/shop")
-//	public String Product_GET(Model model) throws Exception {
-//		logger.info("show all List...............");
-//		model.addAttribute("product_list", service.listAll());
-//		
-//		return "front/shop";
-//	}
 	
 	@GetMapping(value = "/shop")
 	public String listPage(@ModelAttribute("cri") SearchCriteria cri, Model model) throws Exception {

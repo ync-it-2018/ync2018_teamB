@@ -55,6 +55,9 @@ if(session.getAttribute("login") == null) {%>
 	href="/resources/front/images/ico/apple-touch-icon-72-precomposed.png">
 <link rel="apple-touch-icon-precomposed"
 	href="/resources/front/images/ico/apple-touch-icon-57-precomposed.png">
+
+
+	
 </head>
 <body>
 	<header id="header">
@@ -167,7 +170,6 @@ if(session.getAttribute("login") == null) {%>
 							<td class="description">제품설명</td>
 							<td class="register">제품 등록일자 <br>상품 사용후기 건수</td>
 							<td class="price">가격</td>
-							<td></td>
 
 						</tr>
 					</thead>
@@ -177,27 +179,30 @@ if(session.getAttribute("login") == null) {%>
 									src="/resources/front/images/cart/one.png" alt=""></a></td>
 
 							<td class="interest_product">
-								<h4>제품명</h4>
 
-							</td>
+								<h4>${Product_regiVO.PRO_NAME}</h4></td>
+
 
 							<td class="interest_prdouct_description">
-								<h4>제품설명</h4>
-								<p>제품부과 설명</p>
-							</td>
+
+								<h4>${Product_regiVO.PRO_EXPLAN}</h4>
+								<p>${Product_regiVO.PRO_TAG}</p></td>
+
 
 							<td class="interest_product_register">
-								<p class="product_register_date">
-									2018-10-17</p>
+
+									<fmt:formatDate pattern="yyyy-MM-dd HH:mm"
+											value="${Product_regiVO.PRO_DATE}"/>
+
 									<p>5건
-								</p>
-							</td>
+								</p></td>
 
 							<td class="interest_product_price">
-								<h4>$58</h4>
-							</td>
 
-						
+								<h4 class="number">${Product_regiVO.PRO_PRICE}</h4>
+							</td>
+												
+
 						</tr>
 
 
@@ -209,7 +214,6 @@ if(session.getAttribute("login") == null) {%>
 
 							<td class="interest_product">
 								<h4>제품명</h4>
-
 							</td>
 
 							<td class="interest_prdouct_description">
