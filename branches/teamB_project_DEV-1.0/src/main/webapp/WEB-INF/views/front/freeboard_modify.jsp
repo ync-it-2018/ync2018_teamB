@@ -20,17 +20,16 @@
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
     <![endif]-->
-<link rel="shortcut icon" href="images/ico/favicon.ico">
-<link rel="apple-touch-icon-precomposed" sizes="144x144"
-	href="/resources/front/images/ico/apple-touch-icon-144-precomposed.png">
-<link rel="apple-touch-icon-precomposed" sizes="114x114"
-	href="/resources/front/images/ico/apple-touch-icon-114-precomposed.png">
-<link rel="apple-touch-icon-precomposed" sizes="72x72"
-	href="/resources/front/images/ico/apple-touch-icon-72-precomposed.png">
-<link rel="apple-touch-icon-precomposed"
-	href="/resources/front/images/ico/apple-touch-icon-57-precomposed.png">
-</head>
-<!--/head-->
+<!-- 스마트 글쓰기 -->
+<script src="/resources/plugins/jQuery/jQuery-2.1.4.min.js"></script>
+
+<script type="text/javascript" src="/resources/plugins/editor/js/HuskyEZCreator.js" charset="utf-8"></script>
+	<script src="/resources/js/jquery.js"></script>
+	<script src="/resources/js/bootstrap.min.js"></script>
+	<script src="/resources/js/jquery.scrollUp.min.js"></script>
+	<script src="/resources/js/price-range.js"></script>
+    <script src="/resources/js/jquery.prettyPhoto.js"></script>
+    <script src="/resources/js/main.js"></script>
 <script>
 $(document).ready(function(){
 	var formObj = $("form[role='form']");
@@ -44,6 +43,19 @@ $(document).ready(function(){
 	});
 });
 </script>
+
+<link rel="shortcut icon" href="images/ico/favicon.ico">
+<link rel="apple-touch-icon-precomposed" sizes="144x144"
+	href="/resources/front/images/ico/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114"
+	href="/resources/front/images/ico/apple-touch-icon-114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72"
+	href="/resources/front/images/ico/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed"
+	href="/resources/front/images/ico/apple-touch-icon-57-precomposed.png">
+</head>
+<!--/head-->
+
 <body>
 	<header id="header">
 		<!--header-->
@@ -154,36 +166,32 @@ $(document).ready(function(){
 			<div class="tab-content">
 				<div class="tab-pane fade active in" id="reviews">
 					<div class="col-sm-12">
-						<form action="#">
-							<table class="freeboard">
-								<Caption>자유게시판 글 수정</Caption>
-								<form role= "form" method="post">
-									<div class ="box-body">
-										<div class="form-group">
+						<form role="form" method="post">
+						<table class="freeboard"  width= "100%">
+										<div>
 											<label for="exampleInputEmail1">글번호</label>
-											<input type="text" name='free_board_num' class="form-control" value="${boardView.free_board_num}">
+											<input type="text" name='free_board_num' class="form-control" value="${boardVO.free_board_num}" readonly="readonly">
 										</div>
-										<div class="form-group">
+										<div>
 											<label for="exampleInputEmail1">제목</label>
-											<input type="text" name='free_board_title' class="form-control" value="${boardView.free_board_title}">
+											<input type="text" name='free_board_title' class="form-control" value="${boardVO.free_board_title}">
 										</div>
-										<div class="form-group">
+										<div>
 											<label for="exampleInputPassword1">내용</label>
-											<input type="text" name='free_board_cont' class="form-control" value="${boardView.free_board_cont}">
+											<textarea name='free_board_cont' class="form-control" rows="3">${boardVO.free_board_cont}</textarea>
 										</div>
-										<div class="form-group">
+										<div>
 											<label for="exampleInputEmail1">작성자</label>
-											<input type="text" name='free_board_writer' class="form-control" value="${boardView.free_board_writer}">
+											<input type="text" name='free_board_writer' class="form-control" value="${boardVO.free_board_writer}">
 										</div>
-									</div>
 									<!-- /.box-body -->
 								</form>
-								<div class="box-footer">
+								
+								<div>
 									<button type="submit" class="btn btn-primary">저장</button>
 									<button type="submit" class="btn btn-warning">취소</button>
 								</div>
-							</table>
-										
+							</table>													
 						</form>
 					</div>
 				</div>
@@ -191,32 +199,6 @@ $(document).ready(function(){
 			</div>
 		</div>
 		<!--/category-tab-->
-
-
 	</section>
-
-	<footer id="footer"><!--Footer-->
-		<div class="footer-bottom">
-			<div class="container">
-				<div class="row">
-					<p class="pull-left">Team-b © 2018-가격비교사이트 Inc. 영남이공대학교.</p>
-					<p class="pull-right">
-						Designed by <span><a target="_blank"
-							href="">이건영</a></span>
-					</p>
-				</div>
-			</div>
-		</div>
-		
-	</footer><!--/Footer-->
-
-
-
-	<script src="/resources/js/jquery.js"></script>
-	<script src="/resources/js/price-range.js"></script>
-	<script src="/resources/js/jquery.scrollUp.min.js"></script>
-	<script src="/resources/js/bootstrap.min.js"></script>
-	<script src="/resources/js/jquery.prettyPhoto.js"></script>
-	<script src="/resources/js/main.js"></script>
 </body>
 </html>

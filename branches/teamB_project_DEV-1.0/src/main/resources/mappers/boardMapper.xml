@@ -20,9 +20,10 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 </select>
 
 <update id="update">
-	UPDATE tb_free_board	SET free_board_title =#{free_board_title},
-							free_board_cont =#{free_board_cont},
-							free_board_writer =#{free_board_writer}
+	UPDATE tb_free_board SET 
+	free_board_title =#{free_board_title}, 
+	free_board_cont =#{free_board_cont}, 
+	free_board_writer =#{free_board_writer} 
 	WHERE free_board_num = #{free_board_num}
 </update>
 

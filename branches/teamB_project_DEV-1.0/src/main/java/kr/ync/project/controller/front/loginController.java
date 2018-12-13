@@ -72,22 +72,11 @@ public class loginController {
 
 			Cookie loginCookie = WebUtils.getCookie(request, "loginCookie");
 			
-			Cookie loginCookie2 = WebUtils.getCookie(request, "JSESSIONID");
-
-			
 			if (loginCookie != null) {
 
 				loginCookie.setPath("/");
 				loginCookie.setMaxAge(0);
 				response.addCookie(loginCookie);
-				service.keepLogin(vo.getUSER_ID(), session.getId(), new Date());
-			}
-			
-			if (loginCookie2 != null) {
-
-				loginCookie.setPath("/");
-				loginCookie.setMaxAge(0);
-				response.addCookie(loginCookie2);
 				service.keepLogin(vo.getUSER_ID(), session.getId(), new Date());
 			}
 		}

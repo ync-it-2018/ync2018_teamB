@@ -34,6 +34,12 @@
 	href="/resources/front/images/ico/apple-touch-icon-72-precomposed.png">
 <link rel="apple-touch-icon-precomposed"
 	href="/resources/front/images/ico/apple-touch-icon-57-precomposed.png">
+<script src="/resources/js/jquery.js"></script>
+<script src="/resources/js/price-range.js"></script>
+<script src="/resources/js/jquery.scrollUp.min.js"></script>
+<script src="/resources/js/bootstrap.min.js"></script>
+<script src="/resources/js/jquery.prettyPhoto.js"></script>
+<script src="/resources/js/main.js"></script>
 </head>
 <!--/head-->
 
@@ -147,36 +153,36 @@
 			<div class="tab-content">
 				<div class="tab-pane fade active in" id="reviews">
 					<div class="col-sm-12">
-						
-						
+					
+						<form role="form" method="post">
+							<input type='hidden' name='free_board_num' value="${boardVO.free_board_num}">
+						</form>
+					
 						<div class="box-body">
 							<div class="form-group">
 								<label for="exampleInputEamil1">Title</label>
-								<input type="text" name='free_board_title' class="form-control" value="${boardView.free_board_title}"
+								<input type="text" name='free_board_title' class="form-control" value="${boardVO.free_board_title}"
 								readonly="readonly">
 							</div>
 							<div class="form-group">
 								<label for="exampleInputPassword1">Content</label>
-								<input type="text" name='free_board_cont' class="form-control" value="${boardView.free_board_cont}"
+								<input type="text" name='free_board_cont' class="form-control" value="${boardVO.free_board_cont}"
 								readonly="readonly">
 							</div>
 							<div class="form-group">
 								<label for="exampleInputEamil1">Writer</label>
-								<input type="text" name='free_board_writer' class="form-control" value="${boardView.free_board_writer}"
+								<input type="text" name='free_board_writer' class="form-control" value="${boardVO.free_board_writer}"
 								readonly="readonly">
 								
 							</div>
 						</div>
 						<!-- /.box-body -->
 						<div>
-						<form role="form" action="/front/freeboard_modify" method="post">
-							<input type='hidden' name='free_board_num' value="${boardView.free_board_num}">
-						
-							<button type="submit"  id="modifyBtn">수정</button>
-							<button type="submit"  id="removeBtn">삭제</button>
-							<button type="submit"  id="listBtn">목록</button>
-						</form>
+							<button type="submit"  class="modifyBtn" id="modifyBtn">수정</button>
+							<button type="submit"  class="removeBtn" id="removeBtn">삭제</button>
+							<button type="submit"  class="listBtn" id ="goListBtn">목록</button>
 						</div>
+										
 					</div>
 				</div>
 
@@ -187,50 +193,35 @@
 
 	</section>
 
-	<footer id="footer"><!--Footer-->
-		<div class="footer-bottom">
-			<div class="container">
-				<div class="row">
-					<p class="pull-left">Team-b © 2018-가격비교사이트 Inc. 영남이공대학교.</p>
-					<p class="pull-right">
-						Designed by <span><a target="_blank"
-							href="">이건영</a></span>
-					</p>
-				</div>
-			</div>
-		</div>
-		
-	</footer><!--/Footer-->
-	<script type="text/javascript">
-	$(document).ready(function(){
-	    
-	    var formObj = $("form[role='form']");
-	    
-	    console.log(formObj);
-	    
-	    $("#modifyBtn").on("click", function() {
-	    	alret("시발");
-	       formObj.attr("action", "/front/freeboard_modify");
-	       formObj.attr("method", "get");
-	       formObj.submit();
-	    });
-	    
-	    $("#removeBtn").on("click", function() {
-	       formObj.attr("action", "/front");
-	       formObj.submit();
-	    });
-	    
-	    $("#listBtn").on("click", function() {
-	       self.location = "/front/freeboard";	
-	    });
-	    
+
+<script>
+	
+	 $(document).ready(function(){
+	 	
+	 	var formObj = $("form[role='form']");
+	 	
+	 	console.log(formObj);
+	 	
+	 	$("#modifyBtn").on("click", function(){
+	 		alert("수정버튼클릭");
+	 		formObj.attr("action", "/front/freeboard_modify");
+	 		formObj.attr("method", "get");		
+	 		formObj.submit();
+	 	});
+	 	
+	    $("#removeBtn").on("click", function(){
+	 		formObj.attr("action", "/front/freeboard_remove");
+	 		formObj.submit();
+	 	});
+	 	
+	 	$("#goListBtn ").on("click", function(){
+	 		formObj.attr("method", "get");
+	 		formObj.attr("action", "/front/freeboard");
+	 		formObj.submit();
+	 	});
+	 	
 	 });
 </script>
-	<script src="/resources/js/jquery.js"></script>
-	<script src="/resources/js/price-range.js"></script>
-	<script src="/resources/js/jquery.scrollUp.min.js"></script>
-	<script src="/resources/js/bootstrap.min.js"></script>
-	<script src="/resources/js/jquery.prettyPhoto.js"></script>
-	<script src="/resources/js/main.js"></script>
+	
 </body>
 </html>

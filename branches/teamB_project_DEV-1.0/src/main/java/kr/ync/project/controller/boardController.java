@@ -36,7 +36,7 @@ public class boardController {
 	@GetMapping(value = "/freeboard_view")
 	public String read(@RequestParam("free_board_num") int free_board_num,Model model) throws Exception {
 		logger.info("show free board view...............");
-		model.addAttribute("boardView", service.read(free_board_num));
+		model.addAttribute(service.read(free_board_num));
 		
 		return "front/freeboard_view";
 		
@@ -57,11 +57,11 @@ public class boardController {
 
 	}
 	
-	@PostMapping(value = "/remove")
-	public String remove(@RequestParam("free_board_num") int free_board_num, RedirectAttributes rttr) throws Exception {
+	@PostMapping(value = "/freeboard_remove")
+	public String remove(@RequestParam("free_board_num") int free_board_num, 
+			RedirectAttributes rttr) throws Exception {
 
 		service.remove(free_board_num);
-		
 		
 		rttr.addFlashAttribute("msg", "Success");
 		
@@ -70,8 +70,7 @@ public class boardController {
 	}
 	
 	@GetMapping(value = "/freeboard_modify")
-	public void modifyGET( int free_board_num, Model model) throws Exception {
-
+	public void modifyGET(int free_board_num, Model model) throws Exception {
 		logger.info("show modifyGET...............");
 		model.addAttribute(service.read(free_board_num));
 				
@@ -83,7 +82,6 @@ public class boardController {
 		logger.info("mod POST...............");
 		service.modify(board);
 	
-		
 		rttr.addFlashAttribute("msg", "Success");
 		
 		return "redirect:/front/freeboard";

@@ -40,11 +40,6 @@
 						<div class="logo pull-left">
 							<a href="/"><img src="/resources/front/images/home/logo.png" alt="" /></a>
 						</div>
-						<div class="btn-group pull-right">
-							
-							
-							
-						</div>
 					</div>
 					<div class="col-sm-8">
 						<div class="shop-menu pull-right">
@@ -78,7 +73,6 @@
 								<li class="dropdown"><a href="#">카테고리 펼쳐보기<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">                      
                                          <li><h4 style="color:white"><strong>디지털</strong></h4></li>
-                                         
                                         	<ul>
                                         		<li><a href="/shop">PC</a></li>
                                         		<li><a href="/shop">모바일</a></li>
@@ -104,14 +98,11 @@
                                 </li> 
 								<li class="dropdown"><a href="#">게시판<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
-
-                                        <li><a href="/front/freeboard">자유게시판</a></li>
+                                    	<li><a href="/front/freeboard">자유게시판</a></li>
 										<li><a href="/suggest">건의게시판</a></li>
-
                                     </ul>
                                 </li> 
 								<li><a href="/review">상품사용후기</a></li>
-								
 							</ul>
 						</div>
 					</div>
@@ -195,23 +186,6 @@
 
 
 	</section>
-
-	<footer id="footer"><!--Footer-->
-		<div class="footer-bottom">
-			<div class="container">
-				<div class="row">
-					<p class="pull-left">Team-b © 2018-가격비교사이트 Inc. 영남이공대학교.</p>
-					<p class="pull-right">
-						Designed by <span><a target="_blank"
-							href="">이건영</a></span>
-					</p>
-				</div>
-			</div>
-		</div>
-		
-	</footer><!--/Footer-->
-	
-
   
     <script src="/resources/js/jquery.js"></script>
 	<script src="/resources/js/price-range.js"></script>

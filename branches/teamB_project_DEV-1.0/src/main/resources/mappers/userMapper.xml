@@ -18,7 +18,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</update>
 
 	<select id="checkUserWithSessionKey" resultType="UserVO">
-		SELECT * FROM TB_USER WHERE	sessionKey = #{value} AND sessionLimit > NOW()
+		SELECT * FROM TB_USER WHERE	sessionKey = #{value} AND sessionLimit > SYSDATE
 	</select>	
 
 	<insert id ="insertMember">
