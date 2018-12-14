@@ -30,6 +30,10 @@
 	href="/resources/front/images/ico/apple-touch-icon-57-precomposed.png">
 </head>
 <body>
+	<!-- 헤더부분에는  header-middle, header-bottom이 있습니다. -->
+	<!-- header-middle는 사이트로고, 사용자정보, 관심물품, 로그인이 있습니다. -->
+	<!-- header-bottom은 홈, 공지사항, 카테고리펼쳐보기, 게시판(자유게시판, 건의게시판), 상품사용후기가 나옵니다.  -->
+		
 	<header id="header">
 		<!--header-->
 		<div class="header-middle">
