@@ -26,7 +26,7 @@ if(session.getAttribute("login") == null) {%>
 <%}else{ %>
 <%@include file="include/loginedheader.jsp"%>
 <%} %>
-
+<!-- section부분은 페이지에서 몸으로 해당합니다. -->
 	<section>
 		<div class="category-tab shop-details-tab">
 			<!--category-tab-->

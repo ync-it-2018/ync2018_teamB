@@ -23,7 +23,7 @@
 	 		REVIEW_GRADE,
 	 		REVIEW_CONT,
 	 		REVIEW_IMAGE,
-	 		REVIEW_HITS
+	 		REVIEW_HITS 
 	FROM 	TB_REVIEW 
 	WHERE	REVIEW_NUM = #{REVIEW_NUM}
 </select>
@@ -37,7 +37,7 @@
 <update id="update">
 	UPDATE tb_free_board	SET free_board_title =#{free_board_title},
 							free_board_cont =#{free_board_cont},
-							free_board_writer =#{free_board_writer}
+							free_board_writer =#{free_board_writer} 
 	WHERE free_board_num = #{free_board_num}
 </update>
 
@@ -55,7 +55,7 @@
 	 		REVIEW_GRADE,
 	 		REVIEW_CONT,
 	 		REVIEW_IMAGE,
-	 		REVIEW_HITS
+	 		REVIEW_HITS 
 	FROM 	TB_REVIEW 
 	WHERE	REVIEW_NUM > 0 
 	ORDER BY REVIEW_NUM DESC, REVIEW_DATE DESC
@@ -83,7 +83,7 @@
 	 				REVIEW_GRADE,
 	 				REVIEW_CONT,
 	 				REVIEW_IMAGE,
-	 				REVIEW_HITS
+	 				REVIEW_HITS 
 	  		FROM	TB_REVIEW
 			WHERE	rownum <= #{page} * #{perPageNum}
 			AND		REVIEW_NUM > 0
@@ -112,7 +112,7 @@
 	 				REVIEW_GRADE,
 	 				REVIEW_CONT,
 	 				REVIEW_IMAGE,
-	 				REVIEW_HITS
+	 				REVIEW_HITS 
 	  		FROM	TB_REVIEW
 			WHERE	rownum <= #{page} * #{perPageNum}
 			AND		REVIEW_NUM > 0
@@ -159,7 +159,7 @@
 	 				REVIEW_GRADE,
 	 				REVIEW_CONT,
 	 				REVIEW_IMAGE,
-	 				REVIEW_HITS
+	 				REVIEW_HITS 
 		FROM   (SELECT rownum rn,
 						REVIEW_NUM,
 	 					REVIEW_TITLE,
@@ -169,7 +169,7 @@
 	 					REVIEW_GRADE,
 	 					REVIEW_CONT,
 	 					REVIEW_IMAGE,
-	 					REVIEW_HITS
+	 					REVIEW_HITS 
 		  		FROM	TB_REVIEW
 	]]>
 		<!--

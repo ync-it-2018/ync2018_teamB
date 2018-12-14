@@ -94,13 +94,14 @@ if(session.getAttribute("login") == null) {%>
 	
 	<section>
 		<div class="container">
+
 			<div class="row">
 			
 				</div>
-				
+
 				<div>
 					<div class="features_items"><!--features_items-->
-						<h2 class="title text-center">카테고리별 인기제품 TOP 3</h2>
+						<h2 class="title text-center" style="width: 100%;">카테고리별 인기제품 TOP 3</h2>
 						<div class="PC">
 						<h2>디지털</h2>
 						<div class="col-sm-4">
@@ -219,15 +220,11 @@ if(session.getAttribute("login") == null) {%>
 						</div>
 					</div>
 						
-					</div>
+
+					</div><!--features_items-->
 				</div>
 			</div>
-		
 	</section>
-
-	
-
-  
     <script src="/resources/js/jquery.js"></script>
 	<script src="/resources/js/bootstrap.min.js"></script>
 	<script src="/resources/js/jquery.scrollUp.min.js"></script>

@@ -111,7 +111,7 @@
 										<li><a href="/suggest">건의게시판</a></li>
 									</ul></li>
 
-								<li><a href="review.html">상품사용후기</a></li>
+								<li><a href="/review">상품사용후기</a></li>
 
 
 							</ul>
