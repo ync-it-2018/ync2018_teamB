@@ -44,10 +44,12 @@
 <!--/head-->
 
 <body>
+	<!-- 헤더부분에는  header-middle, header-bottom이 있습니다. -->
+	<!-- header-middle는 사이트로고, 사용자정보, 관심물품, 로그인이 있습니다. -->
+	<!-- header-bottom은 홈, 공지사항, 카테고리펼쳐보기, 게시판(자유게시판, 건의게시판), 상품사용후기가 나옵니다.  -->
+	
 	<header id="header">
 		<!--header-->
-
-
 		<div class="header-middle">
 			<!--header-middle-->
 			<div class="container">
@@ -147,6 +149,10 @@
 	</header>
 	<!--/header-->
 
+	<!-- section부분은 페이지에서 몸으로 해당합니다. -->
+	<!-- 내용부분에서 주로 form태그로 구성이 되어있습니다. 
+		   게시판에서 작성한 글을 클릭하면 제목, 내용, 작성자가 나오고, Button을 클릭하면 그에 해당하는 작성, 수정, 삭제가 됩니다. -->
+	
 	<section>
 		<div class="category-tab shop-details-tab">
 			<!--category-tab-->
@@ -155,6 +161,8 @@
 					<div class="col-sm-12">
 					
 						<form role="form" method="post">
+							<!-- input 요소는 텍스트 입력 뿐 아니라, 전송 버튼, 라디오 버튼, 체크 박스 등 여러 가지로 표현될 수 있습니다. -->
+							<!-- name 속성은 데이터가 서버로 전송될 때 할당되는 변수의 이름입니다. -->
 							<input type='hidden' name='free_board_num' value="${boardVO.free_board_num}">
 						</form>
 					
@@ -195,13 +203,13 @@
 
 
 <script>
-	
+/* JQuery의 문법입니다.
+console.log는 요소를 HTML과 같은 트리 구조로 출력합니다. */ 
+
 	 $(document).ready(function(){
-	 	
 	 	var formObj = $("form[role='form']");
-	 	
-	 	console.log(formObj);
-	 	
+	 	 /* 자바스크립트에서 로그를 찍어줍니다. */
+	 	console.log(formObj); 
 	 	$("#modifyBtn").on("click", function(){
 	 		alert("수정버튼클릭");
 	 		formObj.attr("action", "/front/freeboard_modify");

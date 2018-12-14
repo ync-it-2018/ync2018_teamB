@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+<!-- 자유게시판 수정하는 JSP  -->
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -30,11 +31,14 @@
 	<script src="/resources/js/price-range.js"></script>
     <script src="/resources/js/jquery.prettyPhoto.js"></script>
     <script src="/resources/js/main.js"></script>
+    
+    <!-- console.log는 요소를 HTML과 같은 트리 구조로 출력합니다. -->
+    <!-- 자바스크립트에서 로그를 찍어줍니다. -->
 <script>
 $(document).ready(function(){
 	var formObj = $("form[role='form']");
-	console.log(formObj);
-	
+	console.log(formObj); /* formobj의 로그를 찍어줍니다. */
+	/* 버튼을 클릭하면 내가 지정한 위치에 이동합니다. */
 	$(".btn-warning").on("click",function(){
 		self.location = "/front/freeboard";
 	});
@@ -57,10 +61,12 @@ $(document).ready(function(){
 <!--/head-->
 
 <body>
+	<!-- 헤더부분에는  header-middle, header-bottom이 있습니다. -->
+	<!-- header-middle는 사이트로고, 사용자정보, 관심물품, 로그인이 있습니다. -->
+	<!-- header-bottom은 홈, 공지사항, 카테고리펼쳐보기, 게시판(자유게시판, 건의게시판), 상품사용후기가 나옵니다.  -->
+								
 	<header id="header">
 		<!--header-->
-
-
 		<div class="header-middle">
 			<!--header-middle-->
 			<div class="container">
@@ -160,6 +166,11 @@ $(document).ready(function(){
 	</header>
 	<!--/header-->
 
+	
+	<!-- section부분은 페이지에서 몸으로 해당합니다. -->
+	<!-- 내용부분에서 주로 form태그로 구성이 되어있습니다. 
+		   로그인 화면에서 사용자 이름과 비밀번호를 입력하는 것, 
+		   게시판에서 코멘트를 남기는 것입니다. -->
 	<section>
 		<div class="category-tab shop-details-tab">
 			<!--category-tab-->

@@ -30,6 +30,10 @@
 </head><!--/head-->
 
 <body>
+	<!-- 헤더부분에는  header-middle, header-bottom이 있습니다. -->
+	<!-- header-middle는 사이트로고, 사용자정보, 관심물품, 로그인이 있습니다. -->
+	<!-- header-bottom은 홈, 공지사항, 카테고리펼쳐보기, 게시판(자유게시판, 건의게시판), 상품사용후기가 나옵니다.  -->
+	
 	<header id="header"><!--header-->
 		
 		
@@ -136,21 +140,23 @@
 								</thead>
 								
 								<tbody>
+								<!-- 반복으로 돌려 글을 작성한 만큼 나타납니다. -->
 									<c:forEach items="${list}" var="BoardVO">
 									<tr>
-										<td>${BoardVO.free_board_num}</td>
+										<td>${BoardVO.free_board_num}</td><!-- 글 번호입니다.  -->
 										<td><a href='/front/freeboard_view?free_board_num=${BoardVO.free_board_num }'>${BoardVO.free_board_title }</a>
 										</td>
-										<td>${BoardVO.free_board_writer}</td>
+										<td>${BoardVO.free_board_writer}</td> <!-- 작성자입니다.  -->
 										<td><fmt:formatDate pattern="yyyy-MM-dd HH:mm"
-											value="${BoardVO.free_board_date}"/></td>
-										<td><span class="badge bg-red">${BoardVO.free_board_hits }</span>
+											value="${BoardVO.free_board_date}"/></td> <!-- 글을 작성하면 날짜가 나타납니다. -->
+										<td><span class="badge bg-red">${BoardVO.free_board_hits }</span> <!-- 조회수입니다. -->
 									</tr>
 									</c:forEach>
 								</tbody>
 							</table>
 							<div class="pageMove"> ◀   ◀◀     1 2 3 4 5    ▶▶   ▶</div>
 							
+							<!-- 검색할 수 있게 합니다. -->
 							<div class="searchBody">
 								<div class="searchPart">
 									<select class='searchArea'>

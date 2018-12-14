@@ -38,11 +38,13 @@
 </head>
 <!--/head-->
 
+<!-- 헤더부분에는  header-middle, header-bottom이 있습니다. -->
+<!-- header-middle는 사이트로고, 사용자정보, 관심물품, 로그인이 있습니다. -->
+<!-- header-bottom은 홈, 공지사항, 카테고리펼쳐보기, 게시판(자유게시판, 건의게시판), 상품사용후기가 나옵니다.  -->
+
 <body>
 	<header id="header">
 		<!--header-->
-
-
 		<div class="header-middle">
 			<!--header-middle-->
 			<div class="container">
@@ -142,12 +144,16 @@
 	</header>
 	<!--/header-->
 
+<!-- section부분은 페이지에서 몸으로 해당합니다. -->
+<!-- 글을 작성합니다 . -->
+
 	<section>
 		<div class="category-tab shop-details-tab">
 			<!--category-tab-->
 			<div class="tab-content">
 				<div class="tab-pane fade active in" id="reviews">
 					<div class="col-sm-12">
+						<!-- 글작성부분이고 method는 post입니다. -->
 						<form action="/front/boardwritefail" method="post">
 						<table class="freeboard"  width= "100%">
 								<Caption>자유게시판 글쓰기</Caption>
@@ -178,6 +184,8 @@
 		</div>
 		<!--/category-tab-->
 <script type="text/javascript">
+
+/* 스마트 에디터입니다. */
 		var oEditors = [];
 		nhn.husky.EZCreator.createInIFrame({
 			oAppRef : oEditors,

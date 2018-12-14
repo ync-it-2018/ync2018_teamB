@@ -30,6 +30,7 @@
 	href="/resources/front/images/ico/apple-touch-icon-57-precomposed.png">
 </head>
 <body>
+	
 	<header id="header">
 		<!--header-->
 		<div class="header-middle">
