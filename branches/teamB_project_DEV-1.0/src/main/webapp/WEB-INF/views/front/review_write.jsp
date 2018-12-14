@@ -43,8 +43,55 @@
 <script src="/resources/js/star-rating.js" type="text/javascript"></script>
 
 <script type="text/javascript" src="/resources/plugins/editor/js/HuskyEZCreator.js" charset="utf-8"></script>
+	<script src="/resources/js/jquery.js"></script>
+	<script src="/resources/js/price-range.js"></script>
+	<script src="/resources/js/jquery.scrollUp.min.js"></script>
+	<script src="/resources/js/bootstrap.min.js"></script>
+	<script src="/resources/js/jquery.prettyPhoto.js"></script>
+	<script src="/resources/js/main.js"></script>
 </head>
 <!--/head-->
+<script type="text/javascript">
+	$(function(){
+	    //전역변수
+	    var obj = [];               
+	    //스마트에디터 프레임생성
+	    nhn.husky.EZCreator.createInIFrame({
+	        oAppRef: obj,
+	        elPlaceHolder: "contents",
+	        sSkinURI: "/resources/plugins/editor/SmartEditor2Skin.html", 
+	        htParams : {
+	            // 툴바 사용 여부 (true:사용/ false:사용하지 않음)
+	            bUseToolbar : true,             
+	            // 입력창 크기 조절바 사용 여부 (true:사용/ false:사용하지 않음)
+	            bUseVerticalResizer : true,     
+	            // 모드 탭(Editor | HTML | TEXT) 사용 여부 (true:사용/ false:사용하지 않음)
+	            bUseModeChanger : true, 
+	        }
+	    });
+	    //전송버튼
+	    $("#savebutton").click(function(){
+	        //id가 smarteditor인 textarea에 에디터에서 대입
+	        obj.getById["contents"].exec("UPDATE_CONTENTS_FIELD", []);
+	        //폼 submit
+	        $("#frm").submit();
+	    })
+	})
+	</script>
+
+<!-- <script>
+$(document).ready(function(){
+	var formObj = $("form[role='form']");
+	console.log(formObj);
+	
+	$(".btn-warning").on("click",function(){
+		self.location = "/front/review";
+	});
+	$(".btn-primary").on("click",function(){
+		formObj.submit();
+	});
+});
+</script> -->
 <body>
 	<header id="header">
 		<!--header-->
@@ -149,14 +196,13 @@
 	</header>
 	<!--/header-->
 	
-	<form role="form" method="post">
+	<form  method="post" id="frm" ><!--role="form" method="post" id="frm"  -->
 	<section>
 		<div class="category-tab shop-details-tab">
 			<!--category-tab-->
 			<div class="tab-content">
 				<div class="tab-pane fade active in" id="reviews">
 					<div class="col-sm-12">
-						<form action="#">
 							<table class="freeboard">
 								<Caption>사용후기 글쓰기</Caption>
 								<tbody>
@@ -169,7 +215,8 @@
 									<tr>
 										<th style="vertical-align:center; ">내용</th>
 										<td bgcolor="white">
-										<textarea name="REVIEW_CONT" id="REVIEW_CONT" style="width: 1004px;  required="" rows="20" style="width:100%" placeholder="제목을 입력 하세요." ></textarea>
+										    <textarea name="contents" id="contents" rows="10" cols="100" style="width:766px; height:412px;"></textarea>
+										<!-- <textarea name="REVIEW_CONT" id="REVIEW_CONT" style="width: 1004px;  required="" rows="20" style="width:100%" placeholder="제목을 입력 하세요." ></textarea> -->
 										</td>
 									</tr>
 								</tbody>
@@ -181,12 +228,18 @@
 							<div style="float:left; width:300px; height:100px; margin-top: 10px;">
 							<input name="REVIEW_GRADE" id="input-21e" value="0" type="number" class="rating" min=0 max=5 step=0.5 data-size="sm" ></div>
 							<div style="float:right; display:inline-block; width:600px; height:100px; ">
-							<button type="submit" class="write" style="float:right; margin-top: 10px;">글쓰기</button></div>
+							<%-- <input type='hidden' name='REVIEW_CONT' value="${review_View.REVIEW_NUM}"> --%>
+							<!-- <input type="button" id="savebutton" value="서버전송" /> -->
+							<button id="savebutton" >글 쓰기</button>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		
+		<!-- action : 에디터에 입력한 html 코드를 전달받을 Controller페이지 URL -->
+
+
+
 		<!--/category-tab-->
 	</section>
 	</form>
@@ -200,30 +253,6 @@
 	    showCaption: false
 	}).val();
 	</script>
-	<script type="text/javascript">
-		var oEditors = [];
-		nhn.husky.EZCreator.createInIFrame({
-			oAppRef : oEditors,
-			elPlaceHolder : "REVIEW_CONT",
-			sSkinURI : "/resources/plugins/editor/SmartEditor2Skin.html",
-			fCreator : "createSEditor2"
-		});
-		function submitContents(elClickedObj) {
-			// 에디터의 내용이 textarea에 적용됩니다.
-			oEditors.getById["REVIEW_CONT"].exec("UPDATE_CONTENTS_FIELD", []);
-			// 에디터의 내용에 대한 값 검증은 이곳에서 document.getElementById("ir1").value를 이용해서 처리하면 됩니다.
 
-			try {
-				elClickedObj.form.submit();
-			} catch (e) {
-			}
-		}
-	</script>
-	<script src="/resources/js/jquery.js"></script>
-	<script src="/resources/js/price-range.js"></script>
-	<script src="/resources/js/jquery.scrollUp.min.js"></script>
-	<script src="/resources/js/bootstrap.min.js"></script>
-	<script src="/resources/js/jquery.prettyPhoto.js"></script>
-	<script src="/resources/js/main.js"></script>
 </body>
 </html>

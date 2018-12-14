@@ -1,5 +1,7 @@
 package kr.ync.project.controller;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,6 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
@@ -53,18 +56,17 @@ private static final Logger logger = LoggerFactory.getLogger(HomeController.clas
 	
 	
 	@PostMapping(value = "/review_write")
-	public String registPOST(Review_regiVO review, RedirectAttributes rttr) throws Exception {
+	public String registPOST(Review_regiVO review, RedirectAttributes rttr, HttpServletRequest request) throws Exception {
 
 		logger.info("write post ...........");
-		logger.info(review.toString());
-
+		
+		review.setREVIEW_CONT(request.getParameter("contents"));
 		service.regist(review);
-
 		//model.addAttribute("result", "success");
 		//return "/board/success";
+		
 		rttr.addFlashAttribute("msg", "success");
-		return "redirect:/front/review_view";
+		return "redirect:/review";
 	}
-	
 }
 

@@ -156,8 +156,9 @@
 										<th style="vertical-align: center; padding-top: 50px;">내용</th>
 										<td style="float: left; width: 1004px;" bgcolor="white">
 										<%-- <input type="text"	name="writer" class="form-control" placeholder="${review_View.REVIEW_CONT}" readonly> --%>
-										<textarea name="" style="width: 1004px; name="review_cont" id="review_cont" required="" rows="20" style="width:100%" placeholder="${review_View.REVIEW_CONT}" readonly></textarea>
-										</td>
+										<%-- <textarea name="" style="width: 1004px; name="review_cont" id="review_cont" required="" rows="20" style="width:100%" placeholder="${review_View.REVIEW_CONT}" readonly></textarea>
+ --%>									${review_View.REVIEW_CONT}	
+									 </td>
 									</tr>
 									<tr>
 										<th>이미지</th>
