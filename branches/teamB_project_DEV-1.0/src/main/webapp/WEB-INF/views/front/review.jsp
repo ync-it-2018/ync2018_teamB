@@ -141,8 +141,10 @@
 									</tr>
 								</thead>
 								<tbody>
+								<!-- 반복문입니다. 사용후기를 작성하면 작성한 만큼 제목, 글쓴이, 작성 일, 조회수가 순차적으로 나옵니다. -->
  									<c:forEach items="${review_list}" var="Review_regiVO">
 									<tr>
+										<!-- DB에서 리뷰테이블을 받아옵니다.  -->
 										<td><a href='/front/review_view?REVIEW_NUM=${Review_regiVO.REVIEW_NUM } '>
 										<h4>${Review_regiVO.REVIEW_TITLE}</h4></a></td>
 										<td><h4>${Review_regiVO.USER_ID}</h4></td>
@@ -157,7 +159,7 @@
 
 					<div class="text-center">
 						<ul class="pagination">
-
+							<!-- 화면 하단의 페이징 처리입니다. 시작페이지, 끝페이지가 있습니다.   -->
 							<c:if test="${pageMaker.prev}">
 								<li><a href="review${pageMaker.makeSearch(pageMaker.startPage - 1) }">&laquo;</a></li>
 							</c:if>

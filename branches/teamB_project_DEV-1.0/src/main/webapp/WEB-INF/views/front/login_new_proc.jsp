@@ -12,9 +12,15 @@
 <title>Insert title here</title>
 </head>
 <%
+// 한글파일 깨지지 않도록 UTF-8로 설정
 
 request.setCharacterEncoding("utf-8");
 String strID="", strPWD="", strEmail="";
+
+/*
+html문서의 폼으로 넘어온 정보의 값을 반환
+public String getParameter(String name)
+*/
 
 if ( request.getParameter("USER_ID") != null )
 	strID = request.getParameter("USER_ID");
@@ -25,12 +31,11 @@ if ( request.getParameter("USER_PW") != null )
 if ( request.getParameter("USER_EMAIL") != null )
 	strEmail = request.getParameter("USER_EMAIL");
 
-
+/* DB 연결하는 부분입니다. */
 String driverName = "oracle.jdbc.driver.OracleDriver";
 String url = "jdbc:oracle:thin:@220.67.2.3:1521:ora11";
 String userID = "educ239";
 String dbpwd = "pass239";
-//System.out.println("★★★★★★★★★★★★★어디까지 왔냐★★★★★★★★★★★★★");
 Connection conn = null;
 PreparedStatement pstmt = null;
 int result = 0;
@@ -87,6 +92,8 @@ try {
 
 </body>
 <script type ="text/javascript">
+/* 전달되는 값이 올라가서 result가 1이 된다면 추가가 됩니다. 그리고 0일 경우에는 오류발생이 나옵니다.
+   마지막으로 login화면으로 이동합니다. */
 	function insertResult() {
 		if (result > 0 ) {
 			alert("추가되었습니다. ")

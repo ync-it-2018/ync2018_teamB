@@ -137,10 +137,6 @@ if(session.getAttribute("login") == null) {%>
 		</div>
 	</section>
 	
-	
-	
-
-  
     <script src="/resources/js/jquery.js"></script>
 	<script src="/resources/js/price-range.js"></script>
     <script src="/resources/js/jquery.scrollUp.min.js"></script>

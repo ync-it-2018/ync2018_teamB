@@ -171,19 +171,6 @@
 	</section>
 
 	
-		<div class="footer-bottom">
-			<div class="container">
-				<div class="row">
-					<p class="pull-left">Team-b © 2018-가격비교사이트 Inc. 영남이공대학교.</p>
-					<p class="pull-right">
-						Designed by <span><a target="_blank"
-							href="">이건영</a></span>
-					</p>
-				</div>
-			</div>
-		</div>
-		
-	</footer><!--/Footer-->
 
 
 

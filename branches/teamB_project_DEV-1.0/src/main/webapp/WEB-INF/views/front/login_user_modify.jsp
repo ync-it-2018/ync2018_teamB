@@ -136,12 +136,14 @@
 					<div class="signup-form">
 						<!--sign up form-->
 						<h2>000000회원님</h2>
+						<!-- 회원을 수정하는 부분입니다. action으로 login_user_modi_proc로 이동합니다. -->
 						<form action="login_user_modi_proc" method="post" >
 							<input type="text" name="USER_ID" placeholder="아이디" /> 
 							<input type="email"  name="USER_EMAIL"  placeholder="E-mail 주소" /> 
 							<input type="password" name="USER_PW" placeholder="비밀번호" />
 							<button type="submit" class="btn btn-primary btn-block btn-flat">회원수정</button>
 						</form>
+						<!-- 회원삭제 하는 부분입니다. action으로 login_user_delete_proc로 이동합니다. -->
 						<form action="login_user_delete_proc" method="post">
 							<input type="text" name="USER_ID" placeholder="아이디 "/>
 							<input type="password" name="USER_PW" placeholder="비밀번호"/>
@@ -156,72 +158,6 @@
 	</section>
 	<!--/form-->
 
-
-	<footer id="footer"><!--Footer-->
-		<div class="footer-bottom">
-			<div class="container">
-				<div class="row">
-					<p class="pull-left">Team-b © 2018-가격비교사이트 Inc. 영남이공대학교.</p>
-					<p class="pull-right">
-						Designed by <span><a target="_blank"
-							href="">이건영</a></span>
-					</p>
-				</div>
-			</div>
-		</div>
-		
-	</footer><!--/Footer-->
-
-
-<!--오류가 아이디나 이메일적을 때, 다른값으로 안 넘어감 -->
-	<script type="text/javascript">
-	/* 		function newMember() { 
-			if (document.member_new.USER_ID.value.length <= 0) {
-				alert("아이디를 입력하세요");
-				document.member_new.USER_ID.focus();
-				self.location = "/login";
-				
-			} else if (document.member_new.USER_EMAIL.value.length <= 0){
-				alert("이메일을 입력하세요");
-				document.member_new.USER_EMAIL.focus();
-				self.location = "/login";
-				
-			}  else if (document.member_new.USER_PW.value.length <= 0){
-				alert("비밀번호를 입력하세요");
-				document.member_new.USER_PW.focus();
-				self.location = "/login";
-				/* location.href("/index"); 
-				
-			} else {
-				alert("확인완료"); 
-				document.member_new.submit(); 
-				self.location = "/login_new_proc";
-				
-			} 
-			<!-- self.location = "/login_new_proc";-->
-			
-			
-		}
-			*/
- 		
-		/* function nicknameCheck() {
-			window.open("nickname_check.jsp", "pop");
-		}
-
-
-
-		function passwordCheck() {
-			var password = document.member_new.pwd.value;
-			var passCheck = document.member_new.pwdChk.value;
-			if (password == passCheck) {
-				document.getElementById("checked").innerHTML = "입력값이 일치합니다.";
-			} else {
-				document.getElementById("checked").innerHTML = "입력값이 일치하지 않습니다.";
-			}
-
-		} */
-	
-	</script>
 
 
 	<script src="/resources/js/jquery.js"></script>

@@ -79,19 +79,7 @@
 	})
 	</script>
 
-<!-- <script>
-$(document).ready(function(){
-	var formObj = $("form[role='form']");
-	console.log(formObj);
-	
-	$(".btn-warning").on("click",function(){
-		self.location = "/front/review";
-	});
-	$(".btn-primary").on("click",function(){
-		formObj.submit();
-	});
-});
-</script> -->
+
 <body>
 	<header id="header">
 		<!--header-->

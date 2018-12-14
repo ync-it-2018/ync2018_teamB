@@ -12,8 +12,14 @@
 <title>Insert title here</title>
 </head>
 <%
+//한글파일 깨지지 않도록 UTF-8로 설정
+
 request.setCharacterEncoding("UTF-8");
 String strID = ""; String strPW = "";
+/*
+html문서의 폼으로 넘어온 정보의 값을 반환
+public String getParameter(String name)
+*/
 if ( request.getParameter("USER_ID") != null){
 	strID = request.getParameter("USER_ID");
 }
@@ -68,6 +74,7 @@ try {
 </form> --%>
 </body>
 <script type="text/javascript">
+/* 결과의 값이 1증가 되면 삭제가 됩니다. */
 	function deleteResult(result) {
 		if ( result >  0) {
 			alert("삭제되었습니다.");
