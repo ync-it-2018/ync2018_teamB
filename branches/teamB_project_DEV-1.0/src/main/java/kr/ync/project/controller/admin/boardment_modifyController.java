@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import kr.ync.project.controller.HomeController;
 
+/*어드민의 자유게시판 수정페이지로 이동하는 컨트롤러*/
 @Controller
 public class boardment_modifyController {
 private static final Logger logger = LoggerFactory.getLogger(HomeController.class);

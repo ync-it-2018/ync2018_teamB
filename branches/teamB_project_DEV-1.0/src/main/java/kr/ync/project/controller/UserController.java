@@ -26,38 +26,35 @@ import kr.ync.project.domain.UserVO;
 import kr.ync.project.dto.LoginDTO;
 import kr.ync.project.service.UserService;
 
+/*컨트롤러 선언과 기본 주소값*/
 @Controller
 @RequestMapping("/front")
 public class UserController {
 
 	private static Logger logger = LoggerFactory.getLogger(UserController.class);
 
-	
+	/*UserService를 service라는 이름으로 불러옴*/
 	@Autowired
 	private UserService service;
 
-	@GetMapping(value = "/loginService")
-	public void loginGET(@ModelAttribute("dto") LoginDTO dto) {
-
-	}
 
 	@PostMapping(value = "/loginPost")
 	public void loginPOST(LoginDTO dto, HttpSession session, Model model) throws Exception {
-		String returnURL = "";
+		/*전달받은 dto값을 service의 login으로 보내서 리턴받은 값을 vo에 저장*/
 		UserVO vo = service.login(dto);
 
 		// UserVO가 null 이란 말은 DB에서 해당 user에 대한 data가 없다는 말이다.
-		if (vo == null) { return; }
+		if (vo == null) { return; }/*로그인 실패시 loginPost로 감*/
 		model.addAttribute("userVO", vo);
 
+		/*로그인 유지를 위해 세션에 정보를 저장*/
 		if (dto.isUseCookie()) {
 			int amount = 60 * 60 * 24 * 7; // 7일동안 유지
-			Date sessionLimit = new Date(System.currentTimeMillis() + (1000 * amount));
+			Date sessionLimit = new Date(System.currentTimeMillis() + (1000 * amount));/*세션 유지기간 설정*/
 
+			/*keepLogin을 이용하여 로그인정보 저장*/
 			service.keepLogin(vo.getUSER_ID(), session.getId(), sessionLimit);
-		}/* else { // 로그인에 실패한 경우
-			returnURL = "redirect:/login"; // 로그인 폼으로 다시 가도록 함
-		}*/
+		}
 	}
 	
 	

@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import kr.ync.project.controller.HomeController;
 import kr.ync.project.service.BoardService;
 
+/*카테고리 관리 컨트롤러*/
 @Controller
 public class categorymentController {
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
@@ -22,8 +23,8 @@ public class categorymentController {
 	public String categoryment(Locale locale, Model model) {
 
 		logger.info("teamB log categoryment 페이지", locale);
-
-		logger.info("show all List...............");
+		
+		//logger.info("show all List...............");
 		//model.addAttribute("list", service.listAll());
 		return "admin/categoryment";
 	}

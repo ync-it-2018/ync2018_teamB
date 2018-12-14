@@ -16,13 +16,16 @@ import kr.ync.project.controller.HomeController;
 import kr.ync.project.domain.UserVO;
 import kr.ync.project.service.UserService;
 
+/*최고권한자 관리 컨트롤러*/
 @Controller
 public class masterController {
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 
+	/*UserService의 정보를 service로 불러옴*/
 	@Autowired
 	private UserService service;
 
+	/*master페이지를 불러올때 user정보를 불러와 masterlist라는 이름으로 저장후 리턴해줌*/
 	@GetMapping(value = "/master")
 	public String master(Model model) throws Exception {
 
@@ -32,7 +35,7 @@ public class masterController {
 		return "admin/master";
 	}
 	
-	
+	/*삭제 컨트롤러*/
 	@PostMapping(value = "/master")
 	public String delete_user(@RequestParam("USER_NUM") int USER_NUM, RedirectAttributes rttr) throws Exception {
 		service.userdelete(USER_NUM);

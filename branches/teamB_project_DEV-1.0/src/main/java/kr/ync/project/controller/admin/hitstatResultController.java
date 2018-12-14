@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import kr.ync.project.controller.HomeController;
-
+/*조회수 통계 결과 컨트롤러*/
 @Controller
 public class hitstatResultController {
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);

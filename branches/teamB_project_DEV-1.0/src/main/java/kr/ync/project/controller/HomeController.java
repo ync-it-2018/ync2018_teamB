@@ -11,6 +11,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+/* 메인화면을 연결해주는 컨트롤러 */
 @Controller
 public class HomeController {
 	

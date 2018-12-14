@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import kr.ync.project.controller.HomeController;
 
+/*사러가기 통계 페이지 이동 컨트롤러*/
 @Controller
 public class buystatController {
 private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
