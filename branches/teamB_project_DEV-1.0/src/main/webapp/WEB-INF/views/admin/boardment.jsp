@@ -34,7 +34,7 @@
 							<td>1/2</td>
 							<td><a href="/boardment_modify" data-role="button" data-icon="gear" data-iconpos="notext">설정</a>
 							    <a href="index.html" data-role="button" data-icon="delete" data-iconpos="notext">삭제</a></td>
-							<td>표시</td>>
+							<td>표시</td>
 						</tr>
 
 					</table>

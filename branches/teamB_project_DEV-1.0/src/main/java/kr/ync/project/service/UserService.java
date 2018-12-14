@@ -25,6 +25,8 @@ public interface UserService {
 	public List<UserVO> userlistCriteria(Criteria cri) throws Exception;
 
 	public int userlistCountCriteria(Criteria cri) throws Exception;
+
+	public void userdelete(Integer USER_NUM) throws Exception;
 	
 	
 	

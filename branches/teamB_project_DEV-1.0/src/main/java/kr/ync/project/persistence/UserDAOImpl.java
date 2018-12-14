@@ -64,13 +64,11 @@ public class UserDAOImpl implements UserDAO {
 	
 	
 	
-	
-	
-	
-	
-	
-	
-	
+	@Override
+	public void userdelete(Integer USER_NUM) throws Exception {
+		session.delete(namespace + ".deleteMember", USER_NUM);
+	}
+
 	// ----------------------------- 페이지 -------------------------------
 	@Override
 	public List<UserVO> UserlistPage(int page) throws Exception {

@@ -34,6 +34,6 @@ public interface UserDAO {
 
 	
 	
-	
+	public void userdelete(Integer USER_NUM) throws Exception;
 	
 }

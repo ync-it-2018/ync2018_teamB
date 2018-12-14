@@ -64,7 +64,11 @@ public class UserServiceImpl implements UserService {
 		return dao.UsercountPaging(cri);
 	}
 
-	
+	@Override
+	public void userdelete(Integer USER_NUM) throws Exception {
+		dao.userdelete(USER_NUM);
+		
+	}
 
 	
 	
