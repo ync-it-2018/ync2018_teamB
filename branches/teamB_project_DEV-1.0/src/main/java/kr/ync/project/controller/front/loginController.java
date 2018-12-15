@@ -43,17 +43,10 @@ public class loginController {
 		logger.info("teamB log 회원가입페이지(코딩부분)", locale);
 
 		return "front/login_new_proc";
-	}
-	/*	
-	@RequestMapping(value = "/logout", method = RequestMethod.GET)
-	public String logout(Locale locale, Model model) {
-
-		logger.info("teamB log 로그아웃", locale);
-
-		return "front/logout";
-	}
-	*/
-	@RequestMapping(value = "/logout", method = RequestMethod.GET)
+	}	
+	/*로그아웃 부분*/
+/*	세션에서 로그인이라는 세선이 있을경우 쿠키삭제
+*/	@RequestMapping(value = "/logout", method = RequestMethod.GET)
 	public String logout(HttpServletRequest request, 
 			HttpServletResponse response, 
 			HttpSession session)
@@ -79,7 +72,7 @@ public class loginController {
 				response.addCookie(loginCookie);
 				service.keepLogin(vo.getUSER_ID(), session.getId(), new Date());
 			}
-		}
+		}/*없다면 그냥 나온다는걸 로그로 보여줌*/
 		logger.info("그냥나옴");
 		//response.sendRedirect("front/logout");
 		return "front/logout";

@@ -36,14 +36,15 @@ public class masterController {
 	}
 	
 	/*삭제 컨트롤러*/
-	@PostMapping(value = "/master")
+	@PostMapping(value = "/master_user_remove")
 	public String delete_user(@RequestParam("USER_NUM") int USER_NUM, RedirectAttributes rttr) throws Exception {
+		
 		service.userdelete(USER_NUM);
+		
 		rttr.addFlashAttribute("msg", "Success");
 
 		// 목록 페이지로 이동
-		return "redirect:/master_user_remove";
-//		return "admin/master_user_remove";
+		return "redirect:/admin/master_user_remove";
 	}
 	
 	

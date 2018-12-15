@@ -106,6 +106,24 @@ if(session.getAttribute("login") == null) {%>
 						</c:forEach>
 
 						</div>
+						<div class="PC">
+						<h2>아웃도어</h2>
+						<c:forEach items="${top_list}" var="Product_regiVO">
+						<div class="col-sm-4">
+							<div class="product-image-wrapper">
+								<div class="single-products">
+										<div class="productinfo text-center">
+											<a href='/front/product_details?PRO_NUM=${Product_regiVO.PRO_NUM }'><img src="${Product_regiVO.PRO_MAIN_IMAGE}" style="width:200px; height:200px" alt=""></a>
+											<h2>${Product_regiVO.PRO_PRICE}</h2>
+											<p>${Product_regiVO.PRO_NAME}</p>
+											
+										</div>
+								</div>
+							</div>
+						</div>
+						</c:forEach>
+
+						</div>
 					</div><!--features_items-->
 				</div>
 			</div>

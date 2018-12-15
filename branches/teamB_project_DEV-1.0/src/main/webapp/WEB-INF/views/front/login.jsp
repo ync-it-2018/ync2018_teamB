@@ -29,7 +29,13 @@
 <link rel="apple-touch-icon-precomposed"
 	href="/resources/front/images/ico/apple-touch-icon-57-precomposed.png">
 </head>
-
+<%
+if(session.getAttribute("login") == null) {%>
+<!-- 해당하는 파일JSP를 불러옵니다. -->
+<%@include file="include/header.jsp"%>
+<%}else{ %>
+<%@include file="include/loginedheader.jsp"%>
+<%} %>
 <script>
 
 function formCheck(){
@@ -52,13 +58,7 @@ function formCheck(){
 }
 
 </script>
-<%
-if(session.getAttribute("login") == null) {%>
-<!-- 해당하는 파일JSP를 불러옵니다. -->
-<%@include file="include/header.jsp"%>
-<%}else{ %>
-<%@include file="include/loginedheader.jsp"%>
-<%} %>
+
 	
 	<section id="form" >
 		<!--form-->

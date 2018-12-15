@@ -19,6 +19,12 @@
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/resources/front/images/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/resources/front/images/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="/resources/front/images/ico/apple-touch-icon-57-precomposed.png">
+<script src="/resources/js/jquery.js"></script>
+	<script src="/resources/js/price-range.js"></script>
+	<script src="/resources/js/jquery.scrollUp.min.js"></script>
+	<script src="/resources/js/bootstrap.min.js"></script>
+	<script src="/resources/js/jquery.prettyPhoto.js"></script>
+	<script src="/resources/js/main.js"></script>
 <!-- 스마트 글쓰기 -->
 <script src="/resources/plugins/jQuery/jQuery-2.1.4.min.js"></script>
 
@@ -61,7 +67,7 @@ if(session.getAttribute("login") == null) {%>
 										<td><input type="text" name="free_board_title" placeholder="제목" /></td>
 									</tr>
 									<tr>
-										<td colspan=2><textarea name="free_board_cont" id="content" required="" rows="200" style="width:100%"></textarea></td>
+										<td colspan=2><textarea name="free_board_cont"  required="" rows="200" style="width:100%"></textarea></td>
 									</tr>
 									<tr>
 										<th>작성자</th><!-- 자동 불러오기 기능 현재 미구현 -->
@@ -106,11 +112,6 @@ if(session.getAttribute("login") == null) {%>
 
 	</section>
 
-	<script src="/resources/js/jquery.js"></script>
-	<script src="/resources/js/price-range.js"></script>
-	<script src="/resources/js/jquery.scrollUp.min.js"></script>
-	<script src="/resources/js/bootstrap.min.js"></script>
-	<script src="/resources/js/jquery.prettyPhoto.js"></script>
-	<script src="/resources/js/main.js"></script>
+	
 </body>
 </html>

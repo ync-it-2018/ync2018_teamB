@@ -88,14 +88,6 @@ mapper -> userMapper
 
 <%@include file="include/footer.jsp"%>
 <script type="text/javascript">
-  /*   $(document).ready(function(){
- 	var formObj = $("form[role='form']");
- 	console.log(formObj);
-    $("#removeBtn").on("click", function(){
- 		formObj.attr("action", "/admin/master_user_remove");
- 		formObj.submit();
- 	});
-});  */
  
  $(document).ready(function(){
    var formObj = $("form[role='form']");

@@ -73,13 +73,10 @@ if(session.getAttribute("login") == null) {%>
 						</div>
 						<!-- /.box-body -->
 						<div>
-						<c:if test="${not empty login }">
-							<c:if test="${login.USER_ID eq  boardVO.user_id}">
-							
+					
 							<button type="submit"  class="modifyBtn" id="modifyBtn">수정</button>
 							<button type="submit"  class="removeBtn" id="removeBtn">삭제</button>
-							</c:if>
-						</c:if>
+						
 						
 						
 							<button type="submit"  class="listBtn" id ="goListBtn">목록</button>
@@ -105,7 +102,6 @@ console.log는 요소를 HTML과 같은 트리 구조로 출력합니다. */
 	 	 /* 자바스크립트에서 로그를 찍어줍니다. */
 	 	console.log(formObj); 
 	 	$("#modifyBtn").on("click", function(){
-	 		alert("수정버튼클릭");
 	 		formObj.attr("action", "/front/freeboard_modify");
 	 		formObj.attr("method", "get");		
 	 		formObj.submit();
