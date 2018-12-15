@@ -61,6 +61,7 @@ public class boardController {
 		return "front/freeboard_view";
 		
 	}
+	
 
 	/* 자유게시판 게시글을 작성하는 컨트롤러*/
 	@PostMapping(value = "/boardwritefail")

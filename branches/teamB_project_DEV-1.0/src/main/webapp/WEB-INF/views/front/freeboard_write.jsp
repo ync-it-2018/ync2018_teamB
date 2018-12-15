@@ -64,12 +64,12 @@ if(session.getAttribute("login") == null) {%>
 										<td colspan=2><textarea name="free_board_cont" id="content" required="" rows="200" style="width:100%"></textarea></td>
 									</tr>
 									<tr>
-										<th>작성자</th>
-										<td><input type="text" name="free_board_writer" placeholder="작성자" /></td>
+										<th>작성자</th><!-- 자동 불러오기 기능 현재 미구현 -->
+										<td><input type="text" name="free_board_writer" placeholder="로그인한 id를 적어주세요" /></td>
 									</tr>
 									<tr>
-										<th>아이디</th>
-										<td><input type="text" name="user_id" placeholder="admin" /></td>
+										<th>아이디</th><!-- 자동 불러오기 기능 현재 미구현 -->
+										<td><input type="text" name="user_id" placeholder="로그인한 id를 적어주세요" /></td>
 									</tr>
 							</table>
 

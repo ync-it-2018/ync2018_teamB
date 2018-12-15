@@ -3,6 +3,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
   pageEncoding="UTF-8"%>
 
+<!-- 제품 조회수 통계 결과 폼 -->
 <%@include file="include/header.jsp" %>
 <!-- 깨끗한 빈 페이지. 해당 파일을 복사하여 새로운 admin view page를 만들어가면 됨 -->
     <!-- Main content -->

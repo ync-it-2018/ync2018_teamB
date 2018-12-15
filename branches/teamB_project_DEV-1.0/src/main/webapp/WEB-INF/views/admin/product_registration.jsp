@@ -3,6 +3,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 
+<!-- 제품 등록화면 -->
 <%@include file="include/header.jsp"%>
 <!-- 깨끗한 빈 페이지. 해당 파일을 복사하여 새로운 admin view page를 만들어가면 됨 -->
 <!-- Main content -->
@@ -97,7 +98,7 @@
 								<td colspan=5><input type="text" name="PRO_PRICE3" placeholder="제품가격#3"></td>
 							</tr>
 						</table>
-						<button type="submit">확인</button>
+						<button type="submit">확인</button><!-- 정해진 name으로 데이터 전달 -->
 						<button>취소</button>
 					</div>
 				</div>

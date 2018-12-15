@@ -5,6 +5,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 
+<!-- 최고관리자 페이지 폼 -->
 <%@include file="include/header.jsp"%>
 <script src="/resources/js/jquery.js"></script>
 <script src="/resources/js/bootstrap.min.js"></script>
@@ -43,7 +44,7 @@
 							</tr>
 						</thead>
 						<tbody>
-							<c:forEach items="${masterlist}" var="UserVO">
+							<c:forEach items="${masterlist}" var="UserVO"><!-- masterlist에 저장된 데이터 UserVO라는 이름으로 불러옴 -->
 								<tr>
 									<td>${UserVO.USER_NUM}</td>
 									<td>${UserVO.USER_ID}</td>

@@ -123,7 +123,7 @@ if(session.getAttribute("login") == null) {%>
 								</div>
 								<div class="searchPart">
 									<span class="serachButton">
-										<button type="button">글쓰기</button>
+										<button type="button" onclick="location.href='/freeboard_write'">글쓰기</button>
 									</span>
 
 								</div>

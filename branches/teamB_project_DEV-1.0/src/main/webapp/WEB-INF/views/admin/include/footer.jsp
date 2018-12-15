@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
       
-      
+      <!-- 푸터 연결 안함! -->
       <!-- Control Sidebar -->      
       <aside class="control-sidebar control-sidebar-dark">                
         <!-- Create the tabs -->

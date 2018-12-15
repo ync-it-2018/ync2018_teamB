@@ -3,6 +3,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 
+<!-- 카테고리 관리 폼 상위 항목 클릭시 하위 항목 출력 -->
 <%@include file="include/header.jsp"%>
 <link href="/resources/admin/css/multi-select.css" media="screen"
 	rel="stylesheet" type="text/css">

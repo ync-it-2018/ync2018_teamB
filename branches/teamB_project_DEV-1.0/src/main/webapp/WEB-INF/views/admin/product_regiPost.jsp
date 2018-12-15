@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+<!-- 제품 등록 실패시 출력페이지 -->
   <script type="text/javascript">
   	alert("제품 등록 실패");
     self.location = "/product_registration";

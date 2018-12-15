@@ -46,8 +46,7 @@ if(session.getAttribute("login") == null) {%>
 					<div class="col-sm-12">
 					
 						<form role="form" method="post">
-							<!-- input 요소는 텍스트 입력 뿐 아니라, 전송 버튼, 라디오 버튼, 체크 박스 등 여러 가지로 표현될 수 있습니다. -->
-							<!-- name 속성은 데이터가 서버로 전송될 때 할당되는 변수의 이름입니다. -->
+							<!-- free_board_num정보를 받아와서 hidden으로 숨겨둔후 보낼준비해둠 -->
 							<input type='hidden' name='free_board_num' value="${boardVO.free_board_num}">
 						</form>
 					
@@ -66,13 +65,17 @@ if(session.getAttribute("login") == null) {%>
 								<label for="exampleInputEamil1">Writer</label>
 								<input type="text" name='free_board_writer' class="form-control" value="${boardVO.free_board_writer}"
 								readonly="readonly">
-								
+								<input type="text" name='free_board_writer' class="form-control" value="${boardVO.user_id}"
+								readonly="readonly">
+								<input type="text" name='free_board_writer' class="form-control" value="${login.USER_ID}"
+								readonly="readonly">
 							</div>
 						</div>
 						<!-- /.box-body -->
 						<div>
 						<c:if test="${not empty login }">
-							<c:if test="${login.USER_ID eq  boardVO.free_board_writer}">
+							<c:if test="${login.USER_ID eq  boardVO.user_id}">
+							
 							<button type="submit"  class="modifyBtn" id="modifyBtn">수정</button>
 							<button type="submit"  class="removeBtn" id="removeBtn">삭제</button>
 							</c:if>
