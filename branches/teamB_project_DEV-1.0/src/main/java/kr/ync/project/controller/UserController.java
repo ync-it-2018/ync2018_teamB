@@ -51,9 +51,10 @@ public class UserController {
 	}
 	@PostMapping(value = "/userPost")
 	public void memberRegist(UserVO vo,Model model,HttpServletResponse response) throws Exception{
-		
+		// 인코딩 UTF-8 (strbuild의 alert값이 ?뜨는것을 변환)
 		response.setContentType("text/html; charset=UTF-8");
 		PrintWriter out = response.getWriter();
+		
 		StringBuilder strbuild = new StringBuilder();
 		//중복처리
 		int count = service.findMember(vo.getUSER_ID());
@@ -82,14 +83,7 @@ public class UserController {
 			strbuild.append("</script>");
 			out.println(strbuild.toString());
 			out.flush();
-		}
-		
-		
-		
-		
+		}	
 	}
-	
-	
-	
-	
+
 }

@@ -39,11 +39,6 @@ public class Review_regiDAOImpl implements Review_regiDAO {
 	}
 
 	@Override
-	public List<Review_regiVO> listAll() throws Exception {
-		return session.selectList(namespace + ".listAll");
-	}
-
-	@Override
 	public List<Review_regiVO> listPage(int page) throws Exception {
 
 		if (page <= 0) {

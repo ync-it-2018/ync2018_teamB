@@ -24,16 +24,15 @@ public class shopController {
 	public String listPage(@ModelAttribute("cri") SearchCriteria cri, Model model) throws Exception {
 
 		logger.info(cri.toString()); // SearchCriteria 객체의 값
-
-		//model.addAttribute("list", service.listCriteria(cri));
+		//리뷰에 값을 전달시 리스트 형식으로 전달
 		model.addAttribute("product_list", service.listSearchCriteria(cri));
-
+		// 페이징 값 설정 하기위해 사용
 		PageMaker pageMaker = new PageMaker();
 		pageMaker.setCri(cri);
-
-		//pageMaker.setTotalCount(service.listCountCriteria(cri));
+		
+		//전체 카운트를 매기기 위해 사용
 		pageMaker.setTotalCount(service.listSearchCount(cri));
-
+		//해당 모델에 페이지 값을 넘기기 위해 사용;
 		model.addAttribute("pageMaker", pageMaker);
 		
 		return "front/shop";
@@ -43,10 +42,10 @@ public class shopController {
 	public String read(@RequestParam("PRO_NUM") int PRO_NUM,Model model) throws Exception {
 		service.viewHits(PRO_NUM);
 		logger.info("show free product_details...............");
+		// 제품 리스트에 값을 전달하고 read메소드 호출
 		model.addAttribute("productDetails", service.read(PRO_NUM));
 		
 		return "front/product_details";
 		
 	}
-	
 }

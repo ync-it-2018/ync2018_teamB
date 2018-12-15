@@ -36,16 +36,14 @@ public class boardController {
 	public void BoardGET(@ModelAttribute("cri") SearchCriteria cri, Model model) throws Exception {
 
 		logger.info(cri.toString()); // SearchCriteria 객체의 값
-
-		//model.addAttribute("list", service.listCriteria(cri));
+		//페이징, 검색기능 위한 해당 메소드 호출
 		model.addAttribute("list", service.listSearchCriteria(cri));
-
+		// 페이징 값 설정 하기위해 사용
 		PageMaker pageMaker = new PageMaker();
 		pageMaker.setCri(cri);
-
-		//pageMaker.setTotalCount(service.listCountCriteria(cri));
+		//전체 카운트를 매기기 위해 사용
 		pageMaker.setTotalCount(service.listSearchCount(cri));
-
+		//해당 모델에 페이지 값을 넘기기 위해 사용;
 		model.addAttribute("pageMaker", pageMaker);
 	}
 	
@@ -71,7 +69,7 @@ public class boardController {
 		/* vo로 받아온 값을 service의 regist로 넘겨줍니다*/
 		service.regist(vo);
 		
-		// UserVO가 null 이란 말은 DB에서 해당 user에 대한 data가 없다는 말이다.  
+		// BoardVO가 null 이란 말은 DB에서 해당 board에 대한 data가 없다는 말이다.  
 		if (vo == null) {
 			/* 작성 실패시 boardwritefail로 넘어감*/
 			return;

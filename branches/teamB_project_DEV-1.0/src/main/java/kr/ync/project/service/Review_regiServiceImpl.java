@@ -38,12 +38,6 @@ public class Review_regiServiceImpl implements Review_regiService{
 	}
 
 	@Override
-	public List<Review_regiVO> listAll() throws Exception {
-		return dao.listAll();
-		
-	}
-
-	@Override
 	public List<Review_regiVO> listCriteria(Criteria cri) throws Exception {
 		
 		return dao.listCriteria(cri);

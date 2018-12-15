@@ -39,11 +39,6 @@ public class Product_regiDAOImpl implements Product_regiDAO {
 	}
 
 	@Override
-	public List<Product_regiVO> listAll() throws Exception {
-		return session.selectList(namespace + ".listAll");
-	}
-
-	@Override
 	public List<Product_regiVO> listPage(int page) throws Exception {
 
 		if (page <= 0) {

@@ -38,11 +38,6 @@ public class Product_regiServiceImpl implements Product_regiService
 		dao.delete(pno);
 	}
 
-	@Override
-	public List<Product_regiVO> listAll() throws Exception {
-		return dao.listAll();
-		
-	}
 
 	@Override
 	public List<Product_regiVO> listCriteria(Criteria cri) throws Exception {

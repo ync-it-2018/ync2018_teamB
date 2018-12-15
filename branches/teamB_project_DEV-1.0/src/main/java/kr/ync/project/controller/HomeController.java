@@ -26,17 +26,18 @@ public class HomeController {
 	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(Product_regiVO vo, Locale locale, Model model) throws Exception {
-
+		//화면에 값을 전달시 리스트 형식으로 전달
 		model.addAttribute("top_list",service.top3());
 		logger.info("teamB log 메인화면", locale);
 		
+		//날짜 설정
 		Date date = new Date();
 		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
 		
-		
-		
+		//문자형 날짜 데이터값 형변환
 		String formattedDate = dateFormat.format(date);
 		
+		//화면에 날짜 데이터값 전달
 		model.addAttribute("serverTime", formattedDate );
 		
 		return "front/index";
