@@ -82,4 +82,10 @@ public class BoardDAOImpl implements BoardDAO {
 
 		return session.selectOne(namespace + ".listSearchCount", cri);
 	}
+
+	@Override
+	public int viewHits(int bno) throws Exception {
+		// TODO Auto-generated method stub
+		return session.update(namespace+".updateHits",bno);
+	}
 }

@@ -11,7 +11,7 @@ public abstract interface Review_regiDAO
 	public void create(Review_regiVO vo) throws Exception;
 
 	public Review_regiVO read(Integer rno) throws Exception;
-
+	
 	public void update(Review_regiVO vo) throws Exception;
 
 	public void delete(Integer rno) throws Exception;
@@ -31,4 +31,5 @@ public abstract interface Review_regiDAO
 	// 검색이 적용된 Query 결과 Count
 	public int listSearchCount(SearchCriteria cri)throws Exception;
 
+	public int viewHits(int vo) throws Exception;
 }

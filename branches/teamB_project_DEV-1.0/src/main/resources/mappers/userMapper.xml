@@ -6,8 +6,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <mapper namespace="kr.ync.project.mapper.UserMapper">
 
 	<select id="login" resultType="UserVO">
-		SELECT	USER_ID,
-				USER_PW
+		SELECT	*
 		FROM	TB_USER
 		WHERE	USER_ID = #{USER_ID}
 		AND		USER_PW = #{USER_PW}
@@ -86,6 +85,16 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	]]>
 	</select>
 	
+	<select id="userCheck" resultType="int">
+		select count(USER_ID)
+		from tb_user
+		where USER_ID = #{USER_ID}
+	</select>
+	<insert id="userRegist">
+	 	insert into tb_user (USER_ID, USER_PW, USER_EMAIL)
+	 	 
+	 	VALUES(#{USER_ID}, #{USER_PW}, #{USER_EMAIL})
+	</insert>
 </mapper>
 
 

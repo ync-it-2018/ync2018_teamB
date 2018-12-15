@@ -81,7 +81,6 @@ public class PageMaker {
 
 		return uriComponents.toUriString();
 	}
-
 	public String makeSearch(int page) {
 
 		UriComponents uriComponents =
@@ -93,6 +92,6 @@ public class PageMaker {
 				.build();
 
 		return uriComponents.toUriString();
-	}
+	} 
 
 }

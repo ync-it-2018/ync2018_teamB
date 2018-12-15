@@ -26,10 +26,10 @@ public class Review_regiServiceImpl implements Review_regiService{
 		return dao.read(REVIEW_NUM);
 		
 	}
-
+	
 	@Override
-	public void modify(Review_regiVO review) throws Exception {
-		dao.update(review);
+	public void modify(Review_regiVO rno) throws Exception {
+		dao.update(rno);
 	}
 
 	@Override
@@ -66,5 +66,15 @@ public class Review_regiServiceImpl implements Review_regiService{
 		
 		return dao.listSearchCount(cri);
 	}
+
+
+	@Override
+	public int viewHits(int rno) throws Exception {
+		// TODO Auto-generated method stub
+		return dao.viewHits(rno);
+	}
+
+
+
 
 }

@@ -20,6 +20,7 @@ import kr.ync.project.domain.SearchCriteria;
 import kr.ync.project.service.Review_regiService;
 
 @Controller
+@RequestMapping("/front")/* 기본 주소값 */
 public class reviewController {
 private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 	
@@ -35,8 +36,7 @@ private static final Logger logger = LoggerFactory.getLogger(HomeController.clas
 	
 	PageMaker pageMaker = new PageMaker();
 	pageMaker.setCri(cri);
-
-	//pageMaker.setTotalCount(service.listCountCriteria(cri));
+	
 	pageMaker.setTotalCount(service.listSearchCount(cri));
 
 	model.addAttribute("pageMaker", pageMaker);
@@ -45,11 +45,11 @@ private static final Logger logger = LoggerFactory.getLogger(HomeController.clas
 	}
 	
 	
-	@GetMapping(value = "/front/review_view")
+	@GetMapping(value = "/review_view")
 	public String read(@RequestParam("REVIEW_NUM") int REVIEW_NUM,Model model) throws Exception {
 		logger.info("show review board view...............");
+		service.viewHits(REVIEW_NUM);
 		model.addAttribute("review_View", service.read(REVIEW_NUM));
-		
 		return "/front/review_view";
 		
 	}
@@ -67,6 +67,44 @@ private static final Logger logger = LoggerFactory.getLogger(HomeController.clas
 		
 		rttr.addFlashAttribute("msg", "success");
 		return "redirect:/review";
+	}
+
+	@PostMapping(value = "/review_remove")
+	public String removePOST(@RequestParam("REVIEW_NUM") int REVIEW_NUM, RedirectAttributes rttr) throws Exception {
+
+		logger.info("mod POST...............");
+		service.remove(REVIEW_NUM);
+	
+		rttr.addFlashAttribute("msg", "Success");
+		
+		return "redirect:/front/review";
+	}
+	
+	@GetMapping(value = "/review_modify")
+	public void modifyGET(int REVIEW_NUM, Model model) throws Exception {
+		logger.info("show modifyGET...............");
+		model.addAttribute("review_modify", service.read(REVIEW_NUM));
+		
+//		return "/front/review_modify";		
+	}
+//	@GetMapping(value = "/review_modify")
+//	public String modifyGET(@RequestParam("REVIEW_NUM") int REVIEW_NUM,  Model model) throws Exception {
+//		logger.info("show review modifyGET...............");
+//		model.addAttribute("review_modify", service.read(REVIEW_NUM));
+//		
+//		return "front/review_modify";
+//		
+//	}
+	
+	@PostMapping(value = "/review_modify")
+	public String modifyPOST(Review_regiVO review, RedirectAttributes rttr) throws Exception {
+
+		logger.info("mod POST...............");
+		service.modify(review);
+	
+		rttr.addFlashAttribute("msg", "Success");
+		
+		return "redirect:/front/review";
 	}
 }
 

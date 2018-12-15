@@ -29,6 +29,12 @@
 	href="/resources/front/images/ico/apple-touch-icon-72-precomposed.png">
 <link rel="apple-touch-icon-precomposed"
 	href="/resources/front/images/ico/apple-touch-icon-57-precomposed.png">
+	<script src="/resources/js/jquery.js"></script>
+	<script src="/resources/js/price-range.js"></script>
+	<script src="/resources/js/jquery.scrollUp.min.js"></script>
+	<script src="/resources/js/bootstrap.min.js"></script>
+	<script src="/resources/js/jquery.prettyPhoto.js"></script>
+	<script src="/resources/js/main.js"></script>
 </head>
 <!--/head-->
 <%
@@ -72,8 +78,9 @@ if(session.getAttribute("login") == null) {%>
 								</tbody>
 							</table>
 							<div style="margin-left:950px;">
-								<a class="btn btn-default update" href="">수정</a> 
-								<a class="btn btn-default update" href="">삭제</a>
+								<button type="submit"  class="modifyBtn" id="modifyBtn">수정</button>
+								<button type="submit"  class="removeBtn" id="removeBtn">삭제</button>
+								<button type="submit"  class="listBtn" id ="goListBtn">목록</button>
 							</div>
 							<h3>댓글</h3>
 							
@@ -85,10 +92,36 @@ if(session.getAttribute("login") == null) {%>
 
 			</div>
 		</div>
-		<!--/category-tab-->
-
-
 	</section>
+	
+	<script>
+/* JQuery의 문법입니다.
+console.log는 요소를 HTML과 같은 트리 구조로 출력합니다. */ 
+
+	 $(document).ready(function(){
+	 	var formObj = $("form[role='form']");
+	 	 /* 자바스크립트에서 로그를 찍어줍니다. */
+	 	console.log(formObj); 
+	 	$("#modifyBtn").on("click", function(){
+/* 	 		alert("수정버튼클릭"); */
+	 		formObj.attr("action", "/front/review_modify?REVIEW_NUM="${Review_regiVO.REVIEW_NUM });
+	 		formObj.attr("method", "get");		
+	 		formObj.submit();
+	 	});
+	 	
+	    $("#removeBtn").on("click", function(){
+	 		formObj.attr("action", "/front/review_remove");
+	 		formObj.submit();
+	 	});
+	 	
+	 	$("#goListBtn ").on("click", function(){
+	 		formObj.attr("method", "get");
+	 		formObj.attr("action", "/front/review");
+	 		formObj.submit();
+	 	});
+	 	
+	 });
+</script>
 
 	<script src="/resources/js/jquery.js"></script>
 	<script src="/resources/js/price-range.js"></script>

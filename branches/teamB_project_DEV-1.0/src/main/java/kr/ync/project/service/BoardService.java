@@ -27,5 +27,5 @@ public interface BoardService {
 
 	public int listSearchCount(SearchCriteria cri) throws Exception;
 
-
+	public int viewHits(int bno) throws Exception;
 }

@@ -16,10 +16,23 @@
 		 PRO_PRICE2, PRO_URL3,PRO_DATE)
 		 
 		VALUES(TB_SEQ_PRODUCT_NUM.NEXTVAL, #{PRO_NAME} , #{PRO_LOW},#{PRO_SITE},'http://image.itdonga.com/files/2018/03/26/003_9YzKR9R.jpg',#{PRO_PRICE},#{PRO_PRICE3},
-		       #{PRO_EXPLAN}, TB_SEQ_PRODUCT_BUY_HITS.NEXTVAL , TB_SEQ_PRODUCT_HITS.NEXTVAL,'TAG',1,1,
+		       #{PRO_EXPLAN}, 0 , TB_SEQ_PRODUCT_HITS.NEXTVAL,'TAG',1,1,
 		       1, 1, 1, #{PRO_URL}, #{PRO_URL2}, 
 		       #{PRO_PRICE2},#{PRO_URL3}, sysdate)
 	</insert>
+	
+	<select id="top3" resultType="Product_regiVO">
+	<![CDATA[
+	select * 
+	from (select * 
+		  from tb_product 
+		  order by pro_hits desc) 
+	where ROWNUM <= 3
+	]]>
+	
+	
+	</select>
+	
 	<select id="read" resultType="Product_regiVO">
 	SELECT  PRO_NUM,
 	 		PRO_NAME,
@@ -42,6 +55,11 @@
 	WHERE	PRO_NUM = #{PRONUM}
 </select>
 
+<update id="updateHits">
+	UPDATE TB_PRODUCT	
+	SET PRO_HITS = PRO_HITS + 1
+	WHERE PRO_NUM = #{PRO_NUM}
+</update>
 <update id="update">
 	UPDATE tb_free_board	SET free_board_title =#{free_board_title},
 							free_board_cont =#{free_board_cont},

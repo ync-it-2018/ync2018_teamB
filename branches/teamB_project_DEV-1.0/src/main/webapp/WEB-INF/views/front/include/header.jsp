@@ -50,7 +50,7 @@
 					<div class="col-sm-8">
 						<div class="shop-menu pull-right">
 							<ul class="nav navbar-nav">
-								<li><a href="/admin"><i class="fa fa-user"></i> 사용자정보</a></li>		
+								<li><a href="#"><i class="fa fa-user"></i> 사용자정보</a></li>		
 								<li><a href="/interest_product"><i class="fa fa-shopping-cart"></i> 관심물품</a></li>
 								<li><a href="/login"> 로그인</a></li>
 							</ul>
@@ -115,7 +115,7 @@
 										<li><a href="/suggest">건의게시판</a></li>
 									</ul></li>
 
-								<li><a href="/review">상품사용후기</a></li>
+								<li><a href="/front/review">상품사용후기</a></li>
 
 
 							</ul>

@@ -41,6 +41,7 @@ public class shopController {
 	
 	@GetMapping(value = "/front/product_details")
 	public String read(@RequestParam("PRO_NUM") int PRO_NUM,Model model) throws Exception {
+		service.viewHits(PRO_NUM);
 		logger.info("show free product_details...............");
 		model.addAttribute("productDetails", service.read(PRO_NUM));
 		

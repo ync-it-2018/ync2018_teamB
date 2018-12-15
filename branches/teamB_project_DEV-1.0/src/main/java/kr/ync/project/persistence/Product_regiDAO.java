@@ -31,4 +31,7 @@ public abstract interface Product_regiDAO
 	// 검색이 적용된 Query 결과 Count
 	public int listSearchCount(SearchCriteria cri)throws Exception;
 
+	public int viewHits(int pno) throws Exception;
+	
+	public List<Product_regiVO> top3() throws Exception;
 }

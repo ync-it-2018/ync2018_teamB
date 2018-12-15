@@ -11,8 +11,8 @@ public interface Review_regiService {
 	public void regist(Review_regiVO vo) throws Exception;
 
 	public Review_regiVO read(Integer REVIEW_NUM) throws Exception;
-
-	public void modify(Review_regiVO review) throws Exception;
+	
+	public void modify(Review_regiVO rno) throws Exception;
 
 	public void remove(Integer rno) throws Exception;
 
@@ -26,4 +26,5 @@ public interface Review_regiService {
 
 	public int listSearchCount(SearchCriteria cri) throws Exception;
 	
+	public int viewHits(int rno) throws Exception;
 }

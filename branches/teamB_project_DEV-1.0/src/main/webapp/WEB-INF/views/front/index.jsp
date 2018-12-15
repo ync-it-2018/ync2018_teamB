@@ -36,7 +36,6 @@ if(session.getAttribute("login") == null) {%>
 						<ol class="carousel-indicators">
 							<li data-target="#slider-carousel" data-slide-to="0" class="active"></li>
 							<li data-target="#slider-carousel" data-slide-to="1"></li>
-							<li data-target="#slider-carousel" data-slide-to="2"></li>
 						</ol>
 						
 						<div class="carousel-inner">
@@ -44,36 +43,23 @@ if(session.getAttribute("login") == null) {%>
 								<div class="col-sm-6">
 									<h1><span>가</span>격비교사이트</h1>
 									<h2>TEAM-B</h2>
-									<p>팀장 : 강세훈 그외 3명 </p>
+									<p>팀장 : 강세훈</p>
 									<button type="button" class="btn btn-default get">Get it now</button>
 								</div>
 								<div class="col-sm-6">
-									<img src="/resources/front/images/home/zzal.jpg" class="girl img-responsive" alt="" />
+									<img src="/resources/front/images/home/girl1.jpg" class="girl img-responsive" alt="" />
 								</div>
 							</div>
 							<div class="item">
 								<div class="col-sm-6">
 									<h1><span>팀</span> 프로젝트</h1>
-									<h2>100% 수제작</h2>
-									<p>레알 개망한듯 </p>
+									<h2>팀명 TEAM_B</h2>
+									<p>조원 : 박지훈, 이건영, 이정욱 </p>
 									<button type="button" class="btn btn-default get">Get it now</button>
 								</div>
 								<div class="col-sm-6">
 									<img src="/resources/front/images/home/girl2.jpg" class="girl img-responsive" alt="" />
 									<img src="/resources/front/images/home/pricing.png"  class="pricing" alt="" />
-								</div>
-							</div>
-							
-							<div class="item">
-								<div class="col-sm-6">
-									<h1><span>하</span>기싫다</h1>
-									<h2>너무 귀찮다</h2>
-									<p>사실 할줄 모른다</p>
-									<button type="button" class="btn btn-default get">Get it now</button>
-								</div>
-								<div class="col-sm-6">
-									<img src="/resources/front/images/home/girl3.jpg" class="girl img-responsive" alt="" />
-									<img src="/resources/front/images/home/pricing.png" class="pricing" alt="" />
 								</div>
 							</div>
 							
@@ -101,126 +87,25 @@ if(session.getAttribute("login") == null) {%>
 
 				<div>
 					<div class="features_items"><!--features_items-->
-						<h2 class="title text-center" style="width: 100%;">카테고리별 인기제품 TOP 3</h2>
+						<h2 class="title text-center" style="width: 100%;"> 높은 조회수 제품 TOP 3</h2>
 						<div class="PC">
 						<h2>디지털</h2>
+						<c:forEach items="${top_list}" var="Product_regiVO">
 						<div class="col-sm-4">
 							<div class="product-image-wrapper">
 								<div class="single-products">
 										<div class="productinfo text-center">
-											<a href="/product-details"><img src="/resources/front/images/home/LG.jpg" alt=""></a>
-											<h2>150만원</h2>
-											<p>LG 4문형 냉장고</p>
+											<a href='/front/product_details?PRO_NUM=${Product_regiVO.PRO_NUM }'><img src="${Product_regiVO.PRO_MAIN_IMAGE}" style="width:200px; height:200px" alt=""></a>
+											<h2>${Product_regiVO.PRO_PRICE}</h2>
+											<p>${Product_regiVO.PRO_NAME}</p>
 											
 										</div>
 								</div>
 							</div>
 						</div>
-						<div class="col-sm-4">
-							<div class="product-image-wrapper">
-								<div class="single-products">
-										<div class="productinfo text-center">
-											<a href="/product-details"><img src="/resources/front/images/home/LG_2.jpg" alt=""></a>
-											<h2>140만원</h2>
-											<p>LG 김치냉장고</p>
-											
-										</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-4">
-							<div class="product-image-wrapper">
-								<div class="single-products">
-										<div class="productinfo text-center">
-											<a href="/product-details"><img src="/resources/front/images/home/LG3.jpg" alt=""></a>
-											<h2>51만원</h2>
-											<p>전기오븐</p>
-											
-										</div>
-								</div>
-							</div>
-						</div>
-						</div>
-						<div class="outdoor">
-						<h2>아웃도어</h2>
-						<div class="col-sm-4">
-							<div class="product-image-wrapper">
-								<div class="single-products">
-										<div class="productinfo text-center">
-											<a href="/product-details"><img src="/resources/front/images/home/gazuaaa.gif" alt=""></a>
-											<h2>가즈아아아아!!</h2>
-											<p>떡상</p>
-											
-										</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-4">
-							<div class="product-image-wrapper">
-								<div class="single-products">
-										<div class="productinfo text-center">
-											<a href="/product-details"><img src="/resources/front/images/home/buaa.gif" alt=""></a>
-											<h2>좀비 폭탄</h2>
-											<p>메탈슬러그</p>
-											
-										</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-4">
-							<div class="product-image-wrapper">
-								<div class="single-products">
-										<div class="productinfo text-center">
-											<a href="/product-details"><img src="/resources/front/images/home/hell.gif" alt=""></a>
-											<h2>입소2일차</h2>
-											<p>집합15분전</p>
-											
-										</div>
-								</div>
-							</div>
-						</div>
-						</div>
-						<div class="test">
-						<h2>테스트</h2>
-						<div class="col-sm-4">
-							<div class="product-image-wrapper">
-								<div class="single-products">
-										<div class="productinfo text-center">
-											<a href="/product-details"><img src="/resources/front/images/home/ah.gif" alt=""></a>
-											<h2>절레절레</h2>
-											<p>안철수</p>
-											
-										</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-4">
-							<div class="product-image-wrapper">
-								<div class="single-products">
-										<div class="productinfo text-center">
-											<a href="/product-details"><img src="/resources/front/images/home/giee.jpg" alt=""></a>
-											<h2>끼에에엑!</h2>
-											<p>빼애애액!</p>
-											
-										</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-4">
-							<div class="product-image-wrapper">
-								<div class="single-products">
-										<div class="productinfo text-center">
-											<a href="/product-details"><img src="/resources/front/images/home/goza.gif" alt=""></a>
-											<h2>고자라니!!</h2>
-											<p>심영</p>
-											
-										</div>
-								</div>
-							</div>
-						</div>
-					</div>
-						
+						</c:forEach>
 
+						</div>
 					</div><!--features_items-->
 				</div>
 			</div>

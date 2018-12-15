@@ -29,6 +29,29 @@
 <link rel="apple-touch-icon-precomposed"
 	href="/resources/front/images/ico/apple-touch-icon-57-precomposed.png">
 </head>
+
+<script>
+
+function formCheck(){
+	if(!document.frm.USER_ID.value){
+		alert("아이디를 입력하세요");
+		document.frm.USER_ID.focus();
+		return false;
+	}
+	if(!document.frm.USER_EMAIL.value){
+		alert("you must input email");
+		document.frm.USER_EMAIL.focus();
+		return false;
+	}
+	
+	if(!document.frm.USER_PW.value){
+		alert("you must input password");
+		document.frm.USER_PW.focus();
+		return false;
+	}
+}
+
+</script>
 <%
 if(session.getAttribute("login") == null) {%>
 <!-- 해당하는 파일JSP를 불러옵니다. -->
@@ -69,11 +92,11 @@ if(session.getAttribute("login") == null) {%>
 						<!--sign up form-->
 						<h2>회원가입</h2>
 						<!-- 회원가입을 하면 login_new_proc로 이동합니다. -->
-						<form action="login_new_proc" method="post" >
+						<form action="front/userPost" method="post" name="frm" onsubmit="return formCheck()">
 							<input type="text" name="USER_ID" placeholder="아이디" /> 
 							<input type="email"  name="USER_EMAIL"  placeholder="E-mail 주소" /> 
 							<input type="password" name="USER_PW" placeholder="비밀번호" />
-							<button type="submit" class="btn btn-primary btn-block btn-flat">회원가입</button>
+							<input type="submit" class="btn btn-primary btn-block btn-flat" value="회원가입">
 						</form>
 					</div>
 					<!--/sign up form-->

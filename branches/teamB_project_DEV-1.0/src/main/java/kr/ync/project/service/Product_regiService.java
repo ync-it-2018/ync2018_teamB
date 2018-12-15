@@ -26,4 +26,7 @@ public interface Product_regiService {
 
 	public int listSearchCount(SearchCriteria cri) throws Exception;
 	
+	public int viewHits(int pno) throws Exception;
+	
+	public List<Product_regiVO> top3() throws Exception;
 }

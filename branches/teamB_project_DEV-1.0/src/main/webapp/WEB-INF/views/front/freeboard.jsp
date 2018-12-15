@@ -19,6 +19,25 @@
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/resources/front/images/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/resources/front/images/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="/resources/front/images/ico/apple-touch-icon-57-precomposed.png">
+	<script src="/resources/js/jquery.js"></script>
+	<script src="/resources/js/price-range.js"></script>
+	<script src="/resources/js/jquery.scrollUp.min.js"></script>
+	<script src="/resources/js/bootstrap.min.js"></script>
+	<script src="/resources/js/jquery.prettyPhoto.js"></script>
+	<script src="/resources/js/main.js"></script>
+    <script>
+    $(function(){
+    	$(".search").click(function(){
+    		alert("test");
+     		self.location="freeboard"
+    		+'${pageMaker.makeQuery(1)}'
+    		+"&searchType="
+    		+$("select option:selected").val()
+    		+"&keyword="
+    		+encodeURIComponent($("#keywordInput").val());
+    	});
+    });
+    </script>
 <%
 if(session.getAttribute("login") == null) {%>
 <!-- 해당하는 파일JSP를 불러옵니다. -->
@@ -48,9 +67,9 @@ if(session.getAttribute("login") == null) {%>
 								
 								<tbody>
 								<!-- 반복으로 돌려 글을 작성한 만큼 나타납니다. -->
-									<c:forEach items="${list}" var="BoardVO">
+									<c:forEach items="${list}" var="BoardVO" varStatus="i">
 									<tr>
-										<td>${BoardVO.free_board_num}</td><!-- 글 번호입니다.  -->
+										<td>${pageMaker.totalCount-((pageMaker.totalCount-1)-(pageMaker.cri.page-1)*pageMaker.displayPageNum)+i.index}</td><!-- 글 번호입니다.  -->
 										<td><a href='/front/freeboard_view?free_board_num=${BoardVO.free_board_num }'>${BoardVO.free_board_title }</a>
 										</td>
 										<td>${BoardVO.free_board_writer}</td> <!-- 작성자입니다.  -->
@@ -61,20 +80,40 @@ if(session.getAttribute("login") == null) {%>
 									</c:forEach>
 								</tbody>
 							</table>
-							<div class="pageMove"> ◀   ◀◀     1 2 3 4 5    ▶▶   ▶</div>
-							
+									<div class="text-center">
+						<ul class="pagination">
+
+							<c:if test="${pageMaker.prev}">
+								<li><a href="freeboard${pageMaker.makeSearch(pageMaker.startPage - 1) }">&laquo;</a></li>
+							</c:if>
+
+							<c:forEach begin="${pageMaker.startPage }" end="${pageMaker.endPage }" var="idx">
+								<li
+									<c:out value="${pageMaker.cri.page == idx?'class =active':''}"/>>
+									<a href="freeboard${pageMaker.makeSearch(idx)}">${idx}</a>
+								</li>
+							</c:forEach>
+
+							<c:if test="${pageMaker.next && pageMaker.endPage > 0}">
+								<li><a href="freeboard${pageMaker.makeSearch(pageMaker.endPage +1) }">&raquo;</a></li>
+							</c:if>
+
+						</ul>
+					</div>
+					</form>
 							<!-- 검색할 수 있게 합니다. -->
 							<div class="searchBody">
 								<div class="searchPart">
-									<select class='searchArea'>
-										<option value='title' selected>제목</option>
-										<option value='cont-title'>제목+내용</option>
-										<option value='cont'>내용</option>
+									<select class='searchArea' name="searchType">
+										<option value="n"<c:out value="${cri.searchType == null ? 'selected' : '' }"/>>------------</option>
+										<option value='t'<c:out value="${cri.searchType eq 't' ? 'selected' : '' }"/>>제목</option>
+										<option value='c'<c:out value="${cri.searchType eq 'c' ? 'selected' : '' }"/>>내용</option>
+										<option value='tc'<c:out value="${cri.searchType eq 'tc' ? 'selected' : '' }"/>>제목+내용</option>
 									</select>
 								</div>
 								<div class="searchPart">
-									<input type="text" class="searchKeyword"
-										placeholder="검색 입력하세요.">
+									<input type="text" name="keyword" id="keywordInput" class="searchKeyword"
+										placeholder="검색 입력하세요." value='${cri.keyword }'>
 								</div>
 								<div class="searchPart">
 									<span class="serachButton">
@@ -84,12 +123,12 @@ if(session.getAttribute("login") == null) {%>
 								</div>
 								<div class="searchPart">
 									<span class="serachButton">
-										<a href="/freeboard_write"><button type="button">글쓰기</button></a>
+										<button type="button">글쓰기</button>
 									</span>
 
 								</div>
 							</div>
-						</form>
+						
 					</div>
 				</div>
 
@@ -99,12 +138,7 @@ if(session.getAttribute("login") == null) {%>
 
 
 	</section>
-  
-    <script src="/resources/js/jquery.js"></script>
-	<script src="/resources/js/price-range.js"></script>
-    <script src="/resources/js/jquery.scrollUp.min.js"></script>
-	<script src="/resources/js/bootstrap.min.js"></script>
-    <script src="/resources/js/jquery.prettyPhoto.js"></script>
-    <script src="/resources/js/main.js"></script>
+ 
+
 </body>
 </html>

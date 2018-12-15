@@ -28,21 +28,22 @@
 	WHERE	REVIEW_NUM = #{REVIEW_NUM}
 </select>
 
-<update id="hits_UP">
-	UPDATE TB_REVIEW	SET REVIEW_HITS = REVIEW_HITS + 1
+<update id="updateHits">
+	UPDATE TB_REVIEW	
+	SET REVIEW_HITS = REVIEW_HITS + 1
 	WHERE REVIEW_NUM = #{REVIEW_NUM}
 </update>
 
 
 <update id="update">
-	UPDATE tb_free_board	SET free_board_title =#{free_board_title},
-							free_board_cont =#{free_board_cont},
-							free_board_writer =#{free_board_writer} 
-	WHERE free_board_num = #{free_board_num}
+	UPDATE TB_REVIEW
+	SET REVIEW_TITLE = #{REVIEW_TITLE},
+		REVIEW_CONT = #{REVIEW_CONT}
+	WHERE REVIEW_NUM = #{REVIEW_NUM}
 </update>
 
 <delete id="delete">
-	delete from tb_free_board where free_board_num = #{free_board_num}
+	DELETE FROM TB_REVIEW WHERE REVIEW_NUM = #{REVIEW_NUM}
 </delete>
 
 <select id="listAll" resultType="Review_regiVO">

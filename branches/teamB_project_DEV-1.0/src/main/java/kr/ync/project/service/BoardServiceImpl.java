@@ -71,4 +71,11 @@ public class BoardServiceImpl implements BoardService {
 		return dao.listSearchCount(cri);
 	}
 
+
+	@Override
+	public int viewHits(int bno) throws Exception {
+		// TODO Auto-generated method stub
+		return dao.viewHits(bno);
+	}
+
 }

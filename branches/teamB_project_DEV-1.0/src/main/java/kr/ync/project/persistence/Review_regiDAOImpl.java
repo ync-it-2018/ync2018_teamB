@@ -78,6 +78,14 @@ public class Review_regiDAOImpl implements Review_regiDAO {
 
 		return session.selectOne(namespace + ".listSearchCount", cri);
 	}
+
+	@Override
+	public int viewHits(int vo) throws Exception {
+		return session.update(namespace + ".updateHits", vo);
+		
+	}
+
+
 	
 }
 

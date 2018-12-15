@@ -90,5 +90,17 @@ public class UserDAOImpl implements UserDAO {
 		// TODO Auto-generated method stub
 		return session.selectOne(namespace + ".countPaging", cri);
 	}
+
+	@Override
+	public int findMember(String id) throws Exception {
+		// TODO Auto-generated method stub
+		return session.selectOne(namespace+".userCheck",id);
+	}
+
+	@Override
+	public int userRegist(UserVO vo) throws Exception {
+		// TODO Auto-generated method stub
+		return session.insert(namespace+".userRegist",vo);
+	}
 	
 }

@@ -10,6 +10,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	VALUES(SEQ_BOARD.NEXTVAL, #{free_board_title},#{free_board_cont}, #{free_board_writer}, #{user_id})
 </insert>
 
+
 <select id="read" resultType="BoardVO">
 	SELECT  free_board_num,
 	 		free_board_title,
@@ -27,6 +28,12 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	WHERE free_board_num = #{free_board_num}
 </update>
 
+<update id="updateHits">
+	update tb_free_board
+	set FREE_BOARD_HITS = FREE_BOARD_HITS+1
+	WHERE free_board_num = #{free_board_num}
+</update>
+
 <delete id="delete">
 	delete from tb_free_board where free_board_num = #{free_board_num}
 </delete>
@@ -41,7 +48,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	 		free_board_hits
 	FROM tb_free_board 
 	WHERE free_board_num > 0 
-	ORDER BY free_board_num DESC, free_board_date DESC
+	ORDER BY free_board_date DESC
 	]]>  
 </select>
  
@@ -108,16 +115,13 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <sql id="search">
 	<if test="searchType != null" >
 		<if test="searchType == 't'.toString()">
-			AND title LIKE '%'|| #{keyword}||'%'
+			AND FREE_BOARD_TITLE LIKE '%'|| #{keyword}||'%'
 		</if>
 		<if test="searchType == 'c'.toString()">
-			AND content LIKE '%'|| #{keyword}||'%'
-		</if>
-		<if test="searchType == 'w'.toString()">
-			AND writer LIKE '%'|| #{keyword}||'%'
+			AND FREE_BOARD_CONT LIKE '%'|| #{keyword}||'%'
 		</if>    
 		<if test="searchType == 'tc'.toString()">
-			AND (title LIKE '%'|| #{keyword}||'%' OR content LIKE '%'|| #{keyword}||'%')
+			AND (FREE_BOARD_TITLE LIKE '%'|| #{keyword}||'%' OR FREE_BOARD_CONT LIKE '%'|| #{keyword}||'%')
 		</if>      
 	</if>
 </sql>

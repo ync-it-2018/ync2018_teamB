@@ -78,6 +78,18 @@ public class Product_regiDAOImpl implements Product_regiDAO {
 
 		return session.selectOne(namespace + ".listSearchCount", cri);
 	}
+
+	@Override
+	public int viewHits(int pno) throws Exception {
+		// TODO Auto-generated method stub
+		return session.update(namespace + ".updateHits", pno);
+	}
+
+	@Override
+	public List<Product_regiVO> top3() throws Exception {
+		// TODO Auto-generated method stub
+		return session.selectList(namespace + ".top3");
+	}
 	
 }
 

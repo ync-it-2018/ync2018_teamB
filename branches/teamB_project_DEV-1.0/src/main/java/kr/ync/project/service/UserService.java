@@ -28,7 +28,7 @@ public interface UserService {
 
 	public void userdelete(Integer USER_NUM) throws Exception;
 	
+	public int findMember(String id) throws Exception;
 	
-	
-
+	public int userRegist(UserVO vo) throws Exception;
 }

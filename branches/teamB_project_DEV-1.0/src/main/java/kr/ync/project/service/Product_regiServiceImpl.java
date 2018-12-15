@@ -68,4 +68,18 @@ public class Product_regiServiceImpl implements Product_regiService
 		return dao.listSearchCount(cri);
 	}
 
+
+	@Override
+	public int viewHits(int pno) throws Exception {
+		// TODO Auto-generated method stub
+		return dao.viewHits(pno);
+	}
+
+
+	@Override
+	public List<Product_regiVO> top3() throws Exception {
+		// TODO Auto-generated method stub
+		return dao.top3();
+	}
+
 }

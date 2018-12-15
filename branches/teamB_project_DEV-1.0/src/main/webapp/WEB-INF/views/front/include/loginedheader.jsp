@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -46,8 +48,14 @@
 					<div class="col-sm-8">
 						<div class="shop-menu pull-right">
 							<ul class="nav navbar-nav">
-								<li><a href="/admin"><i class="fa fa-user"></i> 사용자정보</a></li>		
-								<li><a href="/interest_product"><i class="fa fa-shopping-cart"></i> 관심물품</a></li>
+								<c:if test="${login.USER_GRADE == 1}">
+									<li><a href="/admin"><i class="fa fa-user"></i> 사용자정보</a></li>
+								</c:if>
+								<c:if test="${login.USER_GRADE != 1}">
+									<li><a href="/#"><i class="fa fa-user"></i> 사용자정보</a></li>
+								</c:if>
+								<li><a href="/interest_product"><i
+										class="fa fa-shopping-cart"></i> 관심물품</a></li>
 								<li><a href="/logout"> 로그아웃</a></li>
 							</ul>
 						</div>
@@ -76,33 +84,39 @@
 
 								<li><a href="/Notice">공지사항</a></li>
 
-								<li class="dropdown"><a href="#">카테고리 펼쳐보기<i class="fa fa-angle-down"></i></a>
-                                    <ul role="menu" class="sub-menu">                      
-                                         <li><h4 style="color:white"><strong>디지털</strong></h4></li>
-                                         
-                                        	<ul>
-                                        		<li><a href="/shop">PC</a></li>
-                                        		<li><a href="/shop">모바일</a></li>
-                                        		<li><a href="/shop">가전제품</a></li>
-                                        		<li><a href="/shop">노트북</a></li>
-                                        		<li><a href="/shop">태블릿</a></li>
-                                        	</ul>
-										<li><h4 style="color:white"><strong>아웃도어</strong></h4></li> 
-											<ul>
-                                        		<li><a href="/shop">골프제품/골프웨어</a></li>
-                                        		<li><a href="/shop">등산제품/등산웨어</a></li>
-                                        		<li><a href="/shop">낚시</a></li>
-                                        		<li><a href="/shop">캠핑</a></li>          
-                                        	</ul> 
-                                        <li><h4 style="color:white"><strong>테스트</strong></h4></li> 
-											<ul>
-                                        		<li><a href="/shop">테스트</a></li>
-                                        		<li><a href="/shop">테스트</a></li>
-                                        		<li><a href="/shop">테스트</a></li>
-                                        		<li><a href="/shop">테스트</a></li>          
-                                        	</ul> 
-                                    </ul>
-                                </li> 
+								<li class="dropdown"><a href="#">카테고리 펼쳐보기<i
+										class="fa fa-angle-down"></i></a>
+									<ul role="menu" class="sub-menu">
+										<li><h4 style="color: white">
+												<strong>디지털</strong>
+											</h4></li>
+
+										<ul>
+											<li><a href="/shop">PC</a></li>
+											<li><a href="/shop">모바일</a></li>
+											<li><a href="/shop">가전제품</a></li>
+											<li><a href="/shop">노트북</a></li>
+											<li><a href="/shop">태블릿</a></li>
+										</ul>
+										<li><h4 style="color: white">
+												<strong>아웃도어</strong>
+											</h4></li>
+										<ul>
+											<li><a href="/shop">골프제품/골프웨어</a></li>
+											<li><a href="/shop">등산제품/등산웨어</a></li>
+											<li><a href="/shop">낚시</a></li>
+											<li><a href="/shop">캠핑</a></li>
+										</ul>
+										<li><h4 style="color: white">
+												<strong>테스트</strong>
+											</h4></li>
+										<ul>
+											<li><a href="/shop">테스트</a></li>
+											<li><a href="/shop">테스트</a></li>
+											<li><a href="/shop">테스트</a></li>
+											<li><a href="/shop">테스트</a></li>
+										</ul>
+									</ul></li>
 
 								<li class="dropdown"><a href="#">게시판<i
 										class="fa fa-angle-down"></i></a>
@@ -128,9 +142,7 @@
 		<!--/header-bottom-->
 	</header>
 
-      <!-- Content Wrapper. Contains page content -->
-      <div class="content-wrapper">
-        <!-- Content Header (Page header) -->
-        <section class="content-header">
-          
-        </section>
+	<!-- Content Wrapper. Contains page content -->
+	<div class="content-wrapper">
+		<!-- Content Header (Page header) -->
+		<section class="content-header"></section>

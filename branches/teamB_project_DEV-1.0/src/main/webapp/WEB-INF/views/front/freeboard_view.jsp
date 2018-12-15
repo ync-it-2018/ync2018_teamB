@@ -71,8 +71,14 @@ if(session.getAttribute("login") == null) {%>
 						</div>
 						<!-- /.box-body -->
 						<div>
+						<c:if test="${not empty login }">
+							<c:if test="${login.USER_ID eq  boardVO.free_board_writer}">
 							<button type="submit"  class="modifyBtn" id="modifyBtn">수정</button>
 							<button type="submit"  class="removeBtn" id="removeBtn">삭제</button>
+							</c:if>
+						</c:if>
+						
+						
 							<button type="submit"  class="listBtn" id ="goListBtn">목록</button>
 						</div>
 										

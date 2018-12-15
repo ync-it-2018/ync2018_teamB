@@ -8,12 +8,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import kr.ync.project.domain.BoardVO;
+import kr.ync.project.domain.Criteria;
+import kr.ync.project.domain.PageMaker;
+import kr.ync.project.domain.SearchCriteria;
 import kr.ync.project.service.BoardService;
 
 /* 자유게시판의 기능을 수행하는 컨트롤러*/
@@ -29,16 +33,29 @@ public class boardController {
 
 	/* 자유게시판에 들어갔을때 리스트형식으로 값을 전달해줌*/
 	@GetMapping(value = "/freeboard")
-	public String BoardGET(Model model) throws Exception {
-		logger.info("show all List...............");
-		model.addAttribute("list", service.listAll());
-		
-		return "front/freeboard";
+	public void BoardGET(@ModelAttribute("cri") SearchCriteria cri, Model model) throws Exception {
+
+		logger.info(cri.toString()); // SearchCriteria 객체의 값
+
+		//model.addAttribute("list", service.listCriteria(cri));
+		model.addAttribute("list", service.listSearchCriteria(cri));
+
+		PageMaker pageMaker = new PageMaker();
+		pageMaker.setCri(cri);
+
+		//pageMaker.setTotalCount(service.listCountCriteria(cri));
+		pageMaker.setTotalCount(service.listSearchCount(cri));
+
+		model.addAttribute("pageMaker", pageMaker);
 	}
 	
 	/*자유게시판 상세보기 컨트롤러*/
 	@GetMapping(value = "/freeboard_view")
 	public String read(@RequestParam("free_board_num") int free_board_num,Model model) throws Exception {
+		
+		// 조회수증가 service
+		service.viewHits(free_board_num);
+		
 		logger.info("show free board view...............");
 		/* 게시물의 번호를 바탕으로 컬럼의 값을 읽어와서 리턴해줌*/
 		model.addAttribute(service.read(free_board_num));

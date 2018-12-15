@@ -34,4 +34,5 @@ public interface BoardDAO {
 	// 검색이 적용된 Query 결과 Count
 	public int listSearchCount(SearchCriteria cri)throws Exception;
 
+	public int viewHits(int bno) throws Exception;
 }

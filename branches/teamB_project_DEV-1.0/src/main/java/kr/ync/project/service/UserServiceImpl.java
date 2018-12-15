@@ -70,6 +70,18 @@ public class UserServiceImpl implements UserService {
 		
 	}
 
+	@Override
+	public int findMember(String id) throws Exception {
+		// TODO Auto-generated method stub
+		return dao.findMember(id);
+	}
+
+	@Override
+	public int userRegist(UserVO vo) throws Exception {
+		// TODO Auto-generated method stub
+		return dao.userRegist(vo);
+	}
+
 	
 	
 }
