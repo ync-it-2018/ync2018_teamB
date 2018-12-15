@@ -15,7 +15,7 @@ import kr.ync.project.dto.InsertDTO;
 import kr.ync.project.dto.LoginDTO;
 import kr.ync.project.persistence.UserDAO;
 
-
+/*회원 관련 서비스 상세기능*/
 @Service
 public class UserServiceImpl implements UserService {
 
@@ -25,32 +25,33 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public UserVO login(LoginDTO dto) throws Exception {
 
-		return dao.login(dto);
+		return dao.login(dto);/*로그인 기능*/
 	}
 
 	@Override
 	public void keepLogin(String USER_ID, String sessionId, Date next) throws Exception {
 
-		dao.keepLogin(USER_ID, sessionId, next);
+		dao.keepLogin(USER_ID, sessionId, next);/*로그인 유지기능*/
 	}
 
 	@Override
 	public UserVO checkLoginBefore(String value) {
-		return dao.checkUserWithSessionKey(value);
+		return dao.checkUserWithSessionKey(value);/*로그인 여부 체크*/
 	}
 
 	@Override
 	public List<String> readMember() throws Exception {
 		// TODO Auto-generated method stub
-		return dao.readMember();
+		return dao.readMember();/*멤버 정보를 읽어옴*/
 	}
 
 	@Override
 	public List<UserVO> listAll() throws Exception {
 		// TODO Auto-generated method stub
-		return dao.listAll();
+		return dao.listAll();/*유저 정보를 읽어옴*/
 	}
 
+	/*페이징-----------------------------------------------------*/
 	@Override
 	public List<UserVO> userlistCriteria(Criteria cri) throws Exception {
 		// TODO Auto-generated method stub

@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import kr.ync.project.controller.HomeController;
 
+/*통계 검색 컨트롤러*/
 @Controller
 public class searchstatController {
 private static final Logger logger = LoggerFactory.getLogger(HomeController.class);

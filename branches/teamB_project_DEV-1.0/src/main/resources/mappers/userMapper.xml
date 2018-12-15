@@ -4,7 +4,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="kr.ync.project.mapper.UserMapper">
-
+	<!-- 로그인 기능 쿼리 -->
 	<select id="login" resultType="UserVO">
 		SELECT	*
 		FROM	TB_USER
@@ -12,25 +12,25 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		AND		USER_PW = #{USER_PW}
 	</select>
   
-	<update id="keepLogin" >
+	<update id="keepLogin" ><!-- 로그인 유지 기능 쿼리 -->
 		UPDATE TB_USER SET sessionKey = #{sessionId}, sessionLimit = #{next} WHERE USER_ID = #{USER_ID}
 	</update>
 
-	<select id="checkUserWithSessionKey" resultType="UserVO">
+	<select id="checkUserWithSessionKey" resultType="UserVO"><!-- 로그인 여부 체크 쿼리 -->
 		SELECT * FROM TB_USER WHERE	sessionKey = #{value} AND sessionLimit > SYSDATE
 	</select>	
 
-	<insert id ="insertMember">
+	<insert id ="insertMember"><!-- 회원 가입 쿼리 -->
     	INSERT into TB_USER (USER_ID, USER_PW, USER_EMAIL) values (#{USER_ID},#{USER_PW},#{USER_EMAIL})
 	</insert>
 	
 	
-	<select id="readMember">
+	<select id="readMember"> <!-- 멤버 불러오기 기능 -->
 		SELETE USER_ID, USER_EMAIL FROM TB_USER
 	</select>
 	
 	
-	<select id="listAll" resultType="UserVO">
+	<select id="listAll" resultType="UserVO"><!-- 유저 목록을 리스트 방식으로 불러옴 -->
 		<![CDATA[
 		SELECT 	USER_NUM,
 		 		USER_ID,
@@ -43,12 +43,12 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		]]>
 	</select>
 	
-	<delete id="deleteMember">
+	<delete id="deleteMember"><!-- 유저 정보 삭제 -->
 		delete from TB_USER where USER_NUM = #{USER_NUM}
 	</delete>
 
 
-
+	<!-- 페이징 -->
 	<select id="userlistPage" resultType="UserVO">
 	<![CDATA[
 	SELECT  USER_NUM, USER_ID, USER_EMAIL

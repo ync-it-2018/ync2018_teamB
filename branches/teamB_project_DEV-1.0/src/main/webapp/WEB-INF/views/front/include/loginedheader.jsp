@@ -49,7 +49,7 @@
 						<div class="shop-menu pull-right">
 							<ul class="nav navbar-nav">
 								<c:if test="${login.USER_GRADE == 1}">
-									<li><a href="/admin"><i class="fa fa-user"></i> 사용자정보</a></li>
+									<li><a href="/admin"><i class="fa fa-user"></i> 관리자</a></li>
 								</c:if>
 								<c:if test="${login.USER_GRADE != 1}">
 									<li><a href="/#"><i class="fa fa-user"></i> 사용자정보</a></li>

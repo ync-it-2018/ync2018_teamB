@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import kr.ync.project.controller.HomeController;
 
+/*리뷰 수정 컨트롤러*/
 @Controller
 public class reviewmodifyController {
 private static final Logger logger = LoggerFactory.getLogger(HomeController.class);

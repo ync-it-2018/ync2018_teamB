@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import kr.ync.project.controller.HomeController;
 
+/*제품등록 컨트롤러*/
 @Controller
 public class Product_regiController {
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);

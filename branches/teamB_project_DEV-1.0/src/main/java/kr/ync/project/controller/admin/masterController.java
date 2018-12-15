@@ -46,19 +46,6 @@ public class masterController {
 //		return "admin/master_user_remove";
 	}
 	
-
-	@PostMapping(value = "/admin")
-	public void deleteMember(UserVO vo, HttpSession session, Model model) throws Exception {
-
-		// service.userdelete(vo);
-
-		// UserVO가 null 이란 말은 DB에서 해당 user에 대한 data가 없다는 말이다.
-		if (vo == null) {
-			return;
-		}
-
-		model.addAttribute("UserVO", vo);
-
-	}
+	
 
 }
