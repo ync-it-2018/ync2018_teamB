@@ -65,19 +65,17 @@ if(session.getAttribute("login") == null) {%>
 								<label for="exampleInputEamil1">Writer</label>
 								<input type="text" name='free_board_writer' class="form-control" value="${boardVO.free_board_writer}"
 								readonly="readonly">
-								<input type="text" name='free_board_writer' class="form-control" value="${boardVO.user_id}"
-								readonly="readonly">
-								<input type="text" name='free_board_writer' class="form-control" value="${login.USER_ID}"
-								readonly="readonly">
 							</div>
 						</div>
 						<!-- /.box-body -->
 						<div>
-					
-							<button type="submit"  class="modifyBtn" id="modifyBtn">수정</button>
-							<button type="submit"  class="removeBtn" id="removeBtn">삭제</button>
-						
-						
+							<c:if test="${not empty login }">
+								<c:if test="${login.USER_ID eq  boardVO.user_id}">
+								
+								<button type="submit"  class="modifyBtn" id="modifyBtn">수정</button>
+								<button type="submit"  class="removeBtn" id="removeBtn">삭제</button>
+								</c:if>
+							</c:if>
 						
 							<button type="submit"  class="listBtn" id ="goListBtn">목록</button>
 						</div>
