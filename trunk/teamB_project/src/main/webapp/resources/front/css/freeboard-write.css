@@ -1,0 +1,124 @@
+
+
+/*************************
+*******Typography******
+**************************/
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,400italic,500,700,100);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,800,300,600,700);
+@import url(http://fonts.googleapis.com/css?family=Abel);
+
+
+/*************************
+*******freeboard CSS******
+**************************/
+body {
+  font-family: 'Roboto', sans-serif;
+  background:;
+  position: relative;
+  font-weight:400px;
+}
+
+.freeboard > caption {
+  text-align: left;
+  font-weight: bold;
+  font-size: 200%;
+  border-bottom: .2em solid #F3E2A9;
+  margin-bottom: .5em;
+}
+	
+	
+table.freeboard {
+    border-collapse: collapse;
+    text-align: left;
+    line-height: 1.5;
+
+}
+table.freeboard thead th {
+	background-color:#DBA901;
+    padding: 10px;
+    font-weight: bold;
+    vertical-align: top;
+    color: #EFFBEF;
+    border-bottom: 1px solid #F3F781;
+    
+}
+table.freeboard tbody th {
+    width: 200px;
+    padding: 10px;
+    font-weight: bold;
+    vertical-align: top;
+    border-bottom: 1px solid #ccc;
+    background: #f3f6f7;
+    
+}
+table.freeboard td {
+    width: 350px;
+    padding: 10px;
+    vertical-align: top;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+  
+}
+
+
+
+.title {
+	border-right:1px solid #F2F2F2;
+	text-align: center;
+	 width:40%;
+}
+.writer {
+	border-right:1px solid #F2F2F2;
+	text-align: center;
+	width: 13%;
+}
+.date {
+	border-right:1px solid #F2F2F2;
+	text-align: center;
+	width: 13%;
+}
+.views {
+	text-align: center;
+	width: 8%;
+}
+
+
+.searchArea{
+	font-size:20px;
+}
+.searchKeyword{
+	font-size:20px;
+}
+.pageMove {
+	font-size : 20px;
+	text-align: center; 
+		
+}
+.searchBody{
+	margin-top:3%;
+	margin-left:30%;
+	
+}
+.searchPart{
+    display: inline-block;
+    float: center;
+    
+}
+.serach{
+	font-size : 20px;
+}
+.write{
+	margin-left:330px;
+}
+
+#reviews button {
+    background: #FE980F;
+    border: 0 none;
+    border-radius: 0;
+    color: #FFFFFF;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    
+}
+
+
